@@ -1,0 +1,28 @@
+.navbar navbar-expand-lg navbar-light bg-light{
+    position: sticky;
+    grid-area: topNav;
+
+    top: 0;
+
+}
+.px-4 py-5 my-5 text-center{
+    grid-area: mainCon;
+}
+.nav nav-pills nav-fill{
+    grid-area: botNav;
+    position: sticky;
+    bottom: 0;
+
+}
+
+.webContainer{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 
+    "topNave"
+    "mainCon"
+    "botNav";
+
+}
