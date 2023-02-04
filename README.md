@@ -1,12 +1,12 @@
-# Project Title
+# HawtPAW
 
 ## 1. Project Description
 State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+Team BBY-28 is developing HawtPAW: Health And Wellness Tracker for Pets in Adverse Weather, to help pet owners better understand and care for their pets during harmful weather with symptom tracking, wellness reports, pet care information, and weather alerts.
+ 
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* ...
 * Niko Durano: first time working on a project
 * Justin Saint: hello
 * Joseph Louwerse: This is confusing, but fun!
