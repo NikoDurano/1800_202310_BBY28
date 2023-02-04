@@ -15,7 +15,17 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.navbar-brand{
+    padding-bottom: 0;
+}
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 200,
+  'opsz' 48
+}
 
 
 
