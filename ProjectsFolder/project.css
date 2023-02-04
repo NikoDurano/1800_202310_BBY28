@@ -1,28 +1,42 @@
-.navbar navbar-expand-lg navbar-light bg-light{
+
+header{
     position: sticky;
-    grid-area: topNav;
-
     top: 0;
-
 }
-.px-4 py-5 my-5 text-center{
-    grid-area: mainCon;
-}
-.nav nav-pills nav-fill{
-    grid-area: botNav;
+footer{
     position: sticky;
     bottom: 0;
-
 }
 
+.nav-pills .nav-link{
+    border-radius: 0;
+}
+.navbar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+/* Doesn't do anthing yet */
+/* #head{
+grid-area: head;
+}
+#mainCon{
+grid-area: main;
+}
+#foot{
+grid-area: feet;
+}
 .webContainer{
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "topNave"
-    "mainCon"
-    "botNav";
+    "head"
+    "main"
+    "feet";
 
-}
+}  */
