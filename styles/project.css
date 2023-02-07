@@ -27,26 +27,29 @@ footer{
   'opsz' 48
 }
 
+.nav-link:hover{
+    background-color: #c9c9c9;
+}
+
+#botNavL{
+    color: white;
+    background-color: blue;
+}
+#botNavML{
+    color: white;
+    background-color: blue;
+}
+#botNavMR{
+    color: white;
+    background-color: blue;
+}
+#botNavR{
+    color: white;
+    background-color: blue;
+}
+#foot a:hover{
+    background-color: rgb(0, 0, 139);
+}
 
 
-/* Doesn't do anthing yet */
-/* #head{
-grid-area: head;
-}
-#mainCon{
-grid-area: main;
-}
-#foot{
-grid-area: feet;
-}
-.webContainer{
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    "head"
-    "main"
-    "feet";
 
-}  */
