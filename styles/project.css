@@ -4,7 +4,7 @@
 }
 
 
-/* These four edit the look of top nav */
+/* These five edit the look of top nav */
 .nav-pills .nav-link{
     border-radius: 0;
 }
@@ -15,8 +15,6 @@
 .navbar-brand{
     padding-bottom: 0;
 }
-
-
 .nav-link{
     border-radius: 5px;
 }
