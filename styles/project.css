@@ -1,9 +1,6 @@
 *{
     margin: 0;
     padding: 0;
- 
-
-
 
 }
 
@@ -56,7 +53,7 @@
     background-position: center;
     background-size: cover;
     height: 500px;
-    min-height: 100vh; /* This fixes white space at bottom don't delete */
+    min-height: 85vh; /* This fixes white space at bottom don't delete */
 
 }
 
@@ -78,11 +75,14 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-    background-color: transparent!important;
 
 }
-.lead .mb-4{
-    background-color: transparent;
+.py-5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(transparent, #000000 75%);
 }
 
 /* Margins for mainCon and footer */
@@ -95,16 +95,6 @@
 
 }
 
-
-/* Text for Hero */
-.py-5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(transparent, #000000 75%);
-    
-}
 
 
 /* Footer text colour */
