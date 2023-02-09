@@ -4,7 +4,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -33,7 +32,7 @@ body{
 
 
 
-/* edit icons */
+/* edit logo */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -41,9 +40,6 @@ body{
   'GRAD' 200,
   'opsz' 48
 }
-
-
-/* Logo in top left */
 [title~=logo]{
     height: 50px;
     width: auto;
@@ -59,7 +55,6 @@ body{
     background-size: cover;
     height: 500px;
     min-height: 85vh; /* This fixes white space at bottom don't delete */
-
 }
 
 
@@ -80,7 +75,6 @@ body{
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-
 }
 .py-5{
     width: 100%;
@@ -103,10 +97,7 @@ body{
 
 
 
-/* Footer text colour */
-/* .text-muted{
-    color: white!important;
-}  */
+
 
 /* save this code to use in main page */
 /* #botNavL{
