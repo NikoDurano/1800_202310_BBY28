@@ -125,9 +125,14 @@ body{
 
 @media only screen and (max-width : 701px){
 
-    header{
+    #navbarPlaceholder{
         position: sticky;
         top: 0;
+    }
+
+    #footerPlaceholder{
+        position: sticky;
+        bottom: 0;
     }
 
 }
