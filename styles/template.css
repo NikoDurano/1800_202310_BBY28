@@ -1,0 +1,131 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* These edit the look of top nav */
+.nav-pills .nav-link{
+    border-radius: 0;
+}
+.navbar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.navbar-brand{
+    padding-bottom: 0;
+}
+.nav-link{
+    border-radius: 5px;
+
+}
+.nav-link:hover{
+    background-color: #c9c9c9;
+    border-radius: 5px;
+}
+
+
+
+/* edit logo */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 200,
+  'opsz' 48
+}
+[title~=logo]{
+    height: 50px;
+    width: auto;
+}
+
+/* Background of Hero */
+#mainCon{
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../images/Corgi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    min-height: 85vh; /* This fixes white space at bottom don't delete */
+}
+
+
+/* Text in Hero */
+.fw-bold{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    background-color: transparent;
+}
+.lead{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.py-5{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(transparent, #000000 75%);
+}
+
+/* Margins for mainCon and footer */
+.my-4{
+    margin-top: 0!important;
+}
+.my-5{
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+
+}
+
+
+
+
+
+/* save this code to use in main page */
+ #botNavL{
+    color: white;
+    background-color: blue;
+}
+#botNavML{
+    color: white;
+    background-color: blue;
+}
+#botNavMR{
+    color: white;
+    background-color: blue;
+}
+#botNavR{
+    color: white;
+    background-color: blue;
+}
+#foot a:hover{
+    background-color: rgb(0, 0, 139);
+}
+
+
+@media only screen and (max-width : 701px){
+
+    header{
+        position: sticky;
+        top: 0;
+    }
+
+}
