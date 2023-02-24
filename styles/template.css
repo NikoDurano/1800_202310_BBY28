@@ -9,8 +9,15 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 
+#footerPlaceholder{
+margin-top: auto;
+}
 /* These edit the look of top nav */
 .nav-pills .nav-link{
     border-radius: 0;
