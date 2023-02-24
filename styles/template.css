@@ -47,17 +47,7 @@ body{
     width: auto;
 }
 
-/* Background of Hero */
-#mainCon{
-    display: flex;
-    align-items: flex-end;
-    background-image: url(../images/Corgi.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    min-height: 85vh; /* This fixes white space at bottom don't delete */
-}
+
 
 
 /* Text in Hero */
