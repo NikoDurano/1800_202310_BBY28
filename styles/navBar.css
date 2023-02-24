@@ -35,8 +35,7 @@ margin-top: auto;
 
 }
 .nav-link:hover{
-    background-color: #c9c9c9;
-    border-radius: 5px;
+    background-color: #686868ad;
 }
 
 
@@ -98,8 +97,8 @@ margin-top: auto;
 
 
 
-/* save this code to use in main page */
- #botNavL{
+
+#botNavL{
     color: white;
     background-color: blue;
 }
@@ -115,8 +114,21 @@ margin-top: auto;
     color: white;
     background-color: blue;
 }
-#foot a:hover{
-    background-color: rgb(0, 0, 139);
+#botNavL:hover{
+    color: rgb(194, 194, 194);
+    background-color: rgb(1, 1, 161);
+}
+#botNavML:hover{
+    color: rgb(194, 194, 194);
+    background-color: rgb(1, 1, 161);
+}
+#botNavMR:hover{
+    color: rgb(194, 194, 194);
+    background-color: rgb(1, 1, 161);
+}
+#botNavR:hover{
+    color: rgb(194, 194, 194);
+    background-color: rgb(1, 1, 161);
 }
 
 
