@@ -125,8 +125,6 @@
     "PIssues"; 
 
     grid-area: botPart;
-    
-    
 }
 .mainPetProfileContainer{
     display: grid;
@@ -137,3 +135,20 @@
     "botPart";
 }
 
+@media only screen and (max-width : 701px){
+    
+#editButton{
+    border-radius: 10%;
+    background-color: #0892d0;
+    color: rgb(255, 255, 255);
+    border: 2px solid #0892d0;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+}
