@@ -115,20 +115,20 @@ margin-top: auto;
     background-color: 	#0892d0;
 }
 #botNavL:hover{
-    color: rgb(255, 255, 255);
-    background-color: #0891d0cf;
+    color: rgb(194, 194, 194);
+    background-color: #0877aa;
 }
 #botNavML:hover{
     color: rgb(194, 194, 194);
-    background-color: #0891d0cf;
+    background-color: #0877aa;
 }
 #botNavMR:hover{
-    color: rgb(255, 255, 255);
-    background-color: #0891d0cf;
+    color: rgb(194, 194, 194);
+    background-color: #0877aa;
 }
 #botNavR:hover{
-    color: rgb(255, 255, 255);
-    background-color: #0891d0cf;
+    color: rgb(194, 194, 194);
+    background-color: #0877aa;
 }
 
 #navbarPlaceholder{
