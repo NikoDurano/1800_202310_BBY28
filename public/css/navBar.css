@@ -100,35 +100,35 @@ margin-top: auto;
 
 #botNavL{
     color: white;
-    background-color: blue;
+    background-color: 	#0892d0;
 }
 #botNavML{
     color: white;
-    background-color: blue;
+    background-color: 	#0892d0;
 }
 #botNavMR{
     color: white;
-    background-color: blue;
+    background-color: 	#0892d0;
 }
 #botNavR{
     color: white;
-    background-color: blue;
+    background-color: 	#0892d0;
 }
 #botNavL:hover{
-    color: rgb(194, 194, 194);
-    background-color: rgb(1, 1, 161);
+    color: rgb(255, 255, 255);
+    background-color: #0891d0cf;
 }
 #botNavML:hover{
     color: rgb(194, 194, 194);
-    background-color: rgb(1, 1, 161);
+    background-color: #0891d0cf;
 }
 #botNavMR:hover{
-    color: rgb(194, 194, 194);
-    background-color: rgb(1, 1, 161);
+    color: rgb(255, 255, 255);
+    background-color: #0891d0cf;
 }
 #botNavR:hover{
-    color: rgb(194, 194, 194);
-    background-color: rgb(1, 1, 161);
+    color: rgb(255, 255, 255);
+    background-color: #0891d0cf;
 }
 
 #navbarPlaceholder{

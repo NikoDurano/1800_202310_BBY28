@@ -2,22 +2,22 @@
 
 #petPic{
     grid-area: picOfPet;
- 
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-image: url(/public/img/Grumpy-Cat.webp);
+    
+    background-image: url(/public/img/Grumpy-Cat.webp); /* This needs to be changable throungh js */
     background-repeat: no-repeat;
     background-size: contain;
 
 
 }
-#petPicHolder{
+#petPicHolder{/* This is not where the profile pic is, this is the container for it */
     grid-area: pic;
-
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -29,10 +29,14 @@
     color: white;
     font-size: 20px;
     text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
 }
 #editProfile{
     grid-area: edit;
@@ -44,9 +48,9 @@
 }
 #editButton{
     border-radius: 10%;
-    background-color: white;
+    background-color: #0892d0;
     color: black;
-    border: 2px solid #555555;
+    border: 2px solid #0892d0;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -56,11 +60,10 @@
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
 #editButton:hover {
-    background-color: #555555;
+    background-color: #0892d0;
     color: white;
-  }
+}
 
 
 #topPortion{
@@ -76,7 +79,7 @@
     ". pic pic ."
     ". info info .";
 
-    background-image: url(/public/img/profilebackground.jpg);
+    background-image: url(/public/img/profilebackground.jpg);  /* This needs to be changable throungh js */
     background-repeat: no-repeat;
     background-size: cover;
  
@@ -87,7 +90,6 @@
     border: 1px solid black;
     padding: 10px;
 }
-
 .mainPetProfileContainer{
     display: grid;
     grid-template-columns: 1fr;
