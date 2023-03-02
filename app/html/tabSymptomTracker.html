@@ -15,7 +15,7 @@
     <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- Other libraries go here -->
     <!-- This needs to be here -->
@@ -29,6 +29,7 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
+    <link rel="stylesheet" href="/public/css/formStyles.css">
 
     <!-- Google Icons -->
     <link rel="stylesheet"
@@ -43,11 +44,16 @@
 
 
     <nav id="navbarPlaceholder"></nav>
-    <div>
-        <table border="1px">
-            <th>
-                Temperature Input
-            </th>
+
+    <div class="symptomMainContainer">
+        <table class="symptomTable">
+            <tr>
+                <th>
+                    Temperature Input
+                </th>
+                <td></td>
+            </tr>
+
             <tr>
                 <td>
                     Current Temperature
@@ -68,11 +74,14 @@
                     </div>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     Weather Conditions
                 </td>
+                <td></td>
             </tr>
+
             <tr>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -86,7 +95,10 @@
                         <label class="btn btn-outline-primary" for="btnradio3">Cold snap</label>
                     </div>
                 </td>
+                <td></td>
+
             </tr>
+
             <tr>
                 <td>
                     <div class="form-check">
@@ -108,13 +120,16 @@
                         </label>
                     </div>
                 </td>
+                <td></td>
             </tr>
         </table>
 
-        <table border="1px">
-            <th>
-                Heatstroke Symptoms
-            </th>
+        <table class="symptomTable">
+            <tr>
+                <th>
+                    Heatstroke Symptoms
+                </th>
+            </tr>
             <tr>
                 <td>
                     <div>Behavioral Symptoms</div>

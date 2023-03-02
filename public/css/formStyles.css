@@ -1,0 +1,16 @@
+.symptomTable{
+    border: 1px solid black;
+}
+
+.symptomMainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.symptomTable{
+    padding: 100px;
+}
+

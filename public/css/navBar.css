@@ -131,17 +131,15 @@ margin-top: auto;
     background-color: rgb(1, 1, 161);
 }
 
-
-@media only screen and (max-width : 701px){
-
-    #navbarPlaceholder{
-        position: sticky;
-        top: 0;
-    }
-
-    #footerPlaceholder{
-        position: sticky;
-        bottom: 0;
-    }
-
+#navbarPlaceholder{
+    position: sticky;
+    top: 0;
 }
+
+#footerPlaceholder{
+    position: sticky;
+    bottom: 0;
+}
+
+
+
