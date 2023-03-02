@@ -103,7 +103,7 @@
 .mainPetProfileContainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 80vh;
+    grid-template-rows: 250px 80vh;
     grid-template-areas: 
     "topPart"
     "botPart";
