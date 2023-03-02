@@ -61,8 +61,10 @@
     cursor: pointer;
 }
 #editButton:hover {
-    background-color: #0891d0cf;
-    border: 2px solid #0891d0cf;
+    background-color: #0877aa;
+    border: 2px solid #0877aa;
+    color: rgb(194, 194, 194);
+
 
 
 }
@@ -84,10 +86,16 @@
     background-image: url(/public/img/profilebackground.jpg);  /* This needs to be changable throungh js */
     background-repeat: no-repeat;
     background-size: cover;
+
+    margin:10px;
+    border-radius: 10px;
  
     
 }
 #bottomPortion{
+    margin: 10px;
+    border-radius: 10px;
+
     grid-area: botPart;
     border: 1px solid black;
     padding: 10px;
