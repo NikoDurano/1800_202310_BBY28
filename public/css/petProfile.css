@@ -92,13 +92,41 @@
  
     
 }
+.petProfileBottomInfo{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#breed{
+    grid-area: breed;
+}
+#coatLength{
+    grid-area: coatL;
+}
+#behavioralIssues{
+    grid-area: BIssues;
+}
+#physicalIssues{
+    grid-area: PIssues;
+}
 #bottomPortion{
     margin: 10px;
     border-radius: 10px;
 
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-areas:
+    "breed"
+    "coatL"
+    "BIssues"
+    "PIssues"; 
+
     grid-area: botPart;
-    border: 1px solid black;
-    padding: 10px;
+    
+    
 }
 .mainPetProfileContainer{
     display: grid;
