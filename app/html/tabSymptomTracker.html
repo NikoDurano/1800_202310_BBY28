@@ -30,6 +30,7 @@
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
     <link rel="stylesheet" href="/public/css/formStyles.css">
+    <link rel="stylesheet" href="/public/css/responsive.css">
 
     <!-- Google Icons -->
     <link rel="stylesheet"
@@ -45,179 +46,191 @@
 
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="symptomMainContainer">
-        <table class="symptomTable">
-            <tr>
-                <th>
-                    Temperature Input
-                </th>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td>
-                    Current Temperature
-                </td>
-                <td>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Temperature"
-                            aria-label="Text input with segmented dropdown button">
-                        <button type="button" class="btn btn-outline-secondary">°C</button>
-                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">°C</a></li>
-                            <li><a class="dropdown-item" href="#">°F</a></li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    Weather Conditions
-                </td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                        <label class="btn btn-outline-primary">Heatwave</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
-                        <label class="btn btn-outline-primary">Normal</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                        <label class="btn btn-outline-primary">Cold snap</label>
-                    </div>
-                </td>
-                <td></td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Thunderstorm
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Heavy Winds
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Heavy Smoke
-                        </label>
-                    </div>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-
-        <table class="symptomTable">
-            <tr>
-                <th>
-                    Heatstroke Symptoms
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <div>Behavioral Symptoms</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Panting
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Drooling
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Agitation
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Dizziness
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Lethargy
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Collapsing
-                        </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div>Physical Symptoms</div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Very Red or Pale Gums
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Bright red tongue
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Increased heart rate
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Breathing distress
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Vomiting
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="">
-                        <label class="form-check-label">
-                            Diarrhea
-                        </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="button" class="btn btn-secondary">Submit</button>
-                </td>
-            </tr>
-        </table>
+    <div class="responsive">
+        <div class="Title">
+            <a class="nav-link" aria-current="page" href="home.html">
+            <button class="Back-arrow">
+                <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
+            </button>
+        </a>
+            <h1>Symptom Tracker</h1>
+        </div>
+        <div class="Content">
+            <table class="symptomTable">
+                <tr>
+                    <th>
+                        Temperature Input
+                    </th>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Current Temperature
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Temperature"
+                                aria-label="Text input with segmented dropdown button">
+                            <button type="button" class="btn btn-outline-secondary">°C</button>
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">°C</a></li>
+                                <li><a class="dropdown-item" href="#">°F</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Weather Conditions
+                    </td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
+                            <label class="btn btn-outline-primary">Heatwave</label>
+    
+                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary">Normal</label>
+    
+                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
+                            <label class="btn btn-outline-primary">Cold snap</label>
+                        </div>
+                    </td>
+                    <td></td>
+    
+                </tr>
+    
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Thunderstorm
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Heavy Winds
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Heavy Smoke
+                            </label>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+    
+            <table class="symptomTable">
+                <tr>
+                    <th>
+                        Heatstroke Symptoms
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Behavioral Symptoms</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Panting
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Drooling
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Agitation
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Dizziness
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Lethargy
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Collapsing
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Physical Symptoms</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Very Red or Pale Gums
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Bright red tongue
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Increased heart rate
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Breathing distress
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Vomiting
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                Diarrhea
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-secondary">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ 
     </div>
 
     <nav id="footerPlaceholder"></nav>
