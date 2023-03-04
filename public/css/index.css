@@ -54,7 +54,7 @@ body{
     background-position: center;
     background-size: cover;
     height: 500px;
-    min-height: 81vh; /* This fixes white space at bottom don't delete */
+    min-height: 92vh; /* This fixes white space at bottom don't delete */
 }
 
 
