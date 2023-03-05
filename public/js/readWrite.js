@@ -1,3 +1,6 @@
+
+
+
 //Ready
 let namePet = document.getElementById("nameBox");
 let agePet = document.getElementById("ageBox");
@@ -6,11 +9,10 @@ let agePet = document.getElementById("ageBox");
 let insertButton = document.getElementById("insertButton")
 
 //Insert
-async function addDocument_CustomID(){
-    var ref = db.collection("users").doc(user.uid).collection("petInfo").doc(namePet.value);
-
-
-        ref.set({
+ async function updateDoc(){
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(users.uid).collection("petInfo").doc(namePet.value)
+        ref.update({
             NameOfPet:namePet.value,
             AgeOfPet:agePet.value,
         }
@@ -21,7 +23,9 @@ async function addDocument_CustomID(){
     .catch((error)=>{
         alert("error" +error);
     });
-}
+} 
 
-insertButton.addEventListener("click", addDocument_CustomID);
+//insertButton.addEventListener("click", updateDoc);
+
+
 

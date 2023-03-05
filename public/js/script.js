@@ -42,32 +42,6 @@ function insertNameFromFirestore(){
 }
 insertNameFromFirestore();
 
-//Ready
-                           // get the user object from the Firebase authentication database
-let namePet = document.getElementById("nameBox");
-let agePet = document.getElementById("ageBox");
-let insertButton = document.getElementById("insertButton")
-
-//update needs fix
-async function updatePetInfo(){
-
-    var ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid);
-
-        ref.update({
-            namePet:namePet.value,
-            agePet:agePet.value,
-        }
-    )
-    .then(()=>{
-        alert("works");
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
-
-}
-
-insertButton.addEventListener("click", updatePetInfo); 
 
 
 
