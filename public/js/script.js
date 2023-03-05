@@ -20,6 +20,56 @@ function readQuote(Hello) {
 readQuote("thisOne");        //calling the function
 
 
+function insertNameFromFirestore(){
+     // to check if the user is logged in:
+     firebase.auth().onAuthStateChanged(user =>{
+         if (user){
+            console.log(user.uid); // let me to know who is the user that logged in to get the UID
+            currentUser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid); // will to to the firestore and go to the document of the user
+            currentUser.get().then(userDoc=>{
+                //get the user name
+                var userName= userDoc.data().namePet;
+                var userAge = userDoc.data().agePet;
+                console.log(userName);
+                console.log(userAge);
+                //$("#name-goes-here").text(userName); //jquery
+                document.getElementById("petInfo").innerText=userName +", "+ userAge;
+ 
+
+            })    
+        }    
+     })
+}
+insertNameFromFirestore();
+
+//Ready
+                           // get the user object from the Firebase authentication database
+let namePet = document.getElementById("nameBox");
+let agePet = document.getElementById("ageBox");
+let insertButton = document.getElementById("insertButton")
+
+//update needs fix
+async function updatePetInfo(){
+
+    var ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid);
+
+        ref.update({
+            namePet:namePet.value,
+            agePet:agePet.value,
+        }
+    )
+    .then(()=>{
+        alert("works");
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+
+}
+
+insertButton.addEventListener("click", updatePetInfo); 
+
+
 
 
 

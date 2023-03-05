@@ -45,11 +45,9 @@
 
     <div class="responsive">
         <div class="Title">
-         
             <button class="Back-arrow" onclick="window.location.href = 'home.html'">
                 <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
             </button>
-   
             <h1>Pet Profile Editor</h1>
         </div>
         <div class="Content">
@@ -61,8 +59,8 @@
                     <td>Age (if known)</td>
                 </tr>
                 <tr>
-                    <td><input class="form-control" type="text" placeholder="Name" aria-label="Name"></td>
-                    <td><input class="form-control" type="text" placeholder="Age" aria-label="Age"></td>
+                    <td><input id="nameBox" class="form-control" type="text" placeholder="Name" aria-label="Name"></td>
+                    <td><input id="ageBox" class="form-control" type="text" placeholder="Age" aria-label="Age"></td>
                 </tr>
                 <tr>
                     <td>Coat Type</td>
@@ -71,13 +69,13 @@
                 <tr>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Coat" value="option1" checked>
+                            <input id="coatShort" class="form-check-input" type="radio" name="Coat" value="option1" checked>
                             <label class="form-check-label">
                                 Short
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Coat" value="option2">
+                            <input id="coatLong" class="form-check-input" type="radio" name="Coat" value="option2">
                             <label class="form-check-label">
                                 Long
                             </label>
@@ -91,13 +89,13 @@
                 <tr>
                     <td>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="FlatFace" value="option1" >
+                        <input id="flatFaceYes" class="form-check-input" type="radio" name="FlatFace" value="option1" >
                         <label class="form-check-label">
                             Yes
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="FlatFace" value="option2" checked>
+                        <input id="flatFaceNo" class="form-check-input" type="radio" name="FlatFace" value="option2" checked>
                         <label class="form-check-label">
                             No
                         </label>
@@ -105,13 +103,13 @@
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Respiratory" value="option1" >
+                            <input id="respiratoryYes" class="form-check-input" type="radio" name="Respiratory" value="option1" >
                             <label class="form-check-label">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Respiratory" value="option2" checked>
+                            <input id="respiratoryNo" class="form-check-input" type="radio" name="Respiratory" value="option2" checked>
                             <label class="form-check-label">
                                 No
                             </label>
@@ -125,13 +123,13 @@
                 <tr>
                     <td>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Heart" value="option1" >
+                        <input id="heartYes" class="form-check-input" type="radio" name="Heart" value="option1" >
                         <label class="form-check-label">
                             Yes
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Heart" value="option2" checked>
+                        <input id="heartNo" class="form-check-input" type="radio" name="Heart" value="option2" checked>
                         <label class="form-check-label">
                             No
                         </label>
@@ -139,13 +137,13 @@
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Neurological" value="option1" >
+                            <input id="neurologicalYes" class="form-check-input" type="radio" name="Neurological" value="option1" >
                             <label class="form-check-label">
                                 Yes
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Neurological" value="option2" checked>
+                            <input id="neurologicalNo" class="form-check-input" type="radio" name="Neurological" value="option2" checked >
                             <label class="form-check-label">
                                 No
                             </label>
@@ -155,14 +153,14 @@
                 <tr>
                     <td></td>
                     <td>
-                        <button type="button">SUBMIT</button>
+                        <button id="insertButton" type="button">SUBMIT</button>
                     </td>
                 </tr>
             </table>
             </div>
         </div>
     </div>
-
+  
 
 
     <nav id="footerPlaceholder"></nav>
@@ -178,6 +176,9 @@
     <!-- Link to scripts of your own -->
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/script.js"></script>
+    <script src="/public/js/authentication.js"></script>
+<!--    <script src="/public/js/readWrite.js"></script> --> 
 
 
 
