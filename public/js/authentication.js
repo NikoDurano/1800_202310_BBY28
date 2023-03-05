@@ -28,6 +28,18 @@ var uiConfig = {
                   namePet: "name",
                   agePet:"age"
             })
+            //Justin
+            db.collection("users").doc(user.uid).collection("petSymptoms").doc(user.uid).set({
+                  symptomOne: "Symptom"
+              // nameOfKeyValuePair: "defaultValue"
+
+            })
+            //Joseph
+            db.collection("users").doc(user.uid).collection("petVetInfo").doc(user.uid).set({
+                  nameVet: "name"
+              // nameOfKeyValuePair: "defaultValue"
+            }) 
+
             .then(function () {
                    console.log("New user added to firestore");
                    window.location.assign("petProfileCreator.html");       //re-direct to main.html after signup
