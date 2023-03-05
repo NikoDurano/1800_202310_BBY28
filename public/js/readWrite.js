@@ -2,19 +2,21 @@
 
 
 //Ready
-let namePet = document.getElementById("nameBox");
-let agePet = document.getElementById("ageBox");
+let nameBox = document.getElementById("nameBox");
+let ageBox = document.getElementById("ageBox");
 
 
 let insertButton = document.getElementById("insertButton")
 
-//Insert
+//update
  async function updateDoc(){
+    
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(users.uid).collection("petInfo").doc(namePet.value)
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+
         ref.update({
-            NameOfPet:namePet.value,
-            AgeOfPet:agePet.value,
+            namePet:nameBox.value,
+            agePet:ageBox.value,
         }
     )
     .then(()=>{
@@ -25,7 +27,7 @@ let insertButton = document.getElementById("insertButton")
     });
 } 
 
-//insertButton.addEventListener("click", updateDoc);
+insertButton.addEventListener("click", updateDoc);
 
 
 
