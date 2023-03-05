@@ -10,7 +10,7 @@ let insertButton = document.getElementById("insertButton")
 
 //update
  async function updateDoc(){
-    
+    const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
