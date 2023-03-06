@@ -15,7 +15,7 @@ let nextButton = document.getElementById("userSubmitBtn")
     const ref =db.collection("users").doc(user.uid);
 
         ref.update({
-            name:userNameBox.value,
+            userName:userNameBox.value,
  
         }
     )
