@@ -23,6 +23,7 @@ let insertButton = document.getElementById("insertButton")
     )
     .then(()=>{
         alert("works");
+        window.location.href = "tabPetProfile.html"
     })
     .catch((error)=>{
         alert("error" +error);
