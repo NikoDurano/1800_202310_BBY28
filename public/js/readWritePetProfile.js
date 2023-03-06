@@ -2,13 +2,15 @@
 
 
 //Ready
+//PET PROFILE CREATE/EDIT VARIBLES
 let nameBox = document.getElementById("nameBox");
 let ageBox = document.getElementById("ageBox");
 
-
 let insertButton = document.getElementById("insertButton")
 
+
 //update
+//PET PROFILE CREATE/EDITE UPDATE
  async function updateDoc(){
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
@@ -26,8 +28,13 @@ let insertButton = document.getElementById("insertButton")
         alert("error" +error);
     });
 } 
-
 insertButton.addEventListener("click", updateDoc);
+
+
+
+
+
+
 
 
 
