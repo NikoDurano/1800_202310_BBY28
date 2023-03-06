@@ -74,8 +74,9 @@
                                 aria-label="Text input with segmented dropdown button"> -->
                             <!-- the DIV that will contain the widget -->
                             <div class="weatherWidget" ></div>
-
+                            
                             <script>
+
                                 window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
                                 window.weatherWidgetConfig.push({
                                     selector:".weatherWidget",
@@ -96,15 +97,49 @@
                                 })();
                             </script>  
 
-                            <button type="button" class="btn btn-outline-secondary">°C</button>
-                            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+
+                            <button type="button" class="btn btn-outline-secondary" id="toggle-units">°C</button>
+
+                            <!-- OLD DROPDOWN BUTTON: -->
+
+                            <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="visually-hidden">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">°C</a></li>
-                                <li><a class="dropdown-item" href="#">°F</a></li>
-                            </ul>
+                            </button> -->
+                            <script>
+                                // document.getElementById("dropdownC").addEventListener("click", () => {
+                                //   document.getElementById("weatherUnit").innerHTML = "°C";
+                                // });
+                                // document.getElementById("dropdownF").addEventListener("click", () => {
+                                //   document.getElementById("weatherUnit").innerHTML = "°F";
+                                // });
+
+                                const toggleUnitsBtn = document.getElementById('toggle-units');
+
+                                toggleUnitsBtn.addEventListener('click', () => {
+                                // Toggle the unitGroup between us (Fahrenheit) and metric (Celsius)
+                                const unitGroup = window.weatherWidgetConfig[0].unitGroup === 'us' ? 'metric' : 'us';
+                                window.weatherWidgetConfig[0].unitGroup = unitGroup;
+
+                                // Reload the weather widget with the updated unitGroup parameter
+                                const existingWidget = document.querySelector('.weatherWidget');
+                                existingWidget.innerHTML = '';
+                                const widgetScript = document.createElement('script');
+                                widgetScript.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+                                widgetScript.setAttribute('data-timestamp', +new Date());
+                                existingWidget.appendChild(widgetScript);
+
+                                //Set button's inner text to °F or °C.
+                                toggleUnitsBtn.innerHTML = (unitGroup === 'us') ? "°F" : "°C";    
+
+                                });
+
+                            </script>
+
+                            <!-- <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" id="dropdownC" href="#">°C</a></li>
+                                <li><a class="dropdown-item" id="dropdownF" href="#">°F</a></li>
+                            </ul> -->
                         </div>
                     </td>
                 </tr>
