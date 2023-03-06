@@ -11,7 +11,7 @@ let insertButton = document.getElementById("insertButton")
 
 //update
 //PET PROFILE CREATE/EDITE UPDATE
- async function updateDoc(){
+ async function updatePetProfileDoc(){
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
@@ -28,7 +28,15 @@ let insertButton = document.getElementById("insertButton")
         alert("error" +error);
     });
 } 
-insertButton.addEventListener("click", updateDoc);
+insertButton.addEventListener("click", updatePetProfileDoc);
+
+
+
+
+
+
+
+
 
 
 
