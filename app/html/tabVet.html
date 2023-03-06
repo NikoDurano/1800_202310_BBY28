@@ -44,13 +44,45 @@
 
 <nav id="navbarPlaceholder"></nav>
 
-<div id = "textStuff">
-    VET INFO
+
+<div class="mainVetContainer">
+
+    <div id="topPortion">
+
+        <div id = "textStuff">
+            VET INFO
+        </div>
+
+        <div class="vetContactInfo" id="breed">
+            Vet contact #1 <span id="quote-goes-here"></span>
+            <button class="callVetButton" id="callVetButton1">CALL</button>
+        </div>
+
+        <div class="vetContactInfo" id="coatLength">
+            Vet contact #2
+            <button class="callVetButton" id="callVetButton2">CALL</button>
+        </div>
+        <div class="vetContactInfo" id="behavioralIssues">
+            Vet contact #3
+            <button class="callVetButton" id="callVetButton3">CALL</button>
+        </div>
+        <div class="vetContactInfo" id="physicalIssues">
+            Vet contact #4
+            <button class="callVetButton" id="callVetButton4">CALL</button>
+        </div>
+
+    </div>
+
+    <div id="bottomPortion">
+     
+    </div>
+
 </div>
 
+<!-- for some reason this can't be put into a div without stuff disappearing -->
 <div class="pac-card" id="pac-card">
     <div>
-      <div id="title">Autocomplete search</div>
+      <div id="title">Search for vets.</div>
       <div id="type-selector" class="pac-controls">
         <input
           type="radio"
@@ -95,10 +127,6 @@
   </div>
 
 <nav id="footerPlaceholder"></nav>
-
-
-
-
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
