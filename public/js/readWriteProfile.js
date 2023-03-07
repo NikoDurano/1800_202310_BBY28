@@ -10,7 +10,7 @@ let insertButton = document.getElementById("insertButton") */
 
 
 //update
-//PET PROFILE CREATE/EDITE UPDATE
+//PET PROFILE CREATE/EDIT UPDATE
  async function updatePetProfileDoc(){
     let nameBox = document.getElementById("nameBox");
     let ageBox = document.getElementById("ageBox");
@@ -35,6 +35,32 @@ let insertButton = document.getElementById("insertButton") */
     });
 } 
 //insertButton.addEventListener("click", updatePetProfileDoc);
+
+
+//USER PROFILE CREATE/EDIT UPDATE
+function updateUserProfileDoc() {
+    let userNameBox = document.getElementById("userNameBox");
+
+
+    //let nextButton = document.getElementById("userSubmitBtn")
+
+
+    const user = firebase.auth().currentUser;
+    const ref = db.collection("users").doc(user.uid);
+
+    ref.update({
+        userName: userNameBox.value,
+
+    }
+    )
+        .then(() => {
+            alert("works");
+            window.location.href = "petProfileCreator.html"
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
 
 
 
