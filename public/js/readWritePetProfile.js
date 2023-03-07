@@ -3,15 +3,20 @@
 
 //Ready
 //PET PROFILE CREATE/EDIT VARIBLES
-let nameBox = document.getElementById("nameBox");
+/* let nameBox = document.getElementById("nameBox");
 let ageBox = document.getElementById("ageBox");
 
-let insertButton = document.getElementById("insertButton")
+let insertButton = document.getElementById("insertButton") */
 
 
 //update
 //PET PROFILE CREATE/EDITE UPDATE
  async function updatePetProfileDoc(){
+    let nameBox = document.getElementById("nameBox");
+    let ageBox = document.getElementById("ageBox");
+    
+    //let insertButton = document.getElementById("insertButton")
+
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
@@ -29,7 +34,7 @@ let insertButton = document.getElementById("insertButton")
         alert("error" +error);
     });
 } 
-insertButton.addEventListener("click", updatePetProfileDoc);
+//insertButton.addEventListener("click", updatePetProfileDoc);
 
 
 
