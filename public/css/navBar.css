@@ -16,6 +16,10 @@ body {
 
 }
 
+.container-fluid {
+    max-width: 768px;
+}
+
 #footerPlaceholder {
     margin-top: auto;
 }

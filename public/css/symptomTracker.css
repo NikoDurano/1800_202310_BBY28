@@ -5,3 +5,17 @@
 #toggle-units {
     margin-top: 0;
 }
+
+.symptomTable {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-content: center;
+
+}
+
+.symptomItem {
+    background-color: #FFF;
+    padding: 5px;
+    text-align: center;
+}

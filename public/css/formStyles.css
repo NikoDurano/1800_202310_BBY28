@@ -1,7 +1,3 @@
-.symptomTable{
-    border: 1px solid black;
-}
-
 .symptomMainContainer{
     display: flex;
     justify-content: center;

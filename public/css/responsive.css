@@ -39,6 +39,21 @@ h1 {
     border-radius: 10px;
 }
 
+.progresscontainer {
+    grid-area: progress;
+    background-color: #0196B7;
+}
+
+.progress {
+    max-width: 568px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #219EBC;
+}
+
+.progress-bar {
+    background-color: #8ECAE6;
+}
 
 
 /* Container for mobile and tablet */
@@ -46,16 +61,17 @@ h1 {
     .responsive {
         display: grid;
         max-width: 768px;
-        min-height: 70vh;
+        min-height: 80vh;
         background-color: #FFF;
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr;
+        grid-template-rows: 1fr 0.5fr 5fr;
         grid-template-areas: 
         "title"
+        "progress"
         "content";
 
     }
@@ -65,17 +81,20 @@ h1 {
 @media only screen and (min-width: 769px) {
     .responsive {
         display: grid;
+        min-width: 768px;
         max-width: 768px;
-        height: 824px;
+        min-height: 80vh;
+        max-height: 80vh;
         background-color: #FFF;
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr;
+        grid-template-rows: 1fr 0.5fr 5fr;
         grid-template-areas: 
         "title"
+        "progress"
         "content";
     }
 }

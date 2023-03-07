@@ -56,35 +56,49 @@
 
         <div class="Content">
             <div class="symptomTable">
-                <div class="symptomItem">Pet profile goes here</div>
+                <!-- Templates for general use, not displayed -->
+                <template id="petCardTemplate">
+                    <div class="card py-2 mx-2" style="width: 18rem">
+                        <img class="card-image card-img-top" src=" ..." alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-length">placeholder</p>
+                            <br />
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the
+                                bulk of the card's content.
+                            </p>
+                            <a class="btn btn-primary card-href">Read more ...</a>
+                        </div>
+                    </div>
+                </template>
+
+                <div class="symptomItem">
+                    <button id="insertButton" type="button"
+                        onclick="window.location.href='symptom2Weather.html'">NEXT</button>
+                </div>
             </div>
 
-            <div class="symptomItem">
-                <button id="insertButton" type="button"
-                    onclick="window.location.href='symptom2Weather.html'">NEXT</button>
-            </div>
         </div>
 
-    </div>
-
-    <nav id="footerPlaceholder"></nav>
+        <nav id="footerPlaceholder"></nav>
 
 
 
 
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="/scripts/firebaseAPI_BBY28.js"></script>
-    <script src="/public/js/skeleton.js"></script>
-    <script src="/public/js/symptomtracker.js"></script>
+        <!-- Link to scripts of your own -->
+        <script src="/scripts/firebaseAPI_BBY28.js"></script>
+        <script src="/public/js/skeleton.js"></script>
+        <script src="/public/js/symptomtracker.js"></script>
 
 
 
-    <!-- <script src="./scripts/script.js"></script> -->
+        <!-- <script src="./scripts/script.js"></script> -->
 
 
 </body>
