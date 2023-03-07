@@ -1,16 +1,29 @@
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyA0ckezpw8hbjuoljUWDAUOiVKe87V6hTg",
-    authDomain: "bby-28-hawtpaw.firebaseapp.com",
-    projectId: "bby-28-hawtpaw",
-    storageBucket: "bby-28-hawtpaw.appspot.com",
-    messagingSenderId: "913241136631",
-    appId: "1:913241136631:web:cb7f56fe0528ad075de2f2"
-  };
-  
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Creates Dropdown from List of Pets
+function populateDropdown(collection, documentId) {
+    const dropdown = document.getElementById("my-dropdown");
+    let options = [];
 
+    db.collection(collection)
+        .doc(documentId)
+        .get()
+        .then((doc) => {
+            options.push({
+                id: doc.id,
+                value: doc.data().namePet,
+            });
+
+            options.forEach((option) => {
+                const el = document.createElement("option");
+                el.value = option.id;
+                el.textContent = option.namePet;
+                dropdown.appendChild(el);
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+populateDropdown("users", "petInfo");
 
 
 //------------------------------------------------------------------------------
