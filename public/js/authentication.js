@@ -37,10 +37,21 @@ var uiConfig = {
             })
             //Justin
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
-                  agitation: "false"
-              // nameOfKeyValuePair: "defaultValue"
-
+                  agitation: "",
+                  breathing: "",
+                  currenttemp: "",
+                  diarrhea: "",
+                  dizziness: "",
+                  drooling: "",
+                  gums: "",
+                  heartrate: "",
+                  lethargy: "",
+                  panting: "",
+                  tongue: "",
+                  vomit: "",
+                  weathercond: "",
             })
+            
             //Joseph
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid).set({
                   nameVet: "name"
