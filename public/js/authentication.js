@@ -27,7 +27,13 @@ var uiConfig = {
             })
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).set({
                   namePet: "name",
-                  agePet:"age"
+                  agePet:"age",
+                  coatType:"",
+                  flatFace:"",
+                  brainProblem:"",
+                  heartProblem:"",
+                  lungProblem:""
+
             })
             //Justin
             db.collection("users").doc(user.uid).collection("petSymptoms").doc(user.uid).set({

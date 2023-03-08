@@ -77,12 +77,52 @@ async function updatePetProfile1Doc(){
     )
     .then(()=>{
         alert("works");
+        window.location.href = "petProfileCreator2.html"
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+} 
+
+async function updatePetProfile2Doc(){
+    let ageBox = document.getElementById("ageBox");
+    document.forms["coat"].coatLength.options;
+    document.forms["face"].flatFace.options;
+    document.forms["heart"].heartProb.options;
+    document.forms["lungs"].lungProb.options;
+    document.forms["brain"].brainProb.options;
+
+
+
+
+    
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+
+        ref.update({
+            agePet:ageBox.value,
+            coatType: this.coatLength.value,
+            flatFace: this.flatFace.value,
+            heartProblem: this.heartProb.value,
+            lungProblem: this.lungProb.value,
+            brainProblem: this.brainProb.value
+
+
+        }
+    )
+    .then(()=>{
+        alert("works");
         window.location.href = "tabPetProfile.html"
     })
     .catch((error)=>{
         alert("error" +error);
     });
 } 
+
+
 
 
 

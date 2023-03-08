@@ -9,10 +9,19 @@ body {
     background-color: #8ecae6;
     margin: 0;
     padding: 0;
-    font-family: "josefin";
+    font-family: "Josefin";
 }
 
-
+#backButton{
+    grid-area: backTop;
+    border: none;
+    background-color: transparent;
+    padding-top: 30px;
+    padding-right: 80vw;
+    padding-left: 5vw;
+    position: absolute;
+    
+}
 #textBoxTop{
     grid-area: textTop;
 }
@@ -55,8 +64,9 @@ body {
 .top{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows:  1fr 4fr 1fr;
     grid-template-areas: 
+    "backTop"
     "pic"
     "word";
     grid-area: up;

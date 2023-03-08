@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #8ecae6;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+}
+
+#backButton{
+    grid-area: backTop;
+    border: none;
+    background-color: transparent;
+    padding-top: 30px;
+    padding-right: 80vw;
+    padding-left: 5vw;
+    position: absolute;
+}
+#petStuff{
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.age{
+    grid-area: age;
+    padding:  0 200px 0 200px;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coat{
+    grid-area: coat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#coatLength{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+.face{
+    grid-area: face;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#flatFace{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.heart{
+    grid-area: heart;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#heartProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.lungs{
+    grid-area: lungs;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#lungProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.brain{
+    grid-area: brain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#brainProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+#userSubmitBtn{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #219EBC;
+    border-color: #219EBC;
+    border-radius: 10px;
+    color: white;
+
+}
+#nextButtonBox{
+    grid-area: next;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mainCon{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "backTop"
+    "info"
+    "age"
+    "coat"
+    "face"
+    "brain"
+    "heart"
+    "lungs"
+    "next";
+
+    background-color: white;
+    margin: 50px;
+    border-radius: 10px;
+    height: 89vh;
+
+
+/*     padding:  0 100px 0 100px;
+ */
+}
+
+
