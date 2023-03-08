@@ -42,8 +42,9 @@ var uiConfig = {
 
             })
             //Joseph
-            db.collection("users").doc(user.uid).collection("petVetInfo").doc(user.uid).set({
+            db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid).set({
                   nameVet: "name"
+                  
               // nameOfKeyValuePair: "defaultValue"
             }) 
 
