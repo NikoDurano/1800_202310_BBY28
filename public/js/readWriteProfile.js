@@ -55,12 +55,34 @@ function updateUserProfileDoc() {
     )
         .then(() => {
             alert("works");
-            window.location.href = "petProfileCreator.html"
+            window.location.href = "petProfileCreator1.html"
         })
         .catch((error) => {
             alert("error" + error);
         });
 }
+
+async function updatePetProfile1Doc(){
+    let nameBox = document.getElementById("userNameBox");
+    
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+
+        ref.update({
+            namePet:nameBox.value,
+        }
+    )
+    .then(()=>{
+        alert("works");
+        window.location.href = "tabPetProfile.html"
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+} 
 
 
 
