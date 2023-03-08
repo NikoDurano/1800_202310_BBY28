@@ -115,7 +115,7 @@ async function updatePetProfile2Doc(){
     )
     .then(()=>{
         alert("works");
-        window.location.href = "tabPetProfile.html"
+        window.location.href = "vetProfileCreator.html"
     })
     .catch((error)=>{
         alert("error" +error);
