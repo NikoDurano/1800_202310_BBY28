@@ -36,8 +36,8 @@ var uiConfig = {
 
             })
             //Justin
-            db.collection("users").doc(user.uid).collection("petSymptoms").doc(user.uid).set({
-                  symptomOne: "Symptom"
+            db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
+                  agitation: "false"
               // nameOfKeyValuePair: "defaultValue"
 
             })
