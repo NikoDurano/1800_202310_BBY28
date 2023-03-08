@@ -13,10 +13,11 @@ body {
 }
 
 
-
-
-
+#textBoxTop{
+    grid-area: textTop;
+}
 #profilePic{
+    grid-area: profilePic;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -29,9 +30,18 @@ body {
 }
 #profilePicHolder{ /* Not the profile pic, just the div that holds it */
     grid-area: pic;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "textTop"
+    "profilePic";
+
+    align-items: end;
+    justify-items: center;
+/*     display: flex;
     justify-content: center;
-    align-items: flex-end; 
+    align-items: flex-end;  */
 
 
 }
