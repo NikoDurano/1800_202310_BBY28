@@ -3,8 +3,7 @@ function populateDropdown(collection, documentId) {
     const dropdown = document.getElementById("my-dropdown");
     let options = [];
 
-    db.collection(collection)
-        .doc(documentId)
+    db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
         .get()
         .then((doc) => {
             options.push({
