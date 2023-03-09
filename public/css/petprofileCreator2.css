@@ -40,14 +40,7 @@ body {
 }
 
 
-.age{
-    grid-area: age;
-    padding:  0 200px 0 200px;  
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 .coat{
     grid-area: coat;
@@ -150,11 +143,10 @@ body {
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "backTop"
     "info"
-    "age"
     "coat"
     "face"
     "brain"

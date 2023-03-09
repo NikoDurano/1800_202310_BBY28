@@ -43,7 +43,7 @@ body {
 
 .name{
     grid-area: name;
-    padding:  0 200px 0 200px;  
+ 
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -51,14 +51,14 @@ body {
 }
 .number{
     grid-area: number;
-    padding:  0 200px 0 200px;  
+ 
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }.locStat{
     grid-area: loc;
-    padding:  0 200px 0 200px;  
+  
     display: flex;
     justify-content: flex-start;
     align-items: center;

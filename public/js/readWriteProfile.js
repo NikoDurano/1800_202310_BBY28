@@ -90,7 +90,6 @@ async function updatePetProfile1Doc(){
 } 
 
 async function updatePetProfile2Doc(){
-    let ageBox = document.getElementById("ageBox");
     document.forms["coat"].coatLength.options;
     document.forms["face"].flatFace.options;
     document.forms["heart"].heartProb.options;
@@ -104,7 +103,7 @@ async function updatePetProfile2Doc(){
     const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
         ref.update({
-            agePet:ageBox.value,
+
             coatType: this.coatLength.value,
             flatFace: this.flatFace.value,
             heartProblem: this.heartProb.value,
