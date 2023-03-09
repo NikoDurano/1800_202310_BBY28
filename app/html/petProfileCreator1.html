@@ -50,57 +50,76 @@
 
     <div class="mainCon">
 
-        <div class="top">
+        <div id="backButtonCon">
+            <button id="backButton" onclick="window.location.href ='userProfileCreator.html'">
+                <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
+            </button>
 
-            <div id="backButtonCon">
-
-                <button id="backButton" onclick="window.location.href ='userProfileCreator.html'">
-                    <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
-                </button>
-
-                <div id="blank">
-
-                </div>
-
-            </div>
-
-            <div id="profilePicHolder">
-                <div id="textBoxTop">
-                    <h1>Pet Profile</h1>
-                </div>
-                <div id="profilePic">
-
-                </div>
-            </div>
-
-
-            <div id="profilePicDesc">
-                Add Pet Picture
-            </div>
+            <div id="blank"></div>
         </div>
 
-        <div class="bottom">
 
-            <div id="textBoxBot">
+        <div id="profilePicHolder">
+
+            <div id="textBoxTop">
+                <h1>Pet Profile</h1>
+            </div>
+            <div id="profilePic"></div>
+
+        </div>
+
+        <div id="profilePicDesc">
+            Add Pet Picture
+        </div>
+
+
+        <div id="name">
+            <div id="nameTextBoxBot">
                 Enter Name of Pet
             </div>
 
-            <div id="inputTextBox">
-                <input id="userNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
+            <div id="inputNameTextBox">
+                <input id="petNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
             </div>
-
-
-
-
-            <div id="nextButtonBox">
-                <button id="userSubmitBtn" type="submit" onclick="updatePetProfile1Doc()">Next</button>
-            </div>
-
         </div>
+
+        <div id="age">
+            <div id="ageTextBoxBot">
+                Enter Age of Pet
+            </div>
+
+            <div id="inputAgeTextBox">
+                <input id="ageNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
+            </div>
+        </div>
+
+        <form name="weight" class="weight">
+            <div id="weightText">
+                Weight of Pet
+            </div>
+            <select name="weightPet" id="weightPet">
+                <option value="0-25 lbs">0-25 lbs</option>
+                <option value="25-50 lbs">25-50 lbs</option>
+                <option value="50 -75 lbs">50-75 lbs</option>
+                <option value="75 - 100 lbs">75-100 lbs</option>
+                <option value="100+ lbs">100+ lbs</option>
+            </select>
+        </form>
+
+        <div id="nextButtonBox">
+            <button id="userSubmitBtn" type="submit" onclick="updatePetProfile1Doc()">Next</button>
+        </div>
+
+
+
+
+
+
+
 
     </div>
 
-    <div id="footer"></div>
+
 
 
 

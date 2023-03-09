@@ -28,7 +28,7 @@ var uiConfig = {
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).set({
                   namePet: "name",
                   agePet:"age",
-                  wightPet:"",
+                  weightPet:"",
                   coatType:"",
                   flatFace:"",
                   brainProblem:"",
