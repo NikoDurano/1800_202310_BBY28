@@ -57,20 +57,36 @@
         </div>
 
         <div class="vetContactInfo" id="breed">
-            Vet contact #1 <span id="quote-goes-here"></span>
-            <button class="callVetButton" id="callVetButton1">CALL</button>
+            Vet contact #1 <span id="vet1Name">Name</span>
+            <button class="callVetButton" id="callVetButton1" onclick="fard()">CALL</button>
+<!---------- TODO: put this into it's own js file, or onto an already made one --------------------------------------------------------------------->
+            <script>
+
+              function fard() {
+
+                const name = document.getElementById("vet1Name");
+                const user = firebase.auth().currentUser;
+                const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
+                ref.get().then(doc => {
+                  console.log(doc.data().nameVet);
+                  name.textContent = doc.data().nameVet;
+                });
+
+              }
+            </script>
+
         </div>
 
-        <div class="vetContactInfo" id="coatLength">
-            Vet contact #2
+        <div class="vetContactInfo" id="tabVetVetName">
+            Vet Name
             <button class="callVetButton" id="callVetButton2">CALL</button>
         </div>
-        <div class="vetContactInfo" id="behavioralIssues">
-            Vet contact #3
+        <div class="vetContactInfo" id="tabVetVetAddress">
+            Vet Address
             <button class="callVetButton" id="callVetButton3">CALL</button>
         </div>
-        <div class="vetContactInfo" id="physicalIssues">
-            Vet contact #4
+        <div class="vetContactInfo" id="tabVetVetNumber">
+            Vet Phone Number
             <button class="callVetButton" id="callVetButton4">CALL</button>
         </div>
 
@@ -140,7 +156,7 @@
     <script src="/public/js/skeleton.js"></script>
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
     <script type="module" src="/public/js/vetMap.js"></script>
-
+    <script src="/public/js/vetInfo.js"></script>
      <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,

@@ -128,7 +128,9 @@ function initMap() {
 }
 window.initMap = initMap;
 
-//Default google code. Example at https://console.cloud.google.com/google/maps-apis/discover/autocomplete?project=fourth-amp-379407
+
+//-----------DEFAULT GOOGLE CODE    DO NOT DELETE YET----------------------
+//Example at https://console.cloud.google.com/google/maps-apis/discover/autocomplete?project=fourth-amp-379407
 // function initMap() {
 //   const map = new google.maps.Map(document.getElementById("map"), {
 //     center: { lat: 40.749933, lng: -73.98633 },
