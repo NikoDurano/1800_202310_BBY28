@@ -92,10 +92,6 @@ async function updatePetProfile2Doc(){
     document.forms["lungs"].lungProb.options;
     document.forms["brain"].brainProb.options;
 
-
-
-
-    
     //let insertButton = document.getElementById("insertButton")
 
     const user = firebase.auth().currentUser;
