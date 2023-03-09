@@ -30,7 +30,9 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
-    <link rel="stylesheet" href="/public/css/symptom2Weather.css">
+    <link rel="stylesheet" href="/public/css/formStyles.css">
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="stylesheet" href="/public/css/symptomTracker.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -52,36 +54,66 @@
         <div class="mainCon">
 
 
-            <button id="backButton" onclick="window.location.href ='symptom1Pet.html'">
+            <button id="backButton" onclick="window.location.href ='symptom2Weather.html'">
                 <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
             </button>
     
             <div id="petStuff">
-                    <h1> What Is The Current Temperature? </h1> 
+                    <h1> How is your pet behaving?   </h1> 
                 </div>
       
-                <div class="temperature">
-                    <div id="BoxText">
-                        Pet Age
-                    </div>
-                    <div id="temperatureBoxInputBox">
-                        <input id="currentTempBox" class="form-control" type="text" placeholder="Current Temp" aria-label="Name">
-                    </div>
+            <form  name="panting" class="qcontainer">
+                <div id="question">
+                    Panting
                 </div>
+                <select name="panting" id="panting">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
 
-                <form name="weather" class="weather">
-                    <div id="BoxText">
-                        Weather Condition
-                    </div>
-                    <select name="weathercond" id="weathercond">
-                        <option value="normal">Normal</option>
-                        <option value="heatwave">Heatwave</option>
-                        <option value="coldsnap">Coldsnap</option>
-                    </select>
-                </form>
+            <form  name="drooling" class="qcontainer">
+                <div id="question">
+                    Drooling
+                </div>
+                <select name="drooling" id="drooling">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
+
+            <form  name="agitation" class="qcontainer">
+                <div id="question">
+                    Agitated
+                </div>
+                <select name="agitation" id="agitation">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
+
+            <form  name="dizziness" class="qcontainer">
+                <div id="question">
+                    Dizzy
+                </div>
+                <select name="dizziness" id="dizziness">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
+
+            <form  name="lethargy" class="qcontainer">
+                <div id="question">
+                    Lethargic
+                </div>
+                <select name="lethargy" id="lethargy">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
     
             <div id="nextButtonBox">
-                <button id="userSubmitBtn" type="submit" onclick="updateTracker2Doc(); window.location.href='symptom3Behavior.html'">Next</button>
+                <button id="userSubmitBtn" type="submit" onclick="updateTracker3Doc(); window.location.href='symptom4Physical.html'">Next</button>
             </div>
     
     

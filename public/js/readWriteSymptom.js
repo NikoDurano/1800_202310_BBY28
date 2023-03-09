@@ -1,3 +1,26 @@
+async function updateTracker2Doc(){
+    let tempBox = document.getElementById("currentTempBox");
+    document.forms["weathercond"].weathercond.options;
+
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid)
+
+        ref.update({
+            currenttemp: tempBox.value,
+            weathercond: this.weathercond.value,
+        }
+    )
+    .then(()=>{
+        alert("Weather form submitted");
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+} 
+
 async function updateTracker3Doc(){
     document.forms["panting"].panting.options;
     document.forms["drooling"].drooling.options;
@@ -20,8 +43,7 @@ async function updateTracker3Doc(){
         }
     )
     .then(()=>{
-        alert("Tracker form submitted");
-        window.location.href = "home.html"
+        alert("Behavior form submitted");
     })
     .catch((error)=>{
         alert("error" +error);

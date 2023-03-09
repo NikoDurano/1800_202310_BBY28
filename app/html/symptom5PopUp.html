@@ -30,7 +30,9 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
-    <link rel="stylesheet" href="/public/css/symptom2Weather.css">
+    <link rel="stylesheet" href="/public/css/formStyles.css">
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="stylesheet" href="/public/css/symptomTracker.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -52,36 +54,24 @@
         <div class="mainCon">
 
 
-            <button id="backButton" onclick="window.location.href ='symptom1Pet.html'">
+            <button id="backButton" onclick="window.location.href ='symptom4Physical.html'">
                 <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
             </button>
     
             <div id="petStuff">
-                    <h1> What Is The Current Temperature? </h1> 
+                    <h1> Pop-Up Alert!   </h1> 
+                    <p>Will either (1)Alert owner that pet needs to be taken to the Vet
+                        (2) Alert owner that their pet needs some Care
+                        (3) Thank owner for filling out form, pet appears OK
+                    </p>
                 </div>
-      
-                <div class="temperature">
-                    <div id="BoxText">
-                        Pet Age
-                    </div>
-                    <div id="temperatureBoxInputBox">
-                        <input id="currentTempBox" class="form-control" type="text" placeholder="Current Temp" aria-label="Name">
-                    </div>
-                </div>
-
-                <form name="weather" class="weather">
-                    <div id="BoxText">
-                        Weather Condition
-                    </div>
-                    <select name="weathercond" id="weathercond">
-                        <option value="normal">Normal</option>
-                        <option value="heatwave">Heatwave</option>
-                        <option value="coldsnap">Coldsnap</option>
-                    </select>
-                </form>
     
             <div id="nextButtonBox">
-                <button id="userSubmitBtn" type="submit" onclick="updateTracker2Doc(); window.location.href='symptom3Behavior.html'">Next</button>
+                <button id="userSubmitBtn" type="submit">Vet Contact</button>
+            </div>
+
+            <div id="nextButtonBox">
+                <button id="userSubmitBtn" type="submit">Pet Care Tips</button>
             </div>
     
     
