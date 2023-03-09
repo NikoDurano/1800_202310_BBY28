@@ -51,246 +51,72 @@
     <nav id="navbarPlaceholder"></nav>
 
     <div class="responsive">
-        <div class="Title">
-            <a class="nav-link" aria-current="page" href="home.html">
-            <button class="Back-arrow">
+        <div class="mainCon">
+
+
+            <button id="backButton" onclick="window.location.href ='symptom2Weather.html'">
                 <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
             </button>
-        </a>
-            <h1>Symptom Tracker</h1>
-        </div>
-        <div class="Content">
-            <table class="symptomTable">
-                <tr>
-                    <th>
-                        Temperature Input
-                    </th>
-                    <td></td>
-                </tr>
     
-                <tr>
-                    <td>
-                        Current Temperature
-                    </td>
-                    <td>
-                        <div class="input-group">
-                            <!-- <input type="text" class="form-control" placeholder="Temperature"
-                                aria-label="Text input with segmented dropdown button"> -->
-                            <!-- the DIV that will contain the widget -->
-                            <div class="weatherWidget" ></div>
-                            
-                            <script>
+            <div id="petStuff">
+                    <h1> How is your pet behaving?   </h1> 
+                </div>
+      
+            <form  name="panting" class="qcontainer">
+                <div id="question">
+                    Panting
+                </div>
+                <select name="panting" id="panting">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
 
-                                window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
-                                window.weatherWidgetConfig.push({
-                                    selector:".weatherWidget",
-                                    apiKey:"EZAPPCTN5ASABXRVFPGQLMKAC", //Sign up for your personal key
-                                    location: "", //Enter an address, "" sets location to user's location.
-                                    unitGroup:"metric", //"us" or "metric"
-                                    forecastDays:5, //how many days forecast to show
-                                    title: "", //"" makes default title
-                                    showTitle:true, 
-                                    showConditions:true
-                                });
-                                
-                                (function() {
-                                    var d = document, s = d.createElement('script');
-                                    s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
-                                    s.setAttribute('data-timestamp', +new Date());
-                                    (d.head || d.body).appendChild(s);
-                                })();
-                            </script>  
+            <form  name="drooling" class="qcontainer">
+                <div id="question">
+                    Drooling
+                </div>
+                <select name="drooling" id="drooling">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
 
+            <form  name="agitation" class="qcontainer">
+                <div id="question">
+                    Agitated
+                </div>
+                <select name="agitation" id="agitation">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
 
-                            <button type="button" class="btn btn-outline-secondary" id="toggle-units">°C</button>
+            <form  name="dizziness" class="qcontainer">
+                <div id="question">
+                    Dizzy
+                </div>
+                <select name="dizziness" id="dizziness">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
 
-                            <!-- OLD DROPDOWN BUTTON: -->
-
-                            <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button> -->
-                            <script>
-                                // document.getElementById("dropdownC").addEventListener("click", () => {
-                                //   document.getElementById("weatherUnit").innerHTML = "°C";
-                                // });
-                                // document.getElementById("dropdownF").addEventListener("click", () => {
-                                //   document.getElementById("weatherUnit").innerHTML = "°F";
-                                // });
-
-                                const toggleUnitsBtn = document.getElementById('toggle-units');
-
-                                toggleUnitsBtn.addEventListener('click', () => {
-                                // Toggle the unitGroup between us (Fahrenheit) and metric (Celsius)
-                                const unitGroup = window.weatherWidgetConfig[0].unitGroup === 'us' ? 'metric' : 'us';
-                                window.weatherWidgetConfig[0].unitGroup = unitGroup;
-
-                                // Reload the weather widget with the updated unitGroup parameter
-                                const existingWidget = document.querySelector('.weatherWidget');
-                                existingWidget.innerHTML = '';
-                                const widgetScript = document.createElement('script');
-                                widgetScript.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
-                                widgetScript.setAttribute('data-timestamp', +new Date());
-                                existingWidget.appendChild(widgetScript);
-
-                                //Set button's inner text to °F or °C.
-                                toggleUnitsBtn.innerHTML = (unitGroup === 'us') ? "°F" : "°C";    
-
-                                });
-
-                            </script>
-
-                            <!-- <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" id="dropdownC" href="#">°C</a></li>
-                                <li><a class="dropdown-item" id="dropdownF" href="#">°F</a></li>
-                            </ul> -->
-                        </div>
-                    </td>
-                </tr>
+            <form  name="lethargy" class="qcontainer">
+                <div id="question">
+                    Lethargic
+                </div>
+                <select name="lethargy" id="lethargy">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
     
-                <tr>
-                    <td>
-                        Weather Conditions
-                    </td>
-                    <td></td>
-                </tr>
+            <div id="nextButtonBox">
+                <button id="userSubmitBtn" type="submit" onclick="updateTracker3Doc()">Next</button>
+            </div>
     
-                <tr>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                            <label class="btn btn-outline-primary">Heatwave</label>
     
-                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary">Normal</label>
-    
-                            <input type="radio" class="btn-check" name="btnradio" autocomplete="off">
-                            <label class="btn btn-outline-primary">Cold snap</label>
-                        </div>
-                    </td>
-                    <td></td>
-    
-                </tr>
-    
-                <tr>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Thunderstorm
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Heavy Winds
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Heavy Smoke
-                            </label>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-    
-            <table class="symptomTable">
-                <tr>
-                    <th>
-                        Heatstroke Symptoms
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <div>Behavioral Symptoms</div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Panting
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Drooling
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Agitation
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Dizziness
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Lethargy
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Collapsing
-                            </label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>Physical Symptoms</div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Very Red or Pale Gums
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Bright red tongue
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Increased heart rate
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Breathing distress
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Vomiting
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <label class="form-check-label">
-                                Diarrhea
-                            </label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="button" class="btn btn-secondary">Submit</button>
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
  
@@ -309,12 +135,12 @@
     <!-- Link to scripts of your own -->
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/readWriteSymptom.js"></script>
 
 
 
 
-
-
+    
 </body>
 
 </html>
