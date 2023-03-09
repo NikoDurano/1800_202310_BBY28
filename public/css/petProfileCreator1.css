@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #8ecae6;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+}
+
+
+
+#blank{
+    grid-area: blank;
+}
+#backButtonCon{
+    grid-area: backTop;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "backBtn blank";
+}
+#backButton{
+    grid-area: backBtn;
+    border: none;
+    background-color: transparent;
+    padding: 20px 0 0 40px;
+    position: absolute;
+    
+}
+#textBoxTop{
+    grid-area: textTop;
+}
+#profilePic{
+    grid-area: profilePic;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+
+
+}
+#profilePicHolder{ /* Not the profile pic, just the div that holds it */
+    grid-area: pic;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "textTop"
+    "profilePic";
+
+    align-items: end;
+    justify-items: center;
+/*     display: flex;
+    justify-content: center;
+    align-items: flex-end;  */
+
+
+}
+#profilePicDesc{
+    grid-area: word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.top{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 4fr 1fr;
+    grid-template-areas: 
+    "backTop"
+    "pic"
+    "word";
+    grid-area: up;
+
+}
+
+#textBoxBot{
+    grid-area: textBox;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#userNameBox{
+    box-shadow:  1px 2px black;
+    max-width: 330px;
+}
+#inputTextBox{
+    grid-area: inputs;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+#userSubmitBtn{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #219EBC;
+    border-color: #219EBC;
+    border-radius: 10px;
+    color: white;
+
+}
+#nextButtonBox{
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+
+}
+.bottom{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "textBox"
+    "inputs"
+    "button";
+    grid-area: down;
+
+
+}
+.mainCon{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 44vh 45vh;
+    grid-template-areas: 
+    "up"
+    "down";
+    background-color: white;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width : 768px){
+    
+}
