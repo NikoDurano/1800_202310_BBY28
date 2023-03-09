@@ -63,8 +63,11 @@ function updateUserProfileDoc() {
 }
 
 async function updatePetProfile1Doc(){
-    let nameBox = document.getElementById("userNameBox");
+    let nameBox = document.getElementById("petNameBox");
+    let ageBox = document.getElementById("ageNameBox");
     
+    document.forms["weight"].weightPet.options;
+
     //let insertButton = document.getElementById("insertButton")
 
     const user = firebase.auth().currentUser;
@@ -73,6 +76,8 @@ async function updatePetProfile1Doc(){
 
         ref.update({
             namePet:nameBox.value,
+            agePet:ageBox.value,
+            weightPet:this.weightPet.value
         }
     )
     .then(()=>{

@@ -14,6 +14,7 @@ body {
 
 
 
+
 #blank{
     grid-area: blank;
 }
@@ -31,76 +32,71 @@ body {
     background-color: transparent;
     padding: 20px 0 0 40px;
     position: absolute;
-    
 }
 #textBoxTop{
-    grid-area: textTop;
-}
-#profilePic{
-    grid-area: profilePic;
+    grid-area: textBox;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+}
+#profilePic{
+    grid-area: petPic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid black;
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
-
-
+    height: 100px;
+    width: 100px;
 }
-#profilePicHolder{ /* Not the profile pic, just the div that holds it */
-    grid-area: pic;
+#profilePicHolder{
+    grid-area: profilePic;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "textTop"
-    "profilePic";
-
+    "textBox"
+    "petPic";
     align-items: end;
     justify-items: center;
-/*     display: flex;
-    justify-content: center;
-    align-items: flex-end;  */
-
-
+    
 }
 #profilePicDesc{
-    grid-area: word;
+    grid-area: profilePicText;
     display: flex;
-    justify-content: center;
     align-items: center;
-
-}
-.top{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:  1fr 4fr 1fr;
-    grid-template-areas: 
-    "backTop"
-    "pic"
-    "word";
-    grid-area: up;
-
-}
-
-#textBoxBot{
-    grid-area: textBox;
-    display: flex;
     justify-content: center;
-    align-items: flex-end;
 }
-#userNameBox{
-    box-shadow:  1px 2px black;
-    max-width: 330px;
-}
-#inputTextBox{
-    grid-area: inputs;
+#name{
+    grid-area: name;
+    padding:  0 10vw 0 10vw;  
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    flex-direction: column;
+}
+#age{
+    grid-area: age;
+    padding:  0 10vw 0 10vw;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.weight{
+    grid-area: weightPet;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#weightPet{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
 }
 #userSubmitBtn{
     padding-left: 10vw;
@@ -114,36 +110,32 @@ body {
 
 }
 #nextButtonBox{
-    grid-area: button;
+    grid-area: next;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
-
-}
-.bottom{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "textBox"
-    "inputs"
-    "button";
-    grid-area: down;
-
-
 }
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 44vh 45vh;
+    grid-template-rows: 0.2 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "up"
-    "down";
+    "backTop"
+    "profilePic"
+    "profilePicText"
+    "name"
+    "age"
+    "weightPet"
+    "next";
+
     background-color: white;
     margin: 50px;
     border-radius: 10px;
+    height: 89vh;
+
+
 }
+
 
 
 @media only screen and (max-width : 768px){
