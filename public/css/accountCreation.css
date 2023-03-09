@@ -12,13 +12,24 @@ body {
     font-family: "Josefin";
 }
 
-#backButton{
+
+
+#blank{
+    grid-area: blank;
+}
+#backButtonCon{
     grid-area: backTop;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "backBtn blank";
+}
+#backButton{
+    grid-area: backBtn;
     border: none;
     background-color: transparent;
-    padding-top: 30px;
-    padding-right: 80vw;
-    padding-left: 5vw;
+    padding: 20px 0 0 40px;
     position: absolute;
     
 }
