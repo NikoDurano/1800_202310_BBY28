@@ -79,7 +79,7 @@
                             apiKey: "EZAPPCTN5ASABXRVFPGQLMKAC", //Sign up for your personal key
                             location: "", //Enter an address, "" sets location to user's location.
                             unitGroup: "metric", //"us" or "metric"
-                            forecastDays: 4, //how many days forecast to show
+                            forecastDays: 0, //how many days forecast to show
                             title: "", //"" makes default title
                             showTitle: true,
                             showConditions: true
@@ -89,27 +89,17 @@
                             var d = document,
                                 s = d.createElement('script');
                             s.src =
-                                'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
-                            s.setAttribute('data-timestamp', +new Date());
+                                //-----Default javaScript, do not delete! ---------------
+                                // 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+                                "/public/js/weatherAPI.js";
+                                s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();
                     </script>
 
                     <button type="button" class="btn btn-outline-secondary" id="toggle-units">°C</button>
 
-                    <!-- OLD DROPDOWN BUTTON: -->
-
-                    <!-- <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button> -->
                     <script>
-                        // document.getElementById("dropdownC").addEventListener("click", () => {
-                        //   document.getElementById("weatherUnit").innerHTML = "°C";
-                        // });
-                        // document.getElementById("dropdownF").addEventListener("click", () => {
-                        //   document.getElementById("weatherUnit").innerHTML = "°F";
-                        // });
 
                         const toggleUnitsBtn = document.getElementById('toggle-units');
 

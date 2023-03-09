@@ -54,8 +54,11 @@ var uiConfig = {
             
             //Joseph
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid).set({
-                  nameVet: "name"
-                  
+                  nameVet: "DR_DOOM",
+                  addressVet: "DEFAULT_ADDRESS",
+                  emailVet: "DEFAULT_EMAIL",
+                  clinicName: "DOOM_CLINIC",
+                  phoneNumberVet: 1234567890
               // nameOfKeyValuePair: "defaultValue"
             }) 
 

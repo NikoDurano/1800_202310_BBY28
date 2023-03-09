@@ -122,7 +122,33 @@ async function updatePetProfile2Doc(){
     });
 } 
 
+async function updateVetProfileCreator() {
 
+    let vetName = document.getElementById("vetNameInput");
+    let vetPhone = document.getElementById("vetPhoneInput");
+    let vetLocation = document.getElementById("vetLocationInput");
+
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
+        ref.update({
+            
+            nameVet: vetName.value,
+            phoneNumberVet: vetPhone.value,
+            addressVet: vetLocation.value
+
+        }
+    )
+    .then(()=>{
+        alert("works");
+        window.location.href = "tabPetProfile.html"
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+
+}
 
 
 
