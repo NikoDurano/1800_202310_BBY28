@@ -21,10 +21,16 @@ body {
 #backButtonCon{
     grid-area: backTop;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "backBtn blank";
+    "backBtn blank backBtnR";
+}
+#backButtonR{
+    grid-area: backBtnR;
+    border: none;
+    background-color: transparent;
+
 }
 #backButton{
     
@@ -137,7 +143,10 @@ body {
 
 }
 
-
+#foot{
+    position: sticky;
+    bottom: 0;
+}
 
 @media only screen and (max-width : 768px){
     

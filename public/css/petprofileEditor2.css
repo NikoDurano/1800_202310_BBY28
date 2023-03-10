@@ -13,92 +13,121 @@ body {
 }
 
 
-
-
 #blank{
     grid-area: blank;
 }
 #backButtonCon{
     grid-area: backTop;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "backBtn blank";
+    "backBtn blank backBtnR";
+}
+#backButtonR{
+    grid-area: backBtnR;
+    border: none;
+    background-color: transparent;
+
 }
 #backButton{
-    
     grid-area: backBtn;
     border: none;
     background-color: transparent;
     padding: 20px 0 0 40px;
     position: absolute;
 }
-#textBoxTop{
-    grid-area: textBox;
+#petStuff{
+    grid-area: info;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#profilePic{
-    grid-area: petPic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-}
-#profilePicHolder{
-    grid-area: profilePic;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "textBox"
-    "petPic";
-    align-items: end;
-    justify-items: center;
     
 }
-#profilePicDesc{
-    grid-area: profilePicText;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#name{
-    grid-area: name;
-    padding:  0 10vw 0 10vw;  
+
+
+
+
+.coat{
+    grid-area: coat;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
-#age{
-    grid-area: age;
-    padding:  0 10vw 0 10vw;  
+#coatLength{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+.face{
+    grid-area: face;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+
 }
-.weight{
-    grid-area: weightPet;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-#weightPet{
-    padding-left: 47px;
-    padding-right: 47px;
+#flatFace{
+    padding-left: 107px;
+    padding-right: 107px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
 }
+
+.heart{
+    grid-area: heart;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#heartProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.lungs{
+    grid-area: lungs;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#lungProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.brain{
+    grid-area: brain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+#brainProb{
+    padding-left: 107px;
+    padding-right: 107px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
 #userSubmitBtn{
     padding-left: 10vw;
     padding-right: 10vw;
@@ -116,17 +145,19 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "backTop"
-    "profilePic"
-    "profilePicText"
-    "name"
-    "age"
-    "weightPet"
+    "info"
+    "coat"
+    "face"
+    "brain"
+    "heart"
+    "lungs"
     "next";
 
     background-color: white;
@@ -135,10 +166,12 @@ body {
     height: 89vh;
 
 
+/*     padding:  0 100px 0 100px;
+ */
 }
 
-
-
-@media only screen and (max-width : 768px){
-    
+#foot{
+    position: sticky;
+    bottom: 0;
 }
+

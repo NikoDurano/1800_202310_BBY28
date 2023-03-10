@@ -150,6 +150,95 @@ async function updateVetProfileCreator() {
 
 }
 
+async function profileEdit1() {
+
+    let nameBox = document.getElementById("petNameBox");
+    let ageBox = document.getElementById("ageNameBox");
+    
+    document.forms["weight"].weightPet.options;
+
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    
+        ref.update({
+            namePet:nameBox.value,
+            agePet:ageBox.value,
+            weightPet:this.weightPet.value
+        }
+    )
+    .then(()=>{
+        alert("works");
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+
+
+}
+
+async function profileEdit2(){
+    document.forms["coat"].coatLength.options;
+    document.forms["face"].flatFace.options;
+    document.forms["heart"].heartProb.options;
+    document.forms["lungs"].lungProb.options;
+    document.forms["brain"].brainProb.options;
+
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+
+        ref.update({
+
+            coatType: this.coatLength.value,
+            flatFace: this.flatFace.value,
+            heartProblem: this.heartProb.value,
+            lungProblem: this.lungProb.value,
+            brainProblem: this.brainProb.value
+
+
+        }
+    )
+    .then(()=>{
+        alert("works");
+ 
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+} 
+
+async function profileEdit3() {
+
+    let vetName = document.getElementById("vetNameInput");
+    let vetPhone = document.getElementById("vetPhoneInput");
+    let vetLocation = document.getElementById("vetLocationInput");
+
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
+        ref.update({
+            
+            nameVet: vetName.value,
+            phoneNumberVet: vetPhone.value,
+            addressVet: vetLocation.value
+
+        }
+    )
+    .then(()=>{
+        alert("works");
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+
+}
+
 
 
 

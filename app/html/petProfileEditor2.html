@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Create Profile</title>
+    <title>Pet Info</title>
     <meta name="comp1800 template" content="My 1800 App">
 
     <!-- Required meta tags -->
@@ -30,7 +30,8 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
-    <link rel="stylesheet" href="/public/css/petProfileEditor.css">
+
+    <link rel="stylesheet" href="/public/css/petprofileEditor2.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -43,86 +44,92 @@
 
 <body>
 
-
-
-
     <nav id="navbarPlaceholder"></nav>
-
-
 
 
     <div class="mainCon">
 
         <div id="backButtonCon">
-            <button id="backButton" onclick="window.location.href ='tabPetProfile.html'">
-                <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
-            </button>
+
+        <button id="backButton" onclick="window.location.href ='petProfileEditor.html'">
+            <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
+        </button>
 
             <div id="blank"></div>
 
-            <button id="backButtonR" onclick="window.location.href ='petProfileEditor2.html'">
+            <button id="backButtonR" onclick="window.location.href ='petProfileEditor3.html'">
                 <i class="bi bi-arrow-right" style="font-size: xx-large;"></i>
             </button>
-        </div>
 
+    </div>
 
-        <div id="profilePicHolder">
-
-            <div id="textBoxTop">
-                <h1>Update Pet Profile</h1>
-            </div>
-            <div id="profilePic"></div>
-
-        </div>
-
-        <div id="profilePicDesc">
-            Change Pet Picture
-        </div>
-
-
-        <div id="name">
-            <div id="nameTextBoxBot">
-                Enter Name of Pet
+        <div id="petStuff">
+                <h1> Update Pet Information   </h1> 
             </div>
 
-            <div id="inputNameTextBox">
-                <input id="petNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
-            </div>
-        </div>
 
-        <div id="age">
-            <div id="ageTextBoxBot">
-                Enter Age of Pet
-            </div>
 
-            <div id="inputAgeTextBox">
-                <input id="ageNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
+        <form  name="coat" class="coat">
+            <div id="coatLengthText">
+                Coat Length
             </div>
-        </div>
+            <select name="coatLength" id="coatLength">
+                <option value="long">Long</option>
+                <option value="short">Short</option>
+            </select>
+        </form>
 
-        <form name="weight" class="weight">
-            <div id="weightText">
-                Weight of Pet
+        <form name="face" class="face">
+            <div id="faceTypeText">
+                Flat Face Breed
             </div>
-            <select name="weightPet" id="weightPet">
-                <option value="0-25 lbs">0-25 lbs</option>
-                <option value="25-50 lbs">25-50 lbs</option>
-                <option value="50 -75 lbs">50-75 lbs</option>
-                <option value="75 - 100 lbs">75-100 lbs</option>
-                <option value="100+ lbs">100+ lbs</option>
+            <select name="flatFace" id="flatFace">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </form>
+
+        <form name="heart" class="heart">
+            <div id="heartCondition">
+                Existing Heart Problems
+            </div>
+            <select name="heartProb" id="heartProb">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </form>
+
+        <form name="lungs" class="lungs">
+            <div id="lungCondition">
+                Existing Respiratory Issues
+            </div>
+            <select name="lungProb" id="lungProb">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </form>
+
+        <form name="brain" class="brain">
+            <div id="brainCondition">
+                Existing Neurological Issues
+            </div>
+            <select name="brainProb" id="brainProb">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
         </form>
 
         <div id="nextButtonBox">
-            <button id="userSubmitBtn" type="submit" onclick="profileEdit1()">Submit</button>
+            <button id="userSubmitBtn" type="submit" onclick="profileEdit2()">Submit</button>
         </div>
+
 
     </div>
 
     <div id="foot">
-    <nav id="footerPlaceholder"></nav>
-</div>
-
+        <nav id="footerPlaceholder"></nav>
+    </div>
+    
 
 
 
