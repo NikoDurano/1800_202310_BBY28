@@ -43,94 +43,133 @@
 
 <body>
 
-    <nav id="navbarPlaceholder"></nav>
-
-    
-    <div class="mainPetProfileContainer">
-
-        <div id="topPortion">
-
-            <div id="petPicHolder">
-                <div id="petPic">
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/public/img/Logo.png" title="logo" alt="HawtPAWLogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <!-- Top nav items subject to change  -->
+                    <a class="nav-link" href="#">HawtPAW</a>
+                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#">Support/Contact</a>
+                    <a class="nav-link" href="index.html">Log Out</a>
                 </div>
             </div>
-            <div id="petInfo" >
-             
-            </div>
-            <div id ="petAge">
+        </div>
+    </nav>
 
-            </div>
-            <div id="editProfile">
-                <button id="editButton"
-                    onclick="window.location.href = '/app/html/petProfileEditor.html'">Edit</button>
-            </div>
 
+
+    <div class="mainCon">
+
+        <div id="profilePic">
         </div>
 
-        <div id="bottomPortion">
+        <div id="test">
 
 
-            <div class="petProfileBottomInfo" id="breed">
-                Breed of pet, Can be empty/hidden <span id="quote-goes-here"></span>
-            </div>
+            <div id="petInfoCon">
 
-            <div class="petProfileBottomInfo" id="coatLength">
-                coat length
-            </div>
-            <div class="petProfileBottomInfo" id="behavioralIssues">
-                behavior Issues
-            </div>
-            <div class="petProfileBottomInfo" id="physicalIssues">
-                physical Issues
+                <div id="petName">
+                    <h1 id="petNameBold">name</h1>
+
+                    <button id="btn"><i class="bi bi-pencil-square" id="edit" onclick="window.location.href='petProfileEditor.html'"></i>
+                    </button>
+                </div>
+
+                <div id="petAge">
+                    4 years old
+                </div>
+
+                <div id="petWeight">
+                    25lbs
+                </div>
             </div>
         </div>
 
+        <div id="botPor">
+
+            <div id="vetInfoCon">
+
+                <div id="vetAdd"></div>
+                <div id="vetPhone">
+                    <dl>
+                        <dt><strong>VET INFO</strong></dt>
+                        <dd id="vetNAME">name</dd>
+                        <dd id="vetADDRESS">add</dd>
+                        <dd id="vetNUMBER">phone</dd>
+                    </dl>
+                </div>
+                <hr>
+            </div>
+
+            <div id="petNotesCon">
+                <dl>
+                    <dt><strong>NOTES</strong></dt>
+                    <dd id="coat">coat</dd>
+                    <dd id="face">face</dd>
+                    <dd id="brain">brain</dd>
+                    <dd id="heart">heart</dd>
+                    <dd id="lung">lungs</dd>
+
+                </dl>
+
+            </div>
+
+
+
+        </div>
 
     </div>
 
 
-    <nav id="footer">
-        <nav class="nav nav-pills nav-fill" >
-        <a class="nav-link" id="botNavL" aria-current="page" href="tabSymptomTracker.html">
-            <i class="material-symbols-outlined">
-            edit
-            </i>
-        </a>
-        <a class="nav-link" id="botNavML" aria-current="page" href="tabHealthHistory.html">
-            <i class="material-symbols-outlined">
-            medical_information
-            </i>
-        </a>
-        <a class="nav-link" id="botNavMR" aria-current="page" href="tabVet.html">
-            <i class="material-symbols-outlined">
-            stethoscope
-            </i>
-        </a>
-        <a class="nav-link" id="botNavR" aria-current="page" href="tabPetProfile.html">
-            <i class="material-symbols-outlined">
-            pets
-            </i>
-        </a>
-      </nav>
-    </nav>
- 
+
+
+        <nav id="footer">
+            <nav class="nav nav-pills nav-fill">
+                <a class="nav-link" id="botNavL" aria-current="page" href="tabSymptomTracker.html">
+                    <i class="material-symbols-outlined">
+                        edit
+                    </i>
+                </a>
+                <a class="nav-link" id="botNavML" aria-current="page" href="tabHealthHistory.html">
+                    <i class="material-symbols-outlined">
+                        medical_information
+                    </i>
+                </a>
+                <a class="nav-link" id="botNavMR" aria-current="page" href="tabVet.html">
+                    <i class="material-symbols-outlined">
+                        stethoscope
+                    </i>
+                </a>
+                <a class="nav-link" id="botNavR" aria-current="page" href="tabPetProfile.html">
+                    <i class="material-symbols-outlined">
+                        pets
+                    </i>
+                </a>
+            </nav>
+        </nav>
 
 
 
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="/scripts/firebaseAPI_BBY28.js"></script>
-    <script src="/public/js/skeleton.js"></script>
-    <script src="/public/js/script.js"></script>
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
+
+        <!-- Link to scripts of your own -->
+        <script src="/scripts/firebaseAPI_BBY28.js"></script>
+        <script src="/public/js/skeleton.js"></script>
+        <script src="/public/js/script.js"></script>
 
 
 
-    <!-- <script src="./scripts/script.js"></script> -->
+        <!-- <script src="./scripts/script.js"></script> -->
 
 
 </body>

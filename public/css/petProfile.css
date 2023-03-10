@@ -1,180 +1,174 @@
-body{
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     background-color: #8ecae6;
-    
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+
+
+}
+dt{
+    font-size:30px;
+}
+dd{
+    padding: 0;
+    margin: 0;
+}
+
+#btn{
+position: absolute;
+border: none;
+background-color: white;
+right:5vw
 }
 
 
-#petPic{
-    grid-area: picOfPet;
-    border: 1px solid black;
+#editProfileCon{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    
-    background-image: url(/public/img/Grumpy-Cat.webp); /* This needs to be changable throungh js */
-    background-repeat: no-repeat;
-    background-size: contain;
-
-
 }
-#petPicHolder{/* This is not where the profile pic is, this is the container for it */
+#profilePic{
     grid-area: pic;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-#petInfo{
-    grid-area: info;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    text-shadow:
-        0.05em 0 black,
-        0 0.05em black,
-        -0.05em 0 black,
-        0 -0.05em black,
-        -0.05em -0.05em black,
-        -0.05em 0.05em black,
-        0.05em -0.05em black,
-        0.05em 0.05em black;
-}
-#editProfile{
-    grid-area: edit;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-#editButton{
-    border-radius: 10%;
-    background-color: #0892d0;
-    color: rgb(255, 255, 255);
-    border: 2px solid #0892d0;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-#editButton:hover {
-    background-color: #0877aa;
-    border: 2px solid #0877aa;
-    color: rgb(194, 194, 194);
-
-
-
-}
-
-
-#topPortion{
-    grid-area: topPart;
-    border: 1px solid black;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    ". . . edit"
-    ". pic pic ."
-    ". pic pic ."
-    ". info info .";
-
-    background-image: url(/public/img/profilebackground.jpg);  /* This needs to be changable throungh js */
+    background-image: url(/public/img/Grumpy-Cat.webp); 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
-    margin:10px;
-    border-radius: 10px;
- 
-    
-}
-.petProfileBottomInfo{
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-#breed{
-    grid-area: breed;
-}
-#coatLength{
-    grid-area: coatL;
-}
-#behavioralIssues{
-    grid-area: BIssues;
-}
-#physicalIssues{
-    grid-area: PIssues;
-}
-#bottomPortion{
-    margin: 10px;
-    border-radius: 10px;
 
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-template-areas:
-    "breed"
-    "coatL"
-    "BIssues"
-    "PIssues"; 
-
-    grid-area: botPart;
 }
-.mainPetProfileContainer{
+
+
+#botPor{
+    position: relative;
+    grid-area: bot;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 80vh;
+    grid-template-rows: 1fr 0.8fr;
     grid-template-areas: 
-    "topPart"
-    "botPart";
+    "vetInfo"
+    "petNotes";
+
 }
 
-@media only screen and (max-width : 768px){
-    
-#editButton{
-    border-radius: 10%;
-    background-color: #0892d0;
-    color: rgb(255, 255, 255);
-    border: 2px solid #0892d0;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+#petName{
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+#petAge{
+    grid-area: age;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+#petWeight{
+    grid-area: weightPet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#petInfoCon{
+
+    grid-area: petInfo;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "name name"
+    "age weightPet";
+    border: 1px solid rgb(255, 255, 255);
+    background-color: white;
+
+
+    width: 100px;
+
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+
+    padding: 10px;
+    width: 50vw;
+    height: 15vh;
+
+}
+#vetAdd{
+    grid-area: address;
+}
+#vetPhone{
+    grid-area: phone;
+    padding-left: 50px;
+}
+#vetInfoCon{
+    grid-area: vetInfo;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+
+    "address"
+    "phone";
 }
 
+#petNotesCon{
+    grid-area: petNotes;
+    padding-left: 50px;
 
- @media only screen and (min-width: 769px) {
-    .mainPetProfileContainer{
-        max-width: 768px;
-        min-width: 768px;
+}
 
-        height: auto;
- /*        background-color: #FFF; */
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-
-
+#test{
+    grid-area: test;
+    background-color: transparent;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainCon{
  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 1px 1fr ;
+
+    grid-template-areas: 
+    "pic"
+    "test"
+    "bot";
+
+    background-color: white;
+
+    border-radius: 10px;
+   
+    min-height: 560px;
+}
+#footer{
+    position: sticky;
+    bottom: 0;
+}
 
 
+@media only screen and (min-width: 769px){
+    .mainCon{
+        margin: 50px;
     }
 
-} 
+
+    #profilePic{
+        border-top-left-radius : 10px;
+        border-top-right-radius : 10px;
+    }
+}
+
+
