@@ -28,6 +28,8 @@ body {
     grid-area: backBtnR;
     border: none;
     background-color: transparent;
+    padding: 20px 40px 0 0;
+
 
 }
 #backButton{
@@ -35,7 +37,7 @@ body {
     border: none;
     background-color: transparent;
     padding: 20px 0 0 40px;
-    position: absolute;
+
 }
 #petStuff{
     grid-area: info;
