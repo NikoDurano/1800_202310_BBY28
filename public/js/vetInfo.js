@@ -13,9 +13,9 @@ function insertNameFromFirestore(){
                console.log(vetAddress);
                console.log(vetNumber);
                //$("#name-goes-here").text(userName); //jquery
-               document.getElementById("tabVetVetName").innerText= "Name: " + vetName;
-               document.getElementById("tabVetVetAddress").innerText= "Address: " + vetAddress;
-               document.getElementById("tabVetVetNumber").innerText= "Number: " + vetNumber;
+               document.getElementById("name").innerText= vetName;
+               document.getElementById("address").innerText="Address: " + vetAddress;
+               document.getElementById("number").innerText= "Phone Number: "+vetNumber;
 
 
            })    
@@ -23,3 +23,16 @@ function insertNameFromFirestore(){
     })
 }
 insertNameFromFirestore();
+
+
+function fard() {
+
+    const name = document.getElementById("vet1Name");
+    const user = firebase.auth().currentUser;
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
+    ref.get().then(doc => {
+      console.log(doc.data().nameVet);
+      name.textContent = doc.data().nameVet;
+    });
+
+  }

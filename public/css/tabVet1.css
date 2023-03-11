@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Josefin';
+  src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #8ecae6;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin";
+}
+
+
+#vetName{
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+/* VET NUMBER */
+#number{
+  grid-area: number;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#callCon{
+  grid-area: call;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#call{
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+#vetNum{
+  grid-area: num;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "number call";
+}
+
+
+/* VET ADDRESS */
+#address{
+  grid-area: addressVet;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#findCon{
+  grid-area: find;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#find{
+
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+#vetAddress{
+  grid-area: address;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "addressVet find";
+}
+
+
+/* FIND A VET BUTTON */
+#searchVetCon{
+  grid-area: btn;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(/public/img/corgiDoc.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 25px;
+}
+#searchVet{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
+
+#theVet{
+  grid-area: info;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: 
+  "name"
+  "num"
+  "address"
+
+}
+#theVet div{
+padding: 14px;
+}
+
+
+
+#mainCon{
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:45vh 42vh;
+  grid-template-areas: 
+  "info"
+  "btn";
+  background-color: white;
+
+
+
+}
+
+
+
+@media only screen and (min-width: 769px){
+  #mainCon{
+      margin: 50px;
+      border-radius: 10px;
+  }
+
+  #searchVetCon{
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/img/corgiDoc.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+  }
+}
