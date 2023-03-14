@@ -7,8 +7,6 @@
 let ageBox = document.getElementById("ageBox");
 
 let insertButton = document.getElementById("insertButton") */
-
-
 //update
 //PET PROFILE CREATE/EDIT UPDATE
  async function updatePetProfileDoc(){

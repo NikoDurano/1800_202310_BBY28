@@ -150,18 +150,24 @@ right:5vw
     background-color: white;
 
     border-radius: 10px;
-   
-    min-height: 560px;
+
 }
 #footer{
     position: sticky;
     bottom: 0;
 }
 
+@media only screen and (max-width: 768px){
+    .mainCon{
+        min-height: 87vh;
+        border-radius: 0;
+    }
+}
 
 @media only screen and (min-width: 769px){
     .mainCon{
         margin: 50px;
+  
 
     }
 
