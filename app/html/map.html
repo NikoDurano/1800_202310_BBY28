@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Vet Info</title>
+  <title>MAP TEST MAY 14, JOSEPH</title>
   <meta name="veterinarian tab " content="Vet info">
 
   <!-- Required meta tags -->
@@ -30,7 +30,8 @@
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="/public/css/navBar.css">
-  <link rel="stylesheet" href="/public/css/tabVet1.css">
+  <!-- <link rel="stylesheet" href="/public/css/tabVet1.css"> -->
+  <link rel="stylesheet" type="text/css" href="/public/css/vetMapStyle.css" />
   <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -78,18 +79,57 @@
 
     <div id="searchVetCon">
 
-      <!--------- Niko's old code. ---------->
-      <!-- <button id="searchVet">
-      Find a Nearby Vet
-      </button> -->
+        <div class="pac-card" id="pac-card">
+            <div>
+                <div id="title">Search for vets.</div>
+                <div id="type-selector" class="pac-controls">
+                <input
+                    type="radio"
+                    name="type"
+                    id="changetype-all"
+                    checked="checked"
+                />
+                <label for="changetype-all">All</label>
+        
+                <input type="radio" name="type" id="changetype-establishment" />
+                <label for="changetype-establishment">establishment</label>
+        
+                <input type="radio" name="type" id="changetype-address" />
+                <label for="changetype-address">address</label>
+        
+                <input type="radio" name="type" id="changetype-geocode" />
+                <label for="changetype-geocode">geocode</label>
+        
+                <input type="radio" name="type" id="changetype-cities" />
+                <label for="changetype-cities">(cities)</label>
+        
+                <input type="radio" name="type" id="changetype-regions" />
+                <label for="changetype-regions">(regions)</label>
+                </div>
+                <br />
+                <div id="strict-bounds-selector" class="pac-controls">
+                <input type="checkbox" id="use-location-bias" value="" checked />
+                <label for="use-location-bias">Bias to map viewport</label>
+        
+                <input type="checkbox" id="use-strict-bounds" value="" />
+                <label for="use-strict-bounds">Strict bounds</label>
+                </div>
+            </div>
+            <div id="pac-container">
+                <input id="pac-input" type="text" placeholder="Enter a location" />
+            </div>
+        </div>
 
-      <button id="searchVet" onclick = "window.location.href='/app/html/map.html';">
-        Find a Nearby Vet
-        </button>
+        <div id="map"></div>
+        <div id="infowindow-content">
+            <span id="place-name" class="title"></span><br/>
+            <span id="place-address"></span>
+        </div>
 
-  </div>
-  </div>
-
+    </div><!--end of searchVetCon-->
+    
+  </div><!--end of mainCon-->
+    
 
   <nav id="footerPlaceholder"></nav>
 
@@ -98,9 +138,13 @@
   <!---------------------------------------------->
 
   <!-- Link to scripts of your own -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdHr-zbe_qq8uctFrj-KZYrMxsIcq82Y&libraries=places&callback=initMap"></script>
+  
   <script src="/scripts/firebaseAPI_BBY28.js"></script>
   <script src="/public/js/skeleton.js"></script>
+  <script type="module" src="/public/js/vetMap.js"></script>
   <script src="/public/js/vetInfo.js"></script>
+
   <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
