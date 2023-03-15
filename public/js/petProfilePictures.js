@@ -32,7 +32,7 @@ function savePost() {
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
-    var storageRef = storage.ref("images/" + postDocID + ".jpg");
+    var storageRef = storage.ref("images/pets/" + postDocID + ".jpg");
     const user = firebase.auth().currentUser;
 
     storageRef.put(ImageFile)   //global variable ImageFile

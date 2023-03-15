@@ -1,8 +1,8 @@
 var ImageFile;
 function listenFileSelect() {
       // listen for file selection
-      var fileInput = document.getElementById("petPic"); // pointer #1
-      const image = document.getElementById("petPicHere"); // pointer #2
+      var fileInput = document.getElementById("persPic"); // pointer #1
+      const image = document.getElementById("persPicHere"); // pointer #2
 
 			// When a change happens to the File Chooser Input
       fileInput.addEventListener('change', function (e) {
@@ -32,7 +32,7 @@ function savePost() {
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
-    var storageRef = storage.ref("images/" + postDocID + ".jpg");
+    var storageRef = storage.ref("images/pers/" + postDocID + ".jpg");
     const user = firebase.auth().currentUser;
 
     storageRef.put(ImageFile)   //global variable ImageFile
@@ -70,10 +70,10 @@ function userPic(){
             
            currentuser.get().then(userDoc=>{
                //get the user name
-                var pic= document.getElementById("petPicHere");
-                var pet = userDoc.data().picProfile
+                var pers= document.getElementById("persPicHere");
+                var pic = userDoc.data().picProfile
                //$("#name-goes-here").text(userName); //jquery
-               pic.src = pet;
+               pers.src = pic;
 
 
            }) 

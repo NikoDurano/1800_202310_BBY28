@@ -45,7 +45,7 @@ body {
 input[type="file"] {
     display: none;
 }
-#labelPet {
+#labelpers {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
@@ -53,7 +53,7 @@ input[type="file"] {
     border-radius: 10px;
     margin-top: 10px;
 }
-#petPicHere {
+#persPicHere {
     width: 150px;
     height: 150px;
     border-radius: 50%;
