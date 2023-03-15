@@ -33,7 +33,8 @@ right:5vw
 }
 #profilePic{
     grid-area: pic;
-    background-image: url(/public/img/Grumpy-Cat.webp); 
+    background-color: #0892d0;
+    background-image: url(); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -169,7 +170,7 @@ right:5vw
 
 @media only screen and (min-width: 769px){
     .mainCon{
-        margin: 50px;
+        margin: 45px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     
@@ -191,7 +192,7 @@ right:5vw
         border: none;
         background-color: white;
 
-        font-size: 40px;
+        font-size: 36px;
         width: 100px;
 
         border-radius: 10px;

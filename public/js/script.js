@@ -36,7 +36,13 @@ function insertNameFromFirestore(){
                 console.log(userAge);
                 //$("#name-goes-here").text(userName); //jquery
                 document.getElementById("petNameBold").innerText=userName;
-                document.getElementById("petAge").innerText=userAge;
+                if(userAge == "1"){
+                document.getElementById("petAge").innerText=userAge +" year old";
+
+                }else{
+                document.getElementById("petAge").innerText=userAge +" years old";
+
+                }
                 document.getElementById("petWeight").innerText=userWeight;
 
  
