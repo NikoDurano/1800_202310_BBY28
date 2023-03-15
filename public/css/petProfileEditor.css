@@ -59,9 +59,11 @@ input[type="file"] {
 }
 
 #petPicHere {
-  width: 150px;
+  width: 206px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+
 }
 
 #profilePic {
@@ -72,8 +74,8 @@ input[type="file"] {
 
   border: 1px solid black;
   height: 150px;
-  width: 150px;
-  border-radius: 50%;
+  width: 206px;
+  border-radius: 10px;
 }
 
 #profilePicHolder {
@@ -177,4 +179,87 @@ input[type="file"] {
   font-size: larger;
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px){
+  .mainCon{
+      min-height: 87vh;
+      border-radius: 0;
+      margin: 0;
+  }
+}
+
+@media only screen and (min-width: 769px){
+  .mainCon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "backTop backTop"
+      " name profilePic"
+      " age profilePic"
+      " weightPet profilePic"
+      " next profilePicText";
+  
+  }
+
+  #name {
+    justify-content: center;
+    font-size: 30px;
+
+  }
+  
+  #age {
+    justify-content: center;
+    font-size: 30px;
+
+
+  }
+  
+  #weightText {
+    font-size: 30px;
+
+  }
+  #weightPet{
+    font-size: 20px;
+
+  }
+  .weight{
+    justify-content: center;
+
+  }
+
+  #petPicHere {
+    width: 30vw;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  #profilePic {
+
+    height: auto;
+    width: 30vw;
+    border-radius: 10px;
+  }
+  #petNameBox{
+    width: 208px;
+    font-size: 20px;
+  }
+  #ageNameBox{
+    width: 208px;
+    font-size: 20px;
+
+
+  }
+
+  #petPicHere {
+    height: 35vh;
+    object-fit: cover;
+
+  }
+  
+  #profilePic {
+    margin-top: 30px;
+    height: 35vh;
+    
+  }
+
+}

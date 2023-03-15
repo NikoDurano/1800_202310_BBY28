@@ -165,4 +165,16 @@ padding: 14px;
     background-size: contain;
     padding: 20px;
   }
+
+  #number{
+    justify-content: center;
+    font-size: 30px;
+
+  }
+
+  #address{
+    justify-content: center;
+    font-size: 30px;
+
+  }
 }

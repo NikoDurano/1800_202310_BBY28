@@ -115,5 +115,12 @@ body {
     position: sticky;
     bottom: 0;
 }
+@media only screen and (max-width: 768px){
+    .mainCon{
+        min-height: 87vh;
+        border-radius: 0;
+        margin: 0;
+    }
+  }
 
 
