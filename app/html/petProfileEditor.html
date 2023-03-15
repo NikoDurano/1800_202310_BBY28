@@ -70,13 +70,22 @@
 
             <div id="textBoxTop">
                 <h1>Update Pet Profile</h1>
+
             </div>
-            <div id="profilePic"></div>
+            <div id="profilePic">
+                <img id="petPicHere" src="." alt="pic">
+            </div>
+
+            <label for="petPic" id="labelPet">
+                Upload Photo
+                <input type="file" name="petPic" id="petPic" accept="image/*" >
+            </label>
 
         </div>
 
         <div id="profilePicDesc">
-            Change Pet Picture
+            <button id="btn" onclick="savePost()"> <i class="bi bi-arrow-clockwise"></i> &nbsp;Update Profile
+                Picture</button>
         </div>
 
 
@@ -120,8 +129,8 @@
     </div>
 
     <div id="foot">
-    <nav id="footerPlaceholder"></nav>
-</div>
+        <nav id="footerPlaceholder"></nav>
+    </div>
 
 
 
@@ -136,6 +145,7 @@
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteProfile.js"></script>
+    <script src="/public/js/profilePictures.js"></script>
 
 
     <!-- <script src="./scripts/script.js"></script> -->
