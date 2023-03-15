@@ -73,7 +73,10 @@
             uri+='forecast?';
             //parameters
             uri+="unitGroup="+me.config.unitGroup+"&contentType=json&locationMode=single&iconSet=icons1&location="+me.config.location+"&key="+me.config.key;
-            uri+="&aggregateHours=12"
+           
+           
+            uri+="&aggregateHours=12" 
+            // uri+="&aggregateHours=24"     --- may be useful
            
             var request = new XMLHttpRequest();
             request.open('GET', uri, true);
@@ -162,7 +165,7 @@
                          "<div class='temp'>-</div>"+
                      "</div>"+
                  "</div>"+
-                 "<div class='forecast'></div>"+
+                //  "<div class='forecast'></div>"+  --------------DEFUALT CODE DO NOT DELETE------------
              "</div>"+
             "<a class='credit' href='https://www.visualcrossing.com/weather-data' title='Visual Crossing Weather Data' target='_blank'>Visual Crossing Weather</a>"+
             "</div>");
