@@ -39,8 +39,9 @@ right:5vw
     background-image: url(/public/img/Grumpy-Cat.webp); 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
+    background-position: center; 
+    object-fit: contain;
+    overflow: hidden;
 
 }
 

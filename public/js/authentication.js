@@ -23,7 +23,8 @@ var uiConfig = {
                    userName: ".",
                    email: user.email,                         //with authenticated user's ID (user.uid)
                    country: "Canada",                      //optional default profile info      
-                   school: "BCIT"                          //optional default profile info
+                   school: "BCIT",
+                   picProfile:""                          //optional default profile info
             })
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).set({
                   namePet: "name",
@@ -33,7 +34,8 @@ var uiConfig = {
                   flatFace:"",
                   brainProblem:"",
                   heartProblem:"",
-                  lungProblem:""
+                  lungProblem:"",
+                  picPet:""
 
             })
             //Justin

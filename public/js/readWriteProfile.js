@@ -131,7 +131,7 @@ async function updateVetProfileCreator() {
     //PROBLEM CANT FIND USER ID
     const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
         ref.update({
-            
+                 
             nameVet: vetName.value,
             phoneNumberVet: vetPhone.value,
             addressVet: vetLocation.value
@@ -160,10 +160,18 @@ async function profileEdit1() {
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
-    
+        if(nameBox.value!=""){
+            ref.update({
+                namePet:nameBox.value
+            })
+        }
+        if(ageBox.value!=""){
+            ref.update({
+                agePet:ageBox.value
+
+            })
+        }
         ref.update({
-            namePet:nameBox.value,
-            agePet:ageBox.value,
             weightPet:this.weightPet.value
         }
     )
@@ -220,12 +228,25 @@ async function profileEdit3() {
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
+    if(vetName.value!=""){
         ref.update({
-            
-            nameVet: vetName.value,
-            phoneNumberVet: vetPhone.value,
+            nameVet: vetName.value
+        })
+    }
+    if(vetPhone.value!=""){
+        ref.update({
+            phoneNumberVet: vetPhone.value
+
+        })
+    }    
+    if(vetLocation.value!=""){
+        ref.update({
             addressVet: vetLocation.value
 
+        })
+    }  
+    ref.update({
+        
         }
     )
     .then(()=>{

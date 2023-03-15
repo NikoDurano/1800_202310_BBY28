@@ -1,136 +1,140 @@
 @font-face {
-    font-family: 'Josefin';
-    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Josefin";
+  src: url("../font/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    background-color: #8ecae6;
-    margin: 0;
-    padding: 0;
-    font-family: "Josefin";
+  background-color: #8ecae6;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin";
 }
 
-
-
-
-#blank{
-    grid-area: blank;
+#blank {
+  grid-area: blank;
 }
-#backButtonCon{
-    grid-area: backTop;
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "backBtn blank backBtnR";
+#backButtonCon {
+  grid-area: backTop;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "backBtn blank backBtnR";
+}
+#backButtonR {
+  grid-area: backBtnR;
+  border: none;
+  background-color: transparent;
+  padding: 20px 40px 0 0;
+}
+#backButton {
+  grid-area: backBtn;
+  border: none;
+  background-color: transparent;
+  padding: 20px 0 0 40px;
+}
+#textBoxTop {
+  grid-area: textBox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="file"] {
+  display: none;
+}
+#labelPet {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#petPicHere {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#profilePic {
+  grid-area: petPic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
-#backButtonR{
-    grid-area: backBtnR;
-    border: none;
-    background-color: transparent;
-    padding: 20px 40px 0 0;
-    
-
-
-}
-#backButton{
-    
-    grid-area: backBtn;
-    border: none;
-    background-color: transparent;
-    padding: 20px 0 0 40px;
-    
-}
-#textBoxTop{
-    grid-area: textBox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#profilePic{
-    grid-area: petPic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-}
-#profilePicHolder{
-    grid-area: profilePic;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+#profilePicHolder {
+  grid-area: profilePic;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas:
     "textBox"
     "petPic";
-    align-items: end;
-    justify-items: center;
-    
+  align-items: end;
+  justify-items: center;
 }
-#profilePicDesc{
-    grid-area: profilePicText;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#profilePicDesc {
+  grid-area: profilePicText;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#name{
-    grid-area: name;
-    padding:  0 10vw 0 10vw;  
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+#name {
+  grid-area: name;
+  padding: 0 10vw 0 10vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
-#age{
-    grid-area: age;
-    padding:  0 10vw 0 10vw;  
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+#age {
+  grid-area: age;
+  padding: 0 10vw 0 10vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
-.weight{
-    grid-area: weightPet;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+.weight {
+  grid-area: weightPet;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
-#weightPet{
-    padding-left: 47px;
-    padding-right: 47px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
+#weightPet {
+  padding-left: 47px;
+  padding-right: 47px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
 }
-#userSubmitBtn{
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #219EBC;
-    border-color: #219EBC;
-    border-radius: 10px;
-    color: white;
-
+#userSubmitBtn {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219ebc;
+  border-color: #219ebc;
+  border-radius: 10px;
+  color: white;
 }
-#nextButtonBox{
-    grid-area: next;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+#nextButtonBox {
+  grid-area: next;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.mainCon{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
+.mainCon {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
     "backTop"
     "profilePic"
     "profilePicText"
@@ -139,19 +143,22 @@ body {
     "weightPet"
     "next";
 
-    background-color: white;
-    margin: 50px;
-    border-radius: 10px;
-    height: 89vh;
-
-
+  background-color: white;
+  margin: 50px;
+  border-radius: 10px;
+  height: 89vh;
 }
 
-#foot{
-    position: sticky;
-    bottom: 0;
+#foot {
+  position: sticky;
+  bottom: 0;
 }
 
-@media only screen and (max-width : 768px){
-    
+#btn {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: larger;
+}
+
+@media only screen and (max-width: 768px) {
 }
