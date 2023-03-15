@@ -70,20 +70,26 @@
                     <h1>User Profile</h1>
                 </div>
                 <div id="profilePic">
+                <img id="petPicHere" src="." alt="pic">
                     
                </div>
+               <label for="petPic" id="labelPet">
+                Upload Photo
+                <input type="file" name="petPic" id="petPic" accept="image/*">
+                
+            </label>
             </div>
 
 
            <div id="profilePicDesc">
-                Add Profile Picture
+            <button id="btn" onclick="savePost()"> <i class="bi bi-arrow-clockwise"></i> &nbsp; Add Profile Picture</button>
            </div>
         </div>
 
         <div class="bottom">
 
             <div id="textBoxBot">
-                Enter a user name
+                Enter a Username
             </div>
 
             <div id="inputTextBox">
@@ -115,6 +121,8 @@
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteProfile.js"></script>
     <script src="/public/js/close.js"></script>
+    <script src="/public/js/userProfilePictures.js"></script>
+
 
 
 

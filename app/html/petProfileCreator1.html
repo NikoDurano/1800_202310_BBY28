@@ -75,12 +75,18 @@
             <div id="textBoxTop">
                 <h1>Pet Profile</h1>
             </div>
-            <div id="profilePic"></div>
-
+            <div id="profilePic">
+                <img id="petPicHere" src="." alt="pic">
+            </div>
+            <label for="petPic" id="labelPet">
+                Upload Photo
+                <input type="file" name="petPic" id="petPic" accept="image/*" >
+                
+            </label>
         </div>
 
         <div id="profilePicDesc">
-            Add Pet Picture
+            <button id="btn" onclick="savePost()"> <i class="bi bi-arrow-clockwise"></i> &nbsp;Add Pet Picture</button>
         </div>
 
 
@@ -147,6 +153,8 @@
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteProfile.js"></script>
     <script src="/public/js/close.js"></script>
+    <script src="/public/js/petProfilePictures.js"></script>
+
 
 
     <!-- <script src="./scripts/script.js"></script> -->

@@ -45,8 +45,8 @@ function uploadPic(postDocID) {
                  // AFTER .getDownloadURL is done
                 .then(function (url) { // Get URL of the uploaded file
                     console.log("Got the download URL.");
-                    db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).update({
-                            "picPet": url // Save the URL into users collection
+                    db.collection("users").doc(user.uid).update({
+                            "picProfile": url // Save the URL into users collection
                         })
 
                          // AFTER .update is done
@@ -61,17 +61,17 @@ function uploadPic(postDocID) {
 }
 
 
-function insertConditionFromFirestore(){
+function userPic(){
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user =>{
         if (user){
            console.log(user.uid); // let me to know who is the user that logged in to get the UID
-           currentuser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid);
+           currentuser = db.collection("users").doc(user.uid);
             
            currentuser.get().then(userDoc=>{
                //get the user name
                 var pic= document.getElementById("petPicHere");
-                var pet = userDoc.data().picPet
+                var pet = userDoc.data().picProfile
                //$("#name-goes-here").text(userName); //jquery
                pic.src = pet;
 
@@ -80,4 +80,4 @@ function insertConditionFromFirestore(){
        }    
     })
 }
-insertConditionFromFirestore();
+userPic();

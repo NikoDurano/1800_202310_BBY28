@@ -45,7 +45,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/public/img/Logo.png" title="logo" alt="HawtPAWLogo"></a>
+            <a class="navbar-brand" href="#"><img id="profile" src="/public/img/Logo.png" title="logo" alt="HawtPAWLogo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -169,7 +169,7 @@
         <script src="/public/js/script.js"></script>
 
 
-        <script>function insertConditionFromFirestore(){
+        <script>function petProfilePicture(){
             // to check if the user is logged in:
             firebase.auth().onAuthStateChanged(user =>{
                 if (user){
@@ -188,7 +188,7 @@
                }    
             })
         }
-        insertConditionFromFirestore();</script>
+        petProfilePicture();</script>
         <!-- <script src="./scripts/script.js"></script> -->
 
 
