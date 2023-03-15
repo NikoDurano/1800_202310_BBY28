@@ -228,7 +228,9 @@ body {
 }
 
 #pac-container {
-  padding-bottom: 12px;
+  /* padding-bottom: 12px; --------------- DEFAULT CODE -------------*/
+  padding-top: 6px;
+  padding-bottom: 6px;
   margin-right: 12px;
 }
 
