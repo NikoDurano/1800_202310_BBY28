@@ -97,11 +97,10 @@ input[type="file"] {
 .top{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr 4fr 1fr;
+    grid-template-rows:  1fr 4fr;
     grid-template-areas: 
     "backTop"
-    "pic"
-    "word";
+    "pic";
     grid-area: up;
 
 }

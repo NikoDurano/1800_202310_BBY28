@@ -13,8 +13,8 @@ function listenFileSelect() {
 }
 listenFileSelect();
 
-
-function savePost() {
+var test = document.getElementById("persPic");
+test.addEventListener('change',function(){
     alert ("SAVE POST is triggered");
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -28,7 +28,23 @@ function savePost() {
                           console.log("Error, no user signed in");
         }
     });
-}
+})
+
+/* function savePost() {
+    alert ("SAVE POST is triggered");
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            // Do something for the user here. 
+                console.log("Post document added!");
+                uploadPic(user.uid);
+
+        } else {
+            // No user is signed in.
+                          console.log("Error, no user signed in");
+        }
+    });
+} */
 
 function uploadPic(postDocID) {
     console.log("inside uploadPic " + postDocID);
