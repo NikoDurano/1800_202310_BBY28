@@ -183,9 +183,11 @@
                         var pic = document.getElementById("profilePic");
                         var pet = userDoc.data().picPet
                         //$("#name-goes-here").text(userName); //jquery
-                        pic.style.backgroundImage = "url(" + pet + ")";
-
-
+                        if (pet == "") {
+                            
+                        } else {
+                            pic.style.backgroundImage = "url(" + pet + ")";
+                        }
                     })
                 }
             })
@@ -205,9 +207,12 @@
                         var pers = document.getElementById("profile");
                         var pic = userDoc.data().picProfile
                         //$("#name-goes-here").text(userName); //jquery
-                        pers.src = pic;
+                        if (pic == "") {
 
+                        } else {
+                            pers.src = pic;
 
+                        }
                     })
                 }
             })

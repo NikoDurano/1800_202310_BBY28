@@ -180,7 +180,10 @@ input[type="file"] {
     opacity: 0;
     pointer-events: none;
 }
-
+img{
+    height: 100px;
+    width: auto;
+}
 .model{
     background-color: white;
     max-width: 100%;
