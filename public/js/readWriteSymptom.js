@@ -49,3 +49,32 @@ async function updateTracker3Doc(){
         alert("error" +error);
     });
 } 
+
+async function updateTracker4Doc(){
+    document.forms["gums"].gums.options;
+    document.forms["heartrate"].heartrate.options;
+    document.forms["tongue"].tongue.options;
+    document.forms["diarrhea"].diarrhea.options;
+    document.forms["vomit"].vomit.options;
+
+    //let insertButton = document.getElementById("insertButton")
+
+    const user = firebase.auth().currentUser;
+    //PROBLEM CANT FIND USER ID
+    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid)
+
+        ref.update({
+            gums: this.gums.value,
+            heartrate: this.heartrate.value,
+            tongue: this.tongue.value,
+            diarrhea: this.diarrhea.value,
+            vomit: this.vomit.value,
+        }
+    )
+    .then(()=>{
+        alert("Behavior form submitted");
+    })
+    .catch((error)=>{
+        alert("error" +error);
+    });
+} 
