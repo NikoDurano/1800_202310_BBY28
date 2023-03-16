@@ -27,15 +27,16 @@ body {
 }
 
 .barTop{
-    border: 1px solid black;
+/*     border: 1px solid black; */
     height: 25px;
-    
+    background-color: #8ecae675;
+
 }
 #one{
     grid-area: one;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: #219EBC;
+    background-color: #8ecae6;
     border-right: none;
 }
 #two{
@@ -73,11 +74,11 @@ body {
     grid-area: up;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
     grid-template-areas: 
     "topleft ."
     "mid mid";
-    
+
 
 }
 .input-group{
@@ -147,17 +148,32 @@ body {
     color: white;
 }
 
-
-
+.visualcrossing-wx-widget{
+    border-top-left-radius: 5px!important;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 5px!important;
+}
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn{
+    background-color: #219EBC;
+    color: white;
+    border-color: transparent;
+}
 
 .weatherWidget{
     width: 296px;
+    border-top-right-radius: 0;
 }
 #weatherCon{
     grid-area: form;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    
 }
 #weather{
     width: fit-content;
@@ -166,14 +182,17 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: row;
+
 }
 #weather input{ display: none; }
 #weather label{
+    text-align: center;
 
     padding: 10px 16px;
     border-right: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s;
+    width: 110px;
 }
 #weather label:last-of-type{ border-right: 0; }
 #weather label:hover{
@@ -209,13 +228,13 @@ body {
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 0fr 1fr 0.5fr 100px;
+    grid-template-rows: 1fr 0.5fr 1fr 0fr 1fr 100px;
     grid-template-areas: 
     "up"
+    "form"
     "weatherAPP"
     "info"
     "wheel"
-    "form"
     "btn";
 
     background-color: white;
@@ -250,6 +269,11 @@ body {
 
         width: 45%; 
     
+    }
+
+    #tempWheelCon{
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
 
