@@ -111,7 +111,7 @@ body {
 }
 #tempWheelCon{
     grid-area: wheel;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
 
 }
