@@ -30,9 +30,7 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
-    <link rel="stylesheet" href="/public/css/formStyles.css">
-    <link rel="stylesheet" href="/public/css/responsive.css">
-    <link rel="stylesheet" href="/public/css/symptomTracker.css">
+    <link rel="stylesheet" href="/public/css/symptom3Behavior.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -50,77 +48,62 @@
 
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="responsive">
-        <div class="mainCon">
+    <div class="mainCon">
 
+        <div id="backButtonCon">
 
-            <button id="backButton" onclick="window.location.href ='symptom2Weather.html'">
-                <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
-            </button>
-    
-            <div id="petStuff">
-                    <h1> How is your pet behaving?   </h1> 
-                </div>
-      
-            <form  name="panting" class="qcontainer">
-                <div id="question">
-                    Panting
-                </div>
-                <select name="panting" id="panting">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </form>
-
-            <form  name="drooling" class="qcontainer">
-                <div id="question">
-                    Drooling
-                </div>
-                <select name="drooling" id="drooling">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </form>
-
-            <form  name="agitation" class="qcontainer">
-                <div id="question">
-                    Agitated
-                </div>
-                <select name="agitation" id="agitation">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </form>
-
-            <form  name="dizziness" class="qcontainer">
-                <div id="question">
-                    Dizzy
-                </div>
-                <select name="dizziness" id="dizziness">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </form>
-
-            <form  name="lethargy" class="qcontainer">
-                <div id="question">
-                    Lethargic
-                </div>
-                <select name="lethargy" id="lethargy">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </form>
-    
-            <div id="nextButtonBox">
-                <button id="userSubmitBtn" type="submit" onclick="updateTracker3Doc(); window.location.href='symptom4Physical.html'">Next</button>
+            <div id="btnCon">
+                <button id="backButton" onclick="window.location.href ='symptom2Weather.html'">
+                    <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
+                </button>
             </div>
-    
-    
+
+            <div id="progress">
+
+                <div id="text">
+                    <h1> Any Behavioral Changes?</h1>
+                </div>
+
+                <div id="bar">
+                    <div class="barTop" id="one"></div>
+                    <div class="barTop" id="two"></div>
+                    <div class="barTop" id="three"></div>
+                </div>
+
+            </div>
         </div>
+
+        <div id="optionCon">
+            <div id="options">
+
+                <input type="checkbox" id="panting" name="behavior" value="panting" />
+                <label for="panting">Panting</label>
+
+                <input type="checkbox" id="drooling" name="behavior" value="drooling" />
+                <label for="drooling">Drooling</label>
+
+                <input type="checkbox" id="agitation" name="behavior" value="agitation" />
+                <label for="agitation">Agitation</label>
+
+                <input type="checkbox" id="dizziness" name="behavior" value="dizziness" />
+                <label for="dizziness">Dizziness</label>
+
+                <input type="checkbox" id="lethargy" name="behavior" value="lethargy" />
+                <label for="lethargy">Lethargy</label>
+
+            </div>
+        </div>
+
+        <div id="nextButtonDiv">
+            <button id="nextbtn" onclick="window.location.href ='symptom4Physical.html'">
+                Next
+            </button>
+        </div>
+
+
     </div>
- 
-    </div>
+
+
 
     <nav id="footerPlaceholder"></nav>
 
@@ -140,7 +123,7 @@
 
 
 
-    
+
 </body>
 
 </html>

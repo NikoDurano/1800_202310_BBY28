@@ -30,7 +30,7 @@
 
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="/public/css/navBar.css">
-    <link rel="stylesheet" href="/public/css/petProfile.css">
+    <link rel="stylesheet" href="/public/css/tabPetProfile.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
 
 
@@ -45,7 +45,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img id="profile" src="/public/img/Logo.png" title="logo" alt="HawtPAWLogo"></a>
+            <a class="navbar-brand" href="#"><img id="profile" src="/public/img/Logo.png" title="logo"
+                    alt="HawtPAWLogo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,8 +67,8 @@
 
     <div class="mainCon">
 
-        <div id="profilePic" >
-            
+        <div id="profilePic">
+
         </div>
 
         <div id="test">
@@ -78,7 +79,8 @@
                 <div id="petName">
                     <h1 id="petNameBold">name</h1>
 
-                    <button id="btn"><i class="bi bi-pencil-square" id="edit" onclick="window.location.href='petProfileEditor.html'"></i>
+                    <button id="btn"><i class="bi bi-pencil-square" id="edit"
+                            onclick="window.location.href='petProfileEditor.html'"></i>
                     </button>
                 </div>
 
@@ -130,90 +132,90 @@
 
 
 
-        <nav id="footer">
-            <nav class="nav nav-pills nav-fill">
-                <a class="nav-link" id="botNavL" aria-current="page" href="symptom1Pet.html">
-                    <i class="material-symbols-outlined">
-                        edit
-                    </i>
-                </a>
-                <a class="nav-link" id="botNavML" aria-current="page" href="tabHealthHistory.html">
-                    <i class="material-symbols-outlined">
-                        medical_information
-                    </i>
-                </a>
-                <a class="nav-link" id="botNavMR" aria-current="page" href="tabVet1.html">
-                    <i class="material-symbols-outlined">
-                        stethoscope
-                    </i>
-                </a>
-                <a class="nav-link" id="botNavR" aria-current="page" href="tabPetProfile.html">
-                    <i class="material-symbols-outlined">
-                        pets
-                    </i>
-                </a>
-            </nav>
+    <nav id="footer">
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link" id="botNavL" aria-current="page" href="symptom1Pet.html">
+                <i class="material-symbols-outlined">
+                    edit
+                </i>
+            </a>
+            <a class="nav-link" id="botNavML" aria-current="page" href="tabHealthHistory.html">
+                <i class="material-symbols-outlined">
+                    medical_information
+                </i>
+            </a>
+            <a class="nav-link" id="botNavMR" aria-current="page" href="tabVet1.html">
+                <i class="material-symbols-outlined">
+                    stethoscope
+                </i>
+            </a>
+            <a class="nav-link" id="botNavR" aria-current="page" href="tabPetProfile.html">
+                <i class="material-symbols-outlined">
+                    pets
+                </i>
+            </a>
         </nav>
+    </nav>
 
 
 
 
 
-        <!---------------------------------------------->
-        <!-- Your own JavaScript functions go here    -->
-        <!---------------------------------------------->
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
 
-        <!-- Link to scripts of your own -->
-        <script src="/scripts/firebaseAPI_BBY28.js"></script>
-        <script src="/public/js/skeleton.js"></script>
-        <script src="/public/js/script.js"></script>
+    <!-- Link to scripts of your own -->
+    <script src="/scripts/firebaseAPI_BBY28.js"></script>
+    <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/script.js"></script>
 
 
-        <script>function petProfilePicture(){
+    <script>function petProfilePicture() {
             // to check if the user is logged in:
-            firebase.auth().onAuthStateChanged(user =>{
-                if (user){
-                   console.log(user.uid); // let me to know who is the user that logged in to get the UID
-                   currentuser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid);
-                    
-                   currentuser.get().then(userDoc=>{
-                       //get the user name
-                        var pic= document.getElementById("profilePic");
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    console.log(user.uid); // let me to know who is the user that logged in to get the UID
+                    currentuser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid);
+
+                    currentuser.get().then(userDoc => {
+                        //get the user name
+                        var pic = document.getElementById("profilePic");
                         var pet = userDoc.data().picPet
-                       //$("#name-goes-here").text(userName); //jquery
-                       pic.style.backgroundImage = "url("+pet+")";
-        
-        
-                   }) 
-               }    
+                        //$("#name-goes-here").text(userName); //jquery
+                        pic.style.backgroundImage = "url(" + pet + ")";
+
+
+                    })
+                }
             })
         }
         petProfilePicture();
-        
-        
-function userPic(){
-    // to check if the user is logged in:
-    firebase.auth().onAuthStateChanged(user =>{
-        if (user){
-           console.log(user.uid); // let me to know who is the user that logged in to get the UID
-           currentuser = db.collection("users").doc(user.uid);
-            
-           currentuser.get().then(userDoc=>{
-               //get the user name
-                var pers= document.getElementById("profile");
-                var pic = userDoc.data().picProfile
-               //$("#name-goes-here").text(userName); //jquery
-               pers.src = pic;
 
 
-           }) 
-       }    
-    })
-}
-userPic();
-        
-        </script>
-        <!-- <script src="./scripts/script.js"></script> -->
+        function userPic() {
+            // to check if the user is logged in:
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    console.log(user.uid); // let me to know who is the user that logged in to get the UID
+                    currentuser = db.collection("users").doc(user.uid);
+
+                    currentuser.get().then(userDoc => {
+                        //get the user name
+                        var pers = document.getElementById("profile");
+                        var pic = userDoc.data().picProfile
+                        //$("#name-goes-here").text(userName); //jquery
+                        pers.src = pic;
+
+
+                    })
+                }
+            })
+        }
+        userPic();
+
+    </script>
+    <!-- <script src="./scripts/script.js"></script> -->
 
 
 </body>

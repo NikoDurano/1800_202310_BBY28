@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #8ecae6;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+}
+
+
+#btnCon{
+    grid-area: topleft;
+
+}
+#backButton{
+    background-color: transparent;
+    border-color: transparent;
+}
+#text{
+    grid-area: textBox;
+    text-align: center;
+}
+
+.barTop{
+/*     border: 1px solid black; */
+    height: 25px;
+    background-color: #8ecae675;
+
+}
+#one{
+    grid-area: one;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #8ecae6;
+    border-right: none;
+}
+#two{
+    grid-area: two;
+    background-color: #8ecae6;
+    border-right: none;
+    border-left: none;
+}
+#three{
+    grid-area: three;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+}
+#bar{
+    grid-area: bar;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "one two three";
+
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+#progress{
+    grid-area: mid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "textBox"
+    "bar";
+}
+#backButtonCon{
+    grid-area: up;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: 
+    "topleft ."
+    "mid mid";
+
+
+}
+
+#optionCon{
+    grid-area: options;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#options{
+    width: fit-content;
+    border-radius: 4px;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+#options input{ display: none; }
+#options label{
+    display: flex;
+
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    margin: 12px;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    width: 120px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#options label:hover{
+    background: #eee;
+}
+#options input:checked + label{
+    background: #219EBC;
+    color: white;
+}
+
+
+
+#nextbtn{
+    height: 50px;
+    width: 150px;
+
+    background-color: #219EBC;
+    border-color: #219EBC;
+    border-radius: 10px;
+    color: white;
+}
+#nextButtonDiv{
+    grid-area: btn;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+
+
+}
+.mainCon{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    grid-template-areas: 
+    "up"
+    "options"
+    "btn";
+
+
+
+    background-color: white;
+
+    border-radius: 10px;
+    min-height: 75vh;
+    margin: 45px;
+    padding: 40px;
+
+}
+@media only screen and (max-width: 768px){
+    .mainCon{
+        min-height: 87vh;
+        border-radius: 0;
+        margin: 0;
+        padding: 40px;
+    }
+    #nextbtn{
+        height: 50px;
+        width: 100px;
+    
+    }
+
+}
+@media only screen and (min-width: 769px){
+
+}
