@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #8ecae6;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+}
+
+#petTrack{
+    grid-area: track;
+
+}
+#pic{
+    grid-area: pic;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    grid-area: name;
+    border: 1px solid black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    height: 100px;
+
+    font-size: 30px;
+
+}
+#petPicHere{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+#opOne{
+    grid-area: one;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pic name";
+
+    background-color: transparent;
+    border-color: transparent;
+
+    margin-top: 50px;
+}
+.mainCon{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    border-radius: 10px;
+    min-height: 75vh;
+    margin: 45px;
+
+
+}
+
+@media only screen and (max-width: 768px){
+    .mainCon{
+        min-height: 87vh;
+        border-radius: 0;
+        margin: 0;
+        padding: 40px;
+    }
+  }

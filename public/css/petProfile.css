@@ -154,6 +154,7 @@ right:5vw
 #footer{
     position: sticky;
     bottom: 0;
+    margin-top: auto;
 }
 
 #profile{
