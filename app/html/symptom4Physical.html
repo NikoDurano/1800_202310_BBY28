@@ -48,6 +48,67 @@
 
     <nav id="navbarPlaceholder"></nav>
 
+    <div class="modelCon" id="modelCon1">
+        <div class="model">
+            <img src="/public/img/corgiDoc.png" alt="dogvet">
+            <h1>Low Risk</h1>
+            <p>
+                Your Pet needs some additonal care
+
+            </p>
+            <div id="options1">
+                <button class="btn" id="petCare1">
+                    Pet Care Tips
+                </button>
+                <button class="btn" id="close1">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modelCon" id="modelCon2">
+        <div class="model">
+            <img src="/public/img/corgiDoc.png" alt="dogvet">
+            <h1>Medium Risk</h1>
+            <p>
+               Your pet may need medical attention. If you're unable to bring your Pet
+               to the vet, please review our Pet-Care tips and monitor your pet's symptoms.
+
+            </p>
+            <div id="options2">
+                <button class="btn" id="petCare2">
+                    Pet Care Tips
+                </button>
+                <button class="btn" id="close2">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modelCon" id="modelCon3">
+        <div class="model">
+            <img src="/public/img/corgiDoc.png" alt="dogvet">
+            <h1>High Risk</h1>
+            <p>
+                Your pet is showing signs that they need immediate medical attention.Please bring 
+                them to the vet immediately.
+
+            </p>
+            <div id="options3">
+                <button class="btn" id="petCare3" onclick="window.location.href ='tabVet1.html'">
+                    Vet Contact Page
+                </button>
+                <button class="btn" id="close3">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="mainCon">
 
         <div id="backButtonCon">
@@ -95,8 +156,13 @@
         </div>
 
         <div id="nextButtonDiv">
+<<<<<<< HEAD
             <button id="nextbtn">
                 SUBMIT
+=======
+            <button id="nextbtn" >
+                Submit
+>>>>>>> 446684015087238b8cef02e2acd79c5a707de4e9
             </button>
         </div>
 
@@ -117,21 +183,11 @@
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteSymptom.js"></script>
-    <script>
-        const btn3B = document.querySelector('#nextbtn');
-        btn3B.addEventListener('click', (event) => {
-            let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
-            let values = [];
-            checkboxes.forEach((checkbox) => {
-                values.push(checkbox.value);
-            });
-            alert(values);
-        });
-    </script>
+    <script src="/public/js/symptom4Phyiscal.js"></script>
 
 
 
-    
+
 </body>
 
 </html>
