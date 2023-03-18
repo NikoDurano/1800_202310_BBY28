@@ -45,14 +45,31 @@
 
     <div class="modelCon" id="modelCon">
         <div class="model">
-        <img src="/public/img/corgiDoc.png" alt="dogvet">
-            <h1>Pet Information</h1>
+        <img src="/public/img/DocProfile.png" alt="dogvet">
             <p>
-                In this section placeholderText placeholderText placeholderText
-                placeholderText placeholderText
+                Let's look at more factors that can affect a pet's response to heat or cold.
             </p>
+            <ul>
+                <li>
+                    Long-haired breeds are more susceptible to extreme heat
+                </li>
+                <li>
+                    Short-haired breeds are more susceptible to extreme cold
+                </li>
+            </ul>
+            <p> Flat-faced (brachycephalic) breeds are also more susceptible to weather effects</p>
+            <ul> 
+                <li>
+                    Bulldog, Pug, Boxer, Shih Tzu dogs
+                </li>
+                <li>
+                    Persian, Exotic, Scottish Fold cats
+                </li>
+            </ul>
+            <p> Existing medical conditions can also affect how your pet handles extreme weather.</p>
+            <br>
             <button id="close" >
-                Close
+                NEXT
             </button>
         </div>
     </div>
@@ -81,7 +98,7 @@
             </div>
             <select name="coatLength" id="coatLength">
                 <option value="long">Long</option>
-                <option value="short">Short</option>
+                <option value="short" selected>Short</option>
             </select>
         </form>
 
@@ -91,7 +108,7 @@
             </div>
             <select name="flatFace" id="flatFace">
                 <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="no" selected>No</option>
             </select>
         </form>
 
@@ -101,7 +118,7 @@
             </div>
             <select name="heartProb" id="heartProb">
                 <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="no" selected>No</option>
             </select>
         </form>
 
@@ -111,7 +128,7 @@
             </div>
             <select name="lungProb" id="lungProb">
                 <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="no" selected>No</option>
             </select>
         </form>
 
@@ -121,12 +138,12 @@
             </div>
             <select name="brainProb" id="brainProb">
                 <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="no" selected>No</option>
             </select>
         </form>
 
         <div id="nextButtonBox">
-            <button id="userSubmitBtn" type="submit" onclick="updatePetProfile2Doc()">Next</button>
+            <button id="userSubmitBtn" type="submit" onclick="updatePetProfile2Doc()">NEXT</button>
         </div>
 
 

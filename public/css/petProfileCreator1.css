@@ -10,45 +10,51 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Josefin";
-    
+
 }
 
 
 
 
-#blank{
+#blank {
     grid-area: blank;
 }
-#backButtonCon{
+
+#backButtonCon {
     grid-area: backTop;
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "backBtn blank";
+    grid-template-areas:
+        "backBtn blank";
 }
-#backButton{
-    
+
+#backButton {
+
     grid-area: backBtn;
     border: none;
     background-color: transparent;
     padding: 20px 0 0 40px;
     position: absolute;
 }
-#textBoxTop{
+
+#textBoxTop {
     grid-area: textBox;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #btn {
     background-color: transparent;
     border-color: transparent;
     font-size: larger;
 }
+
 input[type="file"] {
     display: none;
 }
+
 #labelPet {
     border: 1px solid #ccc;
     display: inline-block;
@@ -57,13 +63,15 @@ input[type="file"] {
     border-radius: 10px;
     margin-top: 20px;
 }
+
 #petPicHere {
     width: 206px;
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
 }
-#profilePic{
+
+#profilePic {
     grid-area: petPic;
     display: flex;
     justify-content: center;
@@ -75,55 +83,62 @@ input[type="file"] {
     width: 206px;
     border-radius: 10px;
 }
-#profilePicHolder{
+
+#profilePicHolder {
     grid-area: profilePic;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr;
-    grid-template-areas: 
-    "textBox"
-    "petPic";
+    grid-template-areas:
+        "textBox"
+        "petPic";
     align-items: end;
     justify-items: center;
-    
+
 }
-#profilePicDesc{
+
+#profilePicDesc {
     grid-area: profilePicText;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#name{
+
+#name {
     grid-area: name;
-    padding:  0 10vw 0 10vw;  
+    padding: 0 10vw 0 10vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
-#age{
+
+#age {
     grid-area: age;
-    padding:  0 10vw 0 10vw;  
+    padding: 0 10vw 0 10vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
-.weight{
+
+.weight {
     grid-area: weightPet;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
-#weightPet{
+
+#weightPet {
     padding-left: 47px;
     padding-right: 47px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
 }
-#userSubmitBtn{
+
+#userSubmitBtn {
     padding-left: 10vw;
     padding-right: 10vw;
     padding-top: 10px;
@@ -134,24 +149,26 @@ input[type="file"] {
     color: white;
 
 }
-#nextButtonBox{
+
+#nextButtonBox {
     grid-area: next;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-.mainCon{
+
+.mainCon {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "backTop"
-    "profilePic"
-    "profilePicText"
-    "name"
-    "age"
-    "weightPet"
-    "next";
+    grid-template-areas:
+        "backTop"
+        "profilePic"
+        "profilePicText"
+        "name"
+        "age"
+        "weightPet"
+        "next";
 
     background-color: white;
     margin: 50px;
@@ -161,14 +178,14 @@ input[type="file"] {
 
 }
 
-.modelCon{
+.modelCon {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
 
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 
     display: flex;
     justify-content: center;
@@ -176,15 +193,18 @@ input[type="file"] {
 
     padding: 20px;
 }
+
 .modelCon.close {
     opacity: 0;
     pointer-events: none;
 }
-img{
+
+img {
     height: 100px;
     width: auto;
 }
-.model{
+
+.model {
     background-color: white;
     max-width: 100%;
     border-radius: 10px;
@@ -195,7 +215,7 @@ img{
     align-items: center;
     flex-direction: column;
 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     text-align: center;
 
@@ -203,7 +223,7 @@ img{
 
 
 
-#close{
+#close {
     padding-left: 10vw;
     padding-right: 10vw;
     padding-top: 10px;
@@ -217,83 +237,85 @@ img{
 
 
 
-@media only screen and (max-width : 768px){
-    
-}
+@media only screen and (max-width : 768px) {}
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 769px) {
     .mainCon {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "backTop backTop"
-        " name profilePic"
-        " age profilePic"
-        " weightPet profilePic"
-        " next profilePicText";
-    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "backTop backTop"
+            " name profilePic"
+            " age profilePic"
+            " weightPet profilePic"
+            " next profilePicText";
+
     }
-  
+
     #name {
-      justify-content: center;
-      font-size: 30px;
-  
+        justify-content: center;
+        font-size: 30px;
+
     }
-    
+
     #age {
-      justify-content: center;
-      font-size: 30px;
-  
-  
+        justify-content: center;
+        font-size: 30px;
+
+
     }
-    
+
     #weightText {
-      font-size: 30px;
-  
+        font-size: 30px;
+
     }
-    #weightPet{
-      font-size: 20px;
-  
+
+    #weightPet {
+        font-size: 20px;
+
     }
-    .weight{
-      justify-content: center;
-  
+
+    .weight {
+        justify-content: center;
+
     }
-  
+
     #petPicHere {
-      width: 30vw;
-      height: auto;
-      border-radius: 10px;
+        width: 30vw;
+        height: auto;
+        border-radius: 10px;
     }
-    
+
     #profilePic {
-  
-      height: auto;
-      width: 30vw;
-      border-radius: 10px;
+
+        height: auto;
+        width: 30vw;
+        border-radius: 10px;
     }
-    #petNameBox{
-      width: 208px;
-      font-size: 20px;
+
+    #petNameBox {
+        width: 208px;
+        font-size: 20px;
     }
-    #ageNameBox{
-      width: 208px;
-      font-size: 20px;
-  
-  
+
+    #ageNameBox {
+        width: 208px;
+        font-size: 20px;
+
+
     }
 
     #petPicHere {
         height: 35vh;
         object-fit: cover;
-    
+
     }
-      
+
     #profilePic {
         margin-top: 30px;
         height: 35vh;
-        
+
     }
-  
-  }
+
+}
