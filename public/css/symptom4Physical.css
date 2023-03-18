@@ -167,6 +167,63 @@ body {
     padding: 40px;
 
 }
+
+.modelCon{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+}
+.modelCon.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+img{
+    height: 100px;
+    width: auto;
+}
+.model{
+    background-color: white;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+    text-align: center;
+
+}
+
+.btn{
+    text-align: center;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    background-color: #219EBC;
+    border-color: #219EBC;
+    border-radius: 10px;
+    color: white;
+
+}
+
+
 @media only screen and (max-width: 768px){
     .mainCon{
         min-height: 87vh;
