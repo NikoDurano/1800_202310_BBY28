@@ -9,29 +9,29 @@ let ageBox = document.getElementById("ageBox");
 let insertButton = document.getElementById("insertButton") */
 //update
 //PET PROFILE CREATE/EDIT UPDATE
- async function updatePetProfileDoc(){
+async function updatePetProfileDoc() {
     let nameBox = document.getElementById("nameBox");
     let ageBox = document.getElementById("ageBox");
-    
+
     //let insertButton = document.getElementById("insertButton")
 
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
-        ref.update({
-            namePet:nameBox.value,
-            agePet:ageBox.value,
-        }
+    ref.update({
+        namePet: nameBox.value,
+        agePet: ageBox.value,
+    }
     )
-    .then(()=>{
-        alert("works");
-        window.location.href = "tabPetProfile.html"
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
-} 
+        .then(() => {
+            alert("works");
+            window.location.href = "tabPetProfile.html"
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
 //insertButton.addEventListener("click", updatePetProfileDoc);
 
 
@@ -46,11 +46,17 @@ function updateUserProfileDoc() {
     const user = firebase.auth().currentUser;
     const ref = db.collection("users").doc(user.uid);
 
-    ref.update({
-        userName: userNameBox.value,
 
-    }
-    )
+        if (userNameBox.value != "") {
+            ref.update({
+                userName: userNameBox.value
+            })
+        }
+
+        ref.update({
+
+        }
+        )
         .then(() => {
             alert("works");
             window.location.href = "petProfileCreator1.html"
@@ -59,35 +65,63 @@ function updateUserProfileDoc() {
             alert("error" + error);
         });
 }
+function editUserProfileDoc() {
+    let userNameBox = document.getElementById("userNameBox");
 
-async function updatePetProfile1Doc(){
+
+    //let nextButton = document.getElementById("userSubmitBtn")
+
+
+    const user = firebase.auth().currentUser;
+    const ref = db.collection("users").doc(user.uid);
+
+
+        if (userNameBox.value != "") {
+            ref.update({
+                userName: userNameBox.value
+            })
+        }
+
+        ref.update({
+
+        }
+        )
+        .then(() => {
+            alert("works");
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
+
+async function updatePetProfile1Doc() {
     let nameBox = document.getElementById("petNameBox");
     let ageBox = document.getElementById("ageNameBox");
-    
+
     document.forms["weight"].weightPet.options;
 
     //let insertButton = document.getElementById("insertButton")
 
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
-        ref.update({
-            namePet:nameBox.value,
-            agePet:ageBox.value,
-            weightPet:this.weightPet.value
-        }
+    ref.update({
+        namePet: nameBox.value,
+        agePet: ageBox.value,
+        weightPet: this.weightPet.value
+    }
     )
-    .then(()=>{
-        alert("works");
-        window.location.href = "petProfileCreator2.html"
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
-} 
+        .then(() => {
+            alert("works");
+            window.location.href = "petProfileCreator2.html"
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
 
-async function updatePetProfile2Doc(){
+async function updatePetProfile2Doc() {
     document.forms["coat"].coatLength.options;
     document.forms["face"].flatFace.options;
     document.forms["heart"].heartProb.options;
@@ -98,27 +132,27 @@ async function updatePetProfile2Doc(){
 
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
-        ref.update({
+    ref.update({
 
-            coatType: this.coatLength.value,
-            flatFace: this.flatFace.value,
-            heartProblem: this.heartProb.value,
-            lungProblem: this.lungProb.value,
-            brainProblem: this.brainProb.value
+        coatType: this.coatLength.value,
+        flatFace: this.flatFace.value,
+        heartProblem: this.heartProb.value,
+        lungProblem: this.lungProb.value,
+        brainProblem: this.brainProb.value
 
 
-        }
+    }
     )
-    .then(()=>{
-        alert("works");
-        window.location.href = "vetProfileCreator.html"
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
-} 
+        .then(() => {
+            alert("works");
+            window.location.href = "vetProfileCreator.html"
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
 
 async function updateVetProfileCreator() {
 
@@ -130,21 +164,21 @@ async function updateVetProfileCreator() {
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
-        ref.update({
-                 
-            nameVet: vetName.value,
-            phoneNumberVet: vetPhone.value,
-            addressVet: vetLocation.value
+    ref.update({
 
-        }
+        nameVet: vetName.value,
+        phoneNumberVet: vetPhone.value,
+        addressVet: vetLocation.value
+
+    }
     )
-    .then(()=>{
-        alert("works");
-        window.location.href = "tabPetProfile.html"
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
+        .then(() => {
+            alert("works");
+            window.location.href = "tabPetProfile.html"
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
 
 }
 
@@ -152,40 +186,40 @@ async function profileEdit1() {
 
     let nameBox = document.getElementById("petNameBox");
     let ageBox = document.getElementById("ageNameBox");
-    
+
     document.forms["weight"].weightPet.options;
 
     //let insertButton = document.getElementById("insertButton")
 
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
-        if(nameBox.value!=""){
-            ref.update({
-                namePet:nameBox.value
-            })
-        }
-        if(ageBox.value!=""){
-            ref.update({
-                agePet:ageBox.value
-
-            })
-        }
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    if (nameBox.value != "") {
         ref.update({
-            weightPet:this.weightPet.value
-        }
+            namePet: nameBox.value
+        })
+    }
+    if (ageBox.value != "") {
+        ref.update({
+            agePet: ageBox.value
+
+        })
+    }
+    ref.update({
+        weightPet: this.weightPet.value
+    }
     )
-    .then(()=>{
-        alert("works");
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
+        .then(() => {
+            alert("works");
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
 
 
 }
 
-async function profileEdit2(){
+async function profileEdit2() {
     document.forms["coat"].coatLength.options;
     document.forms["face"].flatFace.options;
     document.forms["heart"].heartProb.options;
@@ -196,27 +230,27 @@ async function profileEdit2(){
 
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
-    const ref =db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
+    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid)
 
-        ref.update({
+    ref.update({
 
-            coatType: this.coatLength.value,
-            flatFace: this.flatFace.value,
-            heartProblem: this.heartProb.value,
-            lungProblem: this.lungProb.value,
-            brainProblem: this.brainProb.value
+        coatType: this.coatLength.value,
+        flatFace: this.flatFace.value,
+        heartProblem: this.heartProb.value,
+        lungProblem: this.lungProb.value,
+        brainProblem: this.brainProb.value
 
 
-        }
+    }
     )
-    .then(()=>{
-        alert("works");
- 
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
-} 
+        .then(() => {
+            alert("works");
+
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
+}
 
 async function profileEdit3() {
 
@@ -228,33 +262,33 @@ async function profileEdit3() {
     const user = firebase.auth().currentUser;
     //PROBLEM CANT FIND USER ID
     const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
-    if(vetName.value!=""){
+    if (vetName.value != "") {
         ref.update({
             nameVet: vetName.value
         })
     }
-    if(vetPhone.value!=""){
+    if (vetPhone.value != "") {
         ref.update({
             phoneNumberVet: vetPhone.value
 
         })
-    }    
-    if(vetLocation.value!=""){
+    }
+    if (vetLocation.value != "") {
         ref.update({
             addressVet: vetLocation.value
 
         })
-    }  
+    }
     ref.update({
-        
-        }
+
+    }
     )
-    .then(()=>{
-        alert("works");
-    })
-    .catch((error)=>{
-        alert("error" +error);
-    });
+        .then(() => {
+            alert("works");
+        })
+        .catch((error) => {
+            alert("error" + error);
+        });
 
 }
 
