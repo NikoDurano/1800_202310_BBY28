@@ -59,8 +59,8 @@ input[type="file"] {
 }
 
 #petPicHere {
-  width: 206px;
   height: 150px;
+  width: 206px;
   border-radius: 10px;
   object-fit: cover;
 
@@ -80,22 +80,14 @@ input[type="file"] {
 
 #profilePicHolder {
   grid-area: profilePic;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  grid-template-areas:
-    "textBox"
-    "petPic";
-  align-items: end;
-  justify-items: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
-#profilePicDesc {
-  grid-area: profilePicText;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #name {
   grid-area: name;
@@ -149,23 +141,135 @@ input[type="file"] {
   align-items: flex-start;
 }
 
+#TypeCon{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-area: typePet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#Type{
+  width: fit-content;
+  border-radius: 4px;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+#Type input{ display: none; }
+#Type label{
+  display: flex;
+
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  margin: 15px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+
+  width: 80.5px;
+  font-size: 20px;
+  border-radius: 10px;
+
+  height: 52px;
+
+
+}
+#Type label:hover{
+  background: #eee;
+}
+#Type input:checked + label{
+  background: #219EBC;
+  color: white;
+}
+
+#weightCon{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-area: weightPet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#weight{
+  width: fit-content;
+  border-radius: 4px;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+#weight input{ display: none; }
+#weight label{
+  display: flex;
+
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  margin: 12px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  width: 120px;
+  font-size: 20px;
+  border-radius: 10px;
+
+  height: 52px;
+  width: fit-content;
+
+}
+#weight label:hover{
+  background: #eee;
+}
+#weight input:checked + label{
+  background: #219EBC;
+  color: white;
+}
+
+
 .mainCon {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "backTop"
     "profilePic"
     "profilePicText"
     "name"
     "age"
+    "typePet"
     "weightPet"
     "next";
 
   background-color: white;
   margin: 50px;
   border-radius: 10px;
-  height: 89vh;
+  height: 110vh;
 }
 
 #foot {
@@ -185,17 +289,25 @@ input[type="file"] {
       border-radius: 0;
       margin: 0;
   }
+
+  #TypeCon{
+    margin-top: 0;
+    margin-bottom: 0;
+
+    
+  }
 }
 
 @media only screen and (min-width: 769px){
   .mainCon {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "backTop backTop"
       " name profilePic"
       " age profilePic"
+      " typePet profilePic"
       " weightPet profilePic"
       " next profilePicText";
   
@@ -213,13 +325,18 @@ input[type="file"] {
 
 
   }
+
+  #Type label{
+    width: 89px;
+  }
+
   
-  #weightText {
+  #weightTest {
     font-size: 30px;
 
   }
-  #weightPet{
-    font-size: 20px;
+  .text{
+    font-size: 30px;
 
   }
   .weight{
@@ -228,15 +345,18 @@ input[type="file"] {
   }
 
   #petPicHere {
+    height: 35vh;
     width: 30vw;
-    height: auto;
+ 
+
     border-radius: 10px;
+    object-fit: cover;
   }
   
   #profilePic {
 
     height: auto;
-    width: 30vw;
+    width: auto;
     border-radius: 10px;
   }
   #petNameBox{
@@ -249,17 +369,4 @@ input[type="file"] {
 
 
   }
-
-  #petPicHere {
-    height: 35vh;
-    object-fit: cover;
-
-  }
-  
-  #profilePic {
-    margin-top: 30px;
-    height: 35vh;
-    
-  }
-
 }

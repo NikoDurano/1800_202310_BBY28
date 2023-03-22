@@ -27,8 +27,9 @@ var uiConfig = {
                    picProfile:""                          //optional default profile info
             })
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).set({
-                  namePet: "name",
-                  agePet:"age",
+                  namePet: "Pet name",
+                  typePet:"",
+                  agePet:"Pet age",
                   weightPet:"",
                   coatType:"",
                   flatFace:"",
@@ -57,11 +58,11 @@ var uiConfig = {
             
             //Joseph
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid).set({
-                  nameVet: "DR_DOOM",
-                  addressVet: "DEFAULT_ADDRESS",
+                  nameVet: "Name",
+                  addressVet: "Address",
                   emailVet: "DEFAULT_EMAIL",
                   clinicName: "DOOM_CLINIC",
-                  phoneNumberVet: 1234567890
+                  phoneNumberVet: "Phone Number"
               // nameOfKeyValuePair: "defaultValue"
             }) 
 
