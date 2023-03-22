@@ -194,8 +194,34 @@
             document.getElementById("petNameBox").placeholder = userDoc.data().namePet;
             document.getElementById("ageNameBox").placeholder = userDoc.data().agePet;
 
- 
+            dog = document.getElementById("t1");
+            cat = document.getElementById("t2");
 
+            zero = document.getElementById("x1");
+            twentyFive = document.getElementById("x2");
+            fifty = document.getElementById("x3");
+            seventyFive = document.getElementById("x4");
+            oneHundred = document.getElementById("x5");
+
+
+
+            if(userDoc.data().typePet == "dog"){
+                dog.checked=true;
+            }else{
+                cat.checked=true;
+            }
+
+            if(userDoc.data().typePet == "0-25 lbs"){
+                zero.checked = true
+            }else if(userDoc.data().typePet == "25-50 lbs"){
+                twentyFive.checked = true
+            }else if(userDoc.data().typePet == "50-75 lbs"){
+                fifty.checked = true
+            }else if(userDoc.data().typePet == "75-100 lbs"){
+                seventyFive.checked = true
+            }else{
+                oneHundred.checked = true
+            }
             })  
         }    
      })
