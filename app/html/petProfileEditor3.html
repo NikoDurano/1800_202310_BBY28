@@ -117,6 +117,40 @@
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteProfile.js"></script>
+    <script>
+
+        firebase.auth().onAuthStateChanged(user =>{
+        if (user){
+            console.log(user.uid); // let me to know who is the user that logged in to get the UID
+            currentUser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid); // will to to the firestore and go to the document of the user
+              
+            currentUser.get().then(userDoc=>{
+         
+  
+            if(userDoc.data().nameVet=""){
+                document.getElementById("vetNameInput").placeholder = userDoc.data().nameVet;
+            }else{
+                document.getElementById("vetNameInput").placeholder = userDoc.data().nameVet;
+            }
+            if(userDoc.data().phoneNumberVet=""){
+                document.getElementById("vetPhoneInput").placeholder = userDoc.data().phoneNumberVet;
+            }else{
+                document.getElementById("vetPhoneInput").placeholder = userDoc.data().phoneNumberVet;
+            }
+            if(userDoc.data().addressVet=""){
+                document.getElementById("vetLocationInput").placeholder = userDoc.data().addressVet;
+            }else{
+                document.getElementById("vetLocationInput").placeholder = userDoc.data().addressVet;
+            }
+            })  
+          }    
+       })
+  
+  
+  
+  
+  
+      </script>
 
 
     <!-- <script src="./scripts/script.js"></script> -->

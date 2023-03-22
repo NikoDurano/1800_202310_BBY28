@@ -111,22 +111,45 @@
             </div>
 
             <div id="inputAgeTextBox">
-                <input id="ageNameBox" class="form-control" type="text" placeholder="Pet Name" aria-label="Name">
+                <input id="ageNameBox" class="form-control" type="text" placeholder="Pet Age" aria-label="Name">
             </div>
         </div>
 
-        <form name="weight" class="weight">
-            <div id="weightText">
-                Weight of Pet
+        <div id="TypeCon">
+            <p class="text">Type of Pet</p>
+            <div id="Type">
+                <input type="radio" id="t1" name="Type" value="dog"/>
+                <label for="t1">Dog</label>
+                
+                <input type="radio" id="t2" name="Type" value="cat"/>
+                <label for="t2">Cat</label>
+                
             </div>
-            <select name="weightPet" id="weightPet">
-                <option value="0-25 lbs">0-25 lbs</option>
-                <option value="25-50 lbs">25-50 lbs</option>
-                <option value="50 -75 lbs">50-75 lbs</option>
-                <option value="75 - 100 lbs">75-100 lbs</option>
-                <option value="100+ lbs">100+ lbs</option>
-            </select>
-        </form>
+    
+        </div>
+
+        <div id="weightCon">
+            <p class="text">Weight of Pet</p>
+            <div id="weight">
+                <input type="radio" id="x1" name="weight" value="0-25 lbs"/>
+                <label for="x1">0-25 lbs</label>
+                
+                <input type="radio" id="x2" name="weight" value="25-50 lbs"/>
+                <label for="x2">25-50 lbs</label>
+                
+                <input type="radio" id="x3" name="weight" value="50-75 lbs"/>
+                <label for="x3">50-75 lbs</label>
+
+                <input type="radio" id="x4" name="weight" value="75-100 lbs"/>
+                <label for="x4">75-100 lbs</label>
+
+                <input type="radio" id="x5" name="weight" value="100+ lbs"/>
+                <label for="x5">100+ lbs</label>
+                
+                <!-- as many choices as you like -->
+            </div>
+    
+        </div>
 
         <div id="nextButtonBox">
             <button id="userSubmitBtn" type="submit" onclick="updatePetProfile1Doc()">NEXT</button>
