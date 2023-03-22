@@ -81,7 +81,6 @@ function editUserProfileDoc() {
                 userName: userNameBox.value
             })
         }
-
         ref.update({
 
         }
