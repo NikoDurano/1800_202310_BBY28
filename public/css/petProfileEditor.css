@@ -141,7 +141,7 @@ input[type="file"] {
   align-items: flex-start;
 }
 
-#TypeCon{
+#TypeCon {
   margin-top: 20px;
   margin-bottom: 20px;
   grid-area: typePet;
@@ -149,9 +149,10 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
 }
-#Type{
+
+#Type {
   width: fit-content;
   border-radius: 4px;
 
@@ -162,8 +163,12 @@ input[type="file"] {
   justify-content: center;
 
 }
-#Type input{ display: none; }
-#Type label{
+
+#Type input {
+  display: none;
+}
+
+#Type label {
   display: flex;
 
 
@@ -187,15 +192,17 @@ input[type="file"] {
 
 
 }
-#Type label:hover{
+
+#Type label:hover {
   background: #eee;
 }
-#Type input:checked + label{
+
+#Type input:checked+label {
   background: #219EBC;
   color: white;
 }
 
-#weightCon{
+#weightCon {
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -206,9 +213,10 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
 }
-#weight{
+
+#weight {
   width: fit-content;
   border-radius: 4px;
 
@@ -219,8 +227,12 @@ input[type="file"] {
   justify-content: center;
 
 }
-#weight input{ display: none; }
-#weight label{
+
+#weight input {
+  display: none;
+}
+
+#weight label {
   display: flex;
 
 
@@ -243,10 +255,12 @@ input[type="file"] {
   width: fit-content;
 
 }
-#weight label:hover{
+
+#weight label:hover {
   background: #eee;
 }
-#weight input:checked + label{
+
+#weight input:checked+label {
   background: #219EBC;
   color: white;
 }
@@ -269,7 +283,7 @@ input[type="file"] {
   background-color: white;
   margin: 50px;
   border-radius: 10px;
-  height: 110vh;
+  height: 130vh;
 }
 
 #foot {
@@ -283,22 +297,20 @@ input[type="file"] {
   font-size: larger;
 }
 
-@media only screen and (max-width: 768px){
-  .mainCon{
-      min-height: 87vh;
-      border-radius: 0;
-      margin: 0;
+@media only screen and (max-width: 768px) {
+  .mainCon {
+    min-height: 87vh;
+    border-radius: 0;
+    margin: 0;
   }
 
-  #TypeCon{
+  #TypeCon {
     margin-top: 0;
     margin-bottom: 0;
-
-    
   }
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 769px) {
   .mainCon {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,7 +322,7 @@ input[type="file"] {
       " typePet profilePic"
       " weightPet profilePic"
       " next profilePicText";
-  
+
   }
 
   #name {
@@ -318,7 +330,7 @@ input[type="file"] {
     font-size: 30px;
 
   }
-  
+
   #age {
     justify-content: center;
     font-size: 30px;
@@ -326,20 +338,22 @@ input[type="file"] {
 
   }
 
-  #Type label{
+  #Type label {
     width: 89px;
   }
 
-  
+
   #weightTest {
     font-size: 30px;
 
   }
-  .text{
+
+  .text {
     font-size: 30px;
 
   }
-  .weight{
+
+  .weight {
     justify-content: center;
 
   }
@@ -347,23 +361,25 @@ input[type="file"] {
   #petPicHere {
     height: 35vh;
     width: 30vw;
- 
+
 
     border-radius: 10px;
     object-fit: cover;
   }
-  
+
   #profilePic {
 
     height: auto;
     width: auto;
     border-radius: 10px;
   }
-  #petNameBox{
+
+  #petNameBox {
     width: 208px;
     font-size: 20px;
   }
-  #ageNameBox{
+
+  #ageNameBox {
     width: 208px;
     font-size: 20px;
 
