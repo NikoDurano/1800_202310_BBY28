@@ -41,17 +41,9 @@ var uiConfig = {
             })
             //Justin
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
-                  agitation: "",
-                  currenttemp: "",
-                  diarrhea: "",
-                  dizziness: "",
-                  drooling: "",
-                  gums: "",
-                  heartrate: "",
-                  lethargy: "",
-                  panting: "",
-                  tongue: "",
-                  vomit: ""
+                  arrBavior: [],
+                  temperature: "",
+                  arrPhysical:[]
                 
             })
             
