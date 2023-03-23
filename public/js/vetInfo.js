@@ -23,16 +23,3 @@ function insertNameFromFirestore(){
     })
 }
 insertNameFromFirestore();
-
-
-function fard() {
-
-    const name = document.getElementById("vet1Name");
-    const user = firebase.auth().currentUser;
-    const ref = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid);
-    ref.get().then(doc => {
-      console.log(doc.data().nameVet);
-      name.textContent = doc.data().nameVet;
-    });
-
-  }
