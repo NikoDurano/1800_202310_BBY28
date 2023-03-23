@@ -303,6 +303,17 @@ input[type="file"] {
     border-radius: 0;
     margin: 0;
   }
+  #nameTextBoxBot{
+    font-size: 20px;
+  }
+  #ageTextBoxBot{
+    font-size: 20px;
+
+  }
+  .text{
+    font-size: 20px;
+
+  }
 
   #TypeCon {
     margin-top: 0;

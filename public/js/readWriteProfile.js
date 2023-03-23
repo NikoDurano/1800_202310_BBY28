@@ -250,7 +250,9 @@ async function profileEdit1() {
     });
   }
   ref
-    .update({})
+    .update({
+      
+    })
     .then(() => {
       alert("works");
     })
