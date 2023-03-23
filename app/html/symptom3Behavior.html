@@ -95,7 +95,7 @@
         </div>
 
         <div id="nextButtonDiv">
-            <button id="nextbtn" onclick="window.location.href ='symptom4Physical.html'">
+            <button id="nextbtn" onclick="behavioral()">
                 NEXT
             </button>
         </div>
@@ -119,17 +119,7 @@
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
     <script src="/public/js/readWriteSymptom.js"></script>
-    <script>
-        const btn3B = document.querySelector('#nextbtn');
-        btn3B.addEventListener('click', (event) => {
-            let checkboxes = document.querySelectorAll('input[name="behavior"]:checked');
-            let values = [];
-            checkboxes.forEach((checkbox) => {
-                values.push(checkbox.value);
-            });
-            alert(values);
-        });
-    </script>
+
 
 
 

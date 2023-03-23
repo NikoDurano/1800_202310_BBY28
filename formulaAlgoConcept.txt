@@ -13,6 +13,8 @@ formula(){
     int thresholdLower = 49;
     int thresholdUpper = 75;
 
+    
+
 
     if(type == "cat"){
 
