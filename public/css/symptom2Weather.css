@@ -127,6 +127,8 @@ body {
 
     font-size: 60px;
 }
+
+
 #tempWheel input{ display: none; }
 #tempWheel label{
     font-family: sans-serif;
