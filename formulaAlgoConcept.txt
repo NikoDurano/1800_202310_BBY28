@@ -42,11 +42,8 @@ formula(){
 
 catDog(){
 
-    String type;  //Cat or dog
     int petStats = 0;
 
-    if( type == "cat" ){
-
         petStats += petAge();
 
         petStats += petWeight();
@@ -56,19 +53,6 @@ catDog(){
         petStats += petPreConditons();
 
         petStats += petSymptoms();
-        
-    }else{
-
-        petStats += petAge();
-
-        petStats += petWeight();
-
-        petStats += petTemperature();
-
-        petStats += petPreConditons();
-
-        petStats += petSymptoms();
-    }   
 
     return petStats;
 }

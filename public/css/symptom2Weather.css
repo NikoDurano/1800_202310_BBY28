@@ -230,10 +230,9 @@ body {
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 1fr 0fr 1fr 100px;
+    grid-template-rows: 1fr 1fr 0fr 1fr 100px;
     grid-template-areas: 
     "up"
-    "form"
     "weatherAPP"
     "info"
     "wheel"

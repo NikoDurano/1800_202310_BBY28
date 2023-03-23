@@ -42,7 +42,6 @@ var uiConfig = {
             //Justin
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
                   agitation: "",
-                  breathing: "",
                   currenttemp: "",
                   diarrhea: "",
                   dizziness: "",
@@ -52,8 +51,8 @@ var uiConfig = {
                   lethargy: "",
                   panting: "",
                   tongue: "",
-                  vomit: "",
-                  weathercond: "",
+                  vomit: ""
+                
             })
             
             //Joseph
