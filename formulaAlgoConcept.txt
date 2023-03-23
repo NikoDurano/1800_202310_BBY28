@@ -1,6 +1,6 @@
 formula(){
 
-    int someNumber = petAssessment();
+    int someNumber = catDog();
     
     String type;
     
@@ -8,19 +8,18 @@ formula(){
     boolean gums;
     boolean heartProblem;
     boolean tongue;
-    boolean diarrhea;
     boolean vomit;
 
-    int thresholdLower;
-    int thresholdUpper;
+    int thresholdLower = 49;
+    int thresholdUpper = 75;
 
 
     if(type == "cat"){
 
-        if( panting || gums || heartrate || tongue || diarrhea || vomit ){
+        if( panting || gums || heartrate || tongue || vomit ){
             highRisk();
 
-        }else if( thresholdUpper > someNumber > thresholdLower){
+        }else if( thresholdUpper >= someNumber >= thresholdLower){
             midRisk();
 
         }else{
@@ -29,10 +28,10 @@ formula(){
 
     }else{
 
-        if( gums || heartrate || tongue || diarrhea || vomit ){
+        if( gums || heartrate || tongue || vomit ){
             highRisk();
 
-        }else if( thresholdUpper > number > thresholdLower){
+        }else if( thresholdUpper >= number >= thresholdLower){
             midRisk();
 
         }else{
@@ -40,64 +39,6 @@ formula(){
         }   
     }
 }
-
-
-petAssessment(){
-    String coatType;
-    int temperature;
-
-    int value = catDog();
-
-    int assessmentNumber = 0;
-
-    if( temperature < 0 ){
-        if( coatType == "long" ){
-            no cold risk multiplier
-            assessmentNumber = value;
-            return value;
-
-        }
-        else{
-            cold risk multiplier * value;
-            assessmentNumber = value;
-            return assessmentNumber
-        }
-    }
-    else if( 1 < temperature < 29 ){
-        if( coatType == "long" ){
-            multiplier??
-
-            assessmentNumber = value;
-            return value;
-
-        }
-        else{
-            multiplier ??
-
-            assessmentNumber = value;
-            return assessmentNumber
-        }
-
-    }
-    else{
-        if( coatType == "long" ){
-            heat risk multiplier * value;
-            assessmentNumber = value;
-            return assessmentNumber;
-
-        }
-        else{
-            no heat risk multiplier;
-            assessmentNumber = value;
-            return assessmentNumber
-        }
-
-    }
-
-return assessmentNumber;
-
-}
-
 
 catDog(){
 
@@ -110,6 +51,8 @@ catDog(){
 
         petStats += petWeight();
 
+        petStats += petTemperature();
+
         petStats += petPreConditons();
 
         petStats += petSymptoms();
@@ -119,6 +62,8 @@ catDog(){
         petStats += petAge();
 
         petStats += petWeight();
+
+        petStats += petTemperature();
 
         petStats += petPreConditons();
 
@@ -131,42 +76,72 @@ catDog(){
 
 petAge(){
 
-    int age
-    int ageValue = 0;
+    int age;
+    int ageValue = 3;
 
-        if( age <= 2 ){
-            ageValue +-
-
-        }else if( 10 >= age >= 3){
-            ageValue +-
+        if( 0 <= age <=10 ){
+            return ageValue;
 
         }else{
-            ageValue +-
+            ageValue == age - 11;
+            return ageValue;
         }
-
-    return ageValue
 }
 
 petWeight(){
 
+    int temperature;
+    String coat;
     String size;
-    weightValue = 0;
 
-        if(size == "thin"){
-            weightValue +-
+    int sizeValue = 0;
 
-        }else if(size == "normal"){
-            weightValue +-
+    if(size == "obese"){
+        sizeValue += 1;
 
-        }else if(size == "overweight"){
-            weightValue +-
-
-        }else{
-            weightValue +-
-
+        if(temperature >= 19){
+            sizeValue += 3;
+            
+        }if(coat == "long"){
+            sizeValue += 3;
         }
-    
-    return weightValue
+
+    }else if( size == "thin" && temperature <= 11 
+            || size == "overweight" && temperature >= 19
+            || coat == "short" && temperature <= 11
+            || coat == "long" && temperature >= 19){
+
+        sizeValue = 3;
+
+    }else{
+        sizeValue = 0;
+    }
+
+    return sizeValue
+}
+
+petTemperature(){
+
+    int temperature;
+    int temperatureValue = 0;
+
+    if( temperature < 0 ){
+        temperatureValue = 25;
+
+    }else if( 1 <= temperature <= 10 ){
+        temperatureValue = 20 - 2 * (temperature - 1);
+
+    }else if ( 11 <= temperature < = 19){
+        temperatureValue = 0;
+
+    }else if ( 20 <= temperature <= 29){
+        temperatureValue = 2 + 2 * (temperature - 20);
+
+    }else{
+        temperatureValue = 25;
+    }
+
+    return temperatureValue;
 }
 
 petPreConditons(){
@@ -179,16 +154,19 @@ petPreConditons(){
     preConditonsValue = 0;
 
         if(flatFace){
-            preConditonsValue +-
+            preConditonsValue += 3;
         }
         if(brainProb){
-            preConditonsValue +-
+            preConditonsValue += 3;
+
         }
         if(heartProb){
-            preConditonsValue +-
+            preConditonsValue += 3;
+
         }
         if(lungProb){
-            preConditonsValue +- 
+            preConditonsValue += 3;
+ 
         }
 
     return preConditonsValue;
@@ -200,20 +178,24 @@ petSymptoms(){
     boolean agitated;
     boolean dizziness;
     boolean lethargy;
+    boolean diarrhea;
 
     symptomsValue = 0;
 
         if(drool){
-            symptomsValue +- 
+            symptomsValue += 25; 
         }
         if(agitated){
-            symptomsValue +- 
+            symptomsValue += 25; 
         }
         if(dizziness){
-            symptomsValue +-
+            symptomsValue += 25;
         }
         if(lethargy){
-            symptomsValue +-
+            symptomsValue += 25;
+        }
+        if(diarrhea){
+            symptomsValue += 25;
         }
 
     return symptomsValue;
