@@ -39,11 +39,6 @@ formula(){
             lowRisk();
         }   
     }
-
-
-
-
-
 }
 
 
@@ -53,7 +48,7 @@ petAssessment(){
 
     int value = catDog();
 
-    int assessmentNumber;
+    int assessmentNumber = 0;
 
     if( temperature < 0 ){
         if( coatType == "long" ){
@@ -78,6 +73,7 @@ petAssessment(){
         }
         else{
             multiplier ??
+
             assessmentNumber = value;
             return assessmentNumber
         }
@@ -105,103 +101,122 @@ return assessmentNumber;
 
 catDog(){
 
-    String type;
-    int age;      // Age categories --> [0-2], [3-10], [11+]
-    size;         // Weight categores --> [thin], [normal], [overweight], [obese]
+    String type;  //Cat or dog
+    int petStats = 0;
+
+    if( type == "cat" ){
+
+        petStats += petAge();
+
+        petStats += petWeight();
+
+        petStats += petPreConditons();
+
+        petStats += petSymptoms();
+        
+    }else{
+
+        petStats += petAge();
+
+        petStats += petWeight();
+
+        petStats += petPreConditons();
+
+        petStats += petSymptoms();
+    }   
+
+    return petStats;
+}
+
+
+petAge(){
+
+    int age
+    int ageValue = 0;
+
+        if( age <= 2 ){
+            ageValue +-
+
+        }else if( 10 >= age >= 3){
+            ageValue +-
+
+        }else{
+            ageValue +-
+        }
+
+    return ageValue
+}
+
+petWeight(){
+
+    String size;
+    weightValue = 0;
+
+        if(size == "thin"){
+            weightValue +-
+
+        }else if(size == "normal"){
+            weightValue +-
+
+        }else if(size == "overweight"){
+            weightValue +-
+
+        }else{
+            weightValue +-
+
+        }
+    
+    return weightValue
+}
+
+petPreConditons(){
 
     boolean flatFace;
     boolean brainProb;
     boolean heartProb;
     boolean lungProb;
 
-    int petStats;
-
-
-    if( type == "cat" ){
-
-        if( age <= 2 ){
-            petStats +-
-
-        }else if( 10 >= age >= 3){
-            petStats +-
-
-        }else{
-            petStats +-
-
-        }
-
-
-        if(size == thin){
-            petStats +-
-
-        }else if(size == normal){
-            petStats +-
-
-        }else if(size == overweight){
-            petStats +-
-
-        }else{
-            petStats +-
-
-        }
-
+    preConditonsValue = 0;
 
         if(flatFace){
-            petStats +-
+            preConditonsValue +-
         }
         if(brainProb){
-            petStats +-
+            preConditonsValue +-
         }
         if(heartProb){
-            petStats +-
+            preConditonsValue +-
         }
         if(lungProb){
-            petStats +- 
-        }
-        
-    }else{
-        if( age <= 2 ){
-            petStats +-
-
-        }else if( 10 >= age >= 3){
-            petStats +-
-
-        }else{
-            petStats +-
+            preConditonsValue +- 
         }
 
-
-        if(size == thin){
-            petStats +-
-
-        }else if(size == normal){
-            petStats +-
-
-        }else if(size == overweight){
-            petStats +-
-
-        }else{
-            petStats +-
-
-        }
-
-
-        if(flatFace){
-            petStats +-
-        }
-        if(brainProb){
-            petStats +-
-        }
-        if(heartProb){
-            petStats +-
-        }
-        if(lungProb){
-            petStats +- 
-        }
-    }   
-
-    return petStats;
+    return preConditonsValue;
 }
 
+petSymptoms(){
+
+    boolean drool;
+    boolean agitated;
+    boolean dizziness;
+    boolean lethargy;
+
+    symptomsValue = 0;
+
+        if(drool){
+            symptomsValue +- 
+        }
+        if(agitated){
+            symptomsValue +- 
+        }
+        if(dizziness){
+            symptomsValue +-
+        }
+        if(lethargy){
+            symptomsValue +-
+        }
+
+    return symptomsValue;
+}
 
 
