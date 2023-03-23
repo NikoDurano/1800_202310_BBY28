@@ -58,11 +58,11 @@
 
         <div class="vetContactInfo" id="breed">
             Vet contact #1 <span id="vet1Name">Name</span>
-            <button class="callVetButton" id="callVetButton1" onclick="fard()">CALL</button>
+            <button class="callVetButton" id="callVetButton1" onclick="getVetInfo()">CALL</button>
 <!---------- TODO: put this into it's own js file, or onto an already made one --------------------------------------------------------------------->
             <script>
 
-              function fard() {
+              function getVetInfo() {
 
                 const name = document.getElementById("vet1Name");
                 const user = firebase.auth().currentUser;
