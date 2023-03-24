@@ -190,6 +190,16 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
+.warningWeather{
+    display: none;
+    pointer-events: none;
+    
+}
+.warningWeather.show{
+    display: block;
+    pointer-events: auto;
+
+}
 img{
     height: 100px;
     width: auto;

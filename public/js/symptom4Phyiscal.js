@@ -1,33 +1,3 @@
-function lowRisk() {
-  const close1 = document.getElementById("close1");
-  const modelCon1 = document.getElementById("modelCon1");
-
-  close1.addEventListener("click", () => {
-    modelCon1.classList.remove("show");
-  });
-  modelCon1.classList.add("show");
-}
-
-function midRisk() {
-  const close1 = document.getElementById("close2");
-  const modelCon1 = document.getElementById("modelCon2");
-
-  close1.addEventListener("click", () => {
-    modelCon1.classList.remove("show");
-  });
-  modelCon1.classList.add("show");
-}
-
-function highRisk() {
-  const close1 = document.getElementById("close3");
-  const modelCon1 = document.getElementById("modelCon3");
-
-  close1.addEventListener("click", () => {
-    modelCon1.classList.remove("show");
-  });
-  modelCon1.classList.add("show");
-}
-
 function physical() {
   const user = firebase.auth().currentUser;
 
@@ -94,10 +64,13 @@ function getValues() {
           const heart = userDoc.data().heartProblem;
           const lung = userDoc.data().lungProblem;
 
+
           let thresholdLower = 49;
           let thresholdUpper = 75;
 
           let petStats = 0;
+          let weather = petWeight(temperature, coat, size);
+
 
           petStats += petAge(age);
 
@@ -120,13 +93,21 @@ function getValues() {
               arrayPhysial.includes("vomit")
             ) {
               highRisk();
-            } else if (
-              thresholdLower <= petStats &&
-              petStats <= thresholdUpper
-            ) {
+              if(weather>=3){
+                warningThree();
+              }
+   
+            } else if ( thresholdLower <= petStats && petStats <= thresholdUpper) {
               midRisk();
+              if(weather>=3){
+                warningTwo();
+              }
             } else {
               lowRisk();
+              if(weather>=3){
+                warningOne();
+              }
+            
             }
           } else {
             if (
@@ -136,13 +117,22 @@ function getValues() {
               arrayPhysial.includes("vomit")
             ) {
               highRisk();
+              if(weather>=3){
+                warningThree();
+              }
             } else if (
               thresholdLower <= petStats &&
               petStats <= thresholdUpper
             ) {
               midRisk();
+              if(weather>=3){
+                warningTwo();
+              }
             } else {
               lowRisk();
+              if(weather>=3){
+                warningOne();
+              }
             }
           }
         });
@@ -150,6 +140,53 @@ function getValues() {
     }
   });
 }
+
+function warningOne(){
+  const warningCon = document.getElementById("warningOne");
+  warningCon.classList.add("show");
+}
+function warningTwo(){
+  const warningCon = document.getElementById("warningTwo");
+  warningCon.classList.add("show");
+}
+function warningThree(){
+  const warningCon = document.getElementById("warningThree");
+  warningCon.classList.add("show");
+}
+
+function lowRisk() {
+  const close1 = document.getElementById("close1");
+  const modelCon1 = document.getElementById("modelCon1");
+
+  close1.addEventListener("click", () => {
+    modelCon1.classList.remove("show");
+  });
+  modelCon1.classList.add("show");
+  
+}
+
+function midRisk() {
+  const close1 = document.getElementById("close2");
+  const modelCon1 = document.getElementById("modelCon2");
+
+
+  close1.addEventListener("click", () => {
+    modelCon1.classList.remove("show");
+  });
+  modelCon1.classList.add("show");
+}
+
+function highRisk() {
+  const close1 = document.getElementById("close3");
+  const modelCon1 = document.getElementById("modelCon3");
+
+
+  close1.addEventListener("click", () => {
+    modelCon1.classList.remove("show");
+  });
+  modelCon1.classList.add("show");
+}
+
 
 function petAge(age) {
   let ageValue = 3;
