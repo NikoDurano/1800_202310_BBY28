@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Josefin";
+    src: url("../font/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    background-color: #8ecae6;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin";
+  }
+
+  #corgi {
+    background-image: url(/public/img/welcomecorgi.jpg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center ;
+    height: 75%;
+  }
+
+  #mainCon {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh 42vh;
+    grid-template-areas:
+      "corgi"
+      "btn";
+    background-color: white;
+  }
+
+  @media only screen and (min-width: 769px) {
+    #mainCon {
+      margin: 50px;
+      border-radius: 10px;
+    }

@@ -20,3 +20,14 @@ function getNameFromAuth() {
     });
 }
 getNameFromAuth(); //run the function
+
+function insertNameFromFirestore() {
+    currentUser.get().then(userDoc => {
+        //get the user name
+        var user_Name = userDoc.data().name;
+        console.log(user_Name);
+        $("#name-goes-here").text(user_Name); //jquery
+        // document.getElementByID("name-goes-here").innetText=user_Name;
+    })
+}
+insertNameFromFirestore();
