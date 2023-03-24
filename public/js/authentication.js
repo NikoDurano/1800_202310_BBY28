@@ -41,7 +41,7 @@ var uiConfig = {
             })
             //Justin
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
-                  arrBavior: [],
+                  arrBehavior: [],
                   temperature: "",
                   arrPhysical:[]
                 

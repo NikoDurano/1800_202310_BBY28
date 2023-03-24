@@ -138,7 +138,7 @@ function behavioral() {
 
     ref
         .update({
-            arrBavior: arrbehavioral
+            arrBehavior: arrbehavioral
         })
         .then(() => {
             alert("works");
