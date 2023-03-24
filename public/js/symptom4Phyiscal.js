@@ -1,28 +1,3 @@
-/* 
-const btn3B = document.querySelector('#nextbtn');
-btn3B.addEventListener('click', (event) => {
-    let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
-    let values = [];
-    checkboxes.forEach((checkbox) => {
-        values.push(checkbox.value);
-
-        //EDIT conditional TO WHATEVER LOW RISK CONDITION
-        if(values.includes("gums")){
-            lowRisk();
-            
-        //EDIT conditional TO WHATEVER MID RISK CONDITION
-        }else if(values.includes("heartrate")){
-            midRisk();
-
-        //THIS SHOULD BE FINE
-        }else{
-            highRisk();
-        }
-
-    });
-    alert(values);
-}); */
-
 function lowRisk() {
   const close1 = document.getElementById("close1");
   const modelCon1 = document.getElementById("modelCon1");
@@ -53,43 +28,36 @@ function highRisk() {
   modelCon1.classList.add("show");
 }
 
-
 function physical() {
-    const user = firebase.auth().currentUser;
+  const user = firebase.auth().currentUser;
 
-    const ref = db
-        .collection("users")
-        .doc(user.uid)
-        .collection("petInfo")
-        .doc(user.uid)
-        .collection("symptomLog")
-        .doc(user.uid);
+  const ref = db
+    .collection("users")
+    .doc(user.uid)
+    .collection("petInfo")
+    .doc(user.uid)
+    .collection("symptomLog")
+    .doc(user.uid);
 
-    let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
+  let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
 
+  let arrPhysicals = [];
+  checkboxes.forEach((checkbox) => {
+    arrPhysicals.push(checkbox.value);
+  });
 
-
-    let arrPhysicals = [];
-    checkboxes.forEach((checkbox) => {
-        arrPhysicals.push(checkbox.value);
+  ref
+    .update({
+      arrPhysical: arrPhysicals,
+    })
+    .then(() => {
+      alert("works");
+      getValues();
+    })
+    .catch((error) => {
+      alert("error" + error);
     });
-
-    ref
-        .update({
-            arrPhysical: arrPhysicals
-        })
-        .then(() => {
-            alert("works");
-            getValues();
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
-
 }
-
-
-
 
 function getValues() {
   firebase.auth().onAuthStateChanged((user) => {
@@ -182,7 +150,6 @@ function getValues() {
     }
   });
 }
-
 
 function petAge(age) {
   let ageValue = 3;

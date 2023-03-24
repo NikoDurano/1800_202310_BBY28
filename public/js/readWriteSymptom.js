@@ -150,36 +150,3 @@ function behavioral() {
 
 }
 
-function physical() {
-    const user = firebase.auth().currentUser;
-
-    const ref = db
-        .collection("users")
-        .doc(user.uid)
-        .collection("petInfo")
-        .doc(user.uid)
-        .collection("symptomLog")
-        .doc(user.uid);
-
-    let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
-
-
-
-    let arrPhysicals = [];
-    checkboxes.forEach((checkbox) => {
-        arrPhysicals.push(checkbox.value);
-    });
-
-    ref
-        .update({
-            arrPhysical: arrPhysicals
-        })
-        .then(() => {
-            alert("works");
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
-
-}
-
