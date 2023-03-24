@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Josefin';
-  src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-family: "Josefin";
+  src: url("../font/JosefinSans-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,169 +12,154 @@ body {
   font-family: "Josefin";
 }
 
-
-#vetName{
+#vetName {
   grid-area: name;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
-
 /* VET NUMBER */
-#number{
+#number {
   grid-area: number;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#callCon{
+#callCon {
   grid-area: call;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-#call{
+#call {
   padding-left: 70px;
   padding-right: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #219EBC;
-  border-color: #219EBC;
+  background-color: #219ebc;
+  border-color: #219ebc;
   border-radius: 10px;
   color: white;
 }
-#vetNum{
+#vetNum {
   grid-area: num;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "number call";
+  grid-template-areas: "number call";
 }
 
-
 /* VET ADDRESS */
-#address{
+#address {
   grid-area: addressVet;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#findCon{
+#findCon {
   grid-area: find;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#find{
-
+#find {
   padding-left: 38px;
   padding-right: 38px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #219EBC;
-  border-color: #219EBC;
+  background-color: #219ebc;
+  border-color: #219ebc;
   border-radius: 10px;
   color: white;
 }
-#vetAddress{
+#vetAddress {
   grid-area: address;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "addressVet find";
+  grid-template-areas: "addressVet find";
 }
-
 
 /* FIND A VET BUTTON */
-#searchVetCon{
-  grid-area: btn;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+#mascot {
   background-image: url(/public/img/corgiDoc.png);
+  grid-area: mascot;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center ;
+
+}
+#words {
+  grid-area: word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#searchVetCon {
+  grid-area: btn;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    "mascot word"
+    "mascot search";
   padding: 25px;
 }
-#searchVet{
+#searchVet {
+  grid-area: search;
+
+  margin-top: 10px;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #219EBC;
-  border-color: #219EBC;
+  background-color: #219ebc;
+  border-color: #219ebc;
   border-radius: 10px;
   color: white;
 }
 
-
-
-
-#theVet{
+#theVet {
   grid-area: info;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr 1fr;
-  grid-template-areas: 
-  "name"
-  "num"
-  "address"
-
+  grid-template-areas:
+    "name"
+    "num"
+    "address";
 }
-#theVet div{
-padding: 14px;
+#theVet div {
+  padding: 14px;
 }
 
-
-
-#mainCon{
-
+#mainCon {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:45vh 42vh;
-  grid-template-areas: 
-  "info"
-  "btn";
+  grid-template-rows: 45vh 42vh;
+  grid-template-areas:
+    "info"
+    "btn";
   background-color: white;
-
-
-
 }
 
-
-
-@media only screen and (min-width: 769px){
-  #mainCon{
-      margin: 50px;
-      border-radius: 10px;
+@media only screen and (min-width: 769px) {
+  #mainCon {
+    margin: 50px;
+    border-radius: 10px;
   }
 
-  #searchVetCon{
-    grid-area: btn;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/public/img/corgiDoc.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 20px;
-  }
 
-  #number{
+
+  #number {
     justify-content: center;
     font-size: 30px;
-
   }
 
-  #address{
+  #address {
     justify-content: center;
     font-size: 30px;
-
   }
 }
