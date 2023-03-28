@@ -114,6 +114,11 @@ body {
     float: left;
 }
 
+.footerimg {
+    height: 200px;
+    width: auto;
+}
+
 .symptomlist ul {
     columns: 2;
     column-width: 50%;
