@@ -54,6 +54,7 @@ body {
     width: 100px;
     overflow: hidden;
     object-fit: cover;
+    padding: 1px;
 }
 #opOne{
     grid-area: one;
