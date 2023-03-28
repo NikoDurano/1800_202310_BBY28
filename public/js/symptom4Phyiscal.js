@@ -85,7 +85,7 @@ function getValues() {
           if (type == "cat") {
             if (
               arrayBehavior.includes("panting") ||
-              arrayPhysial.includes("gums") ||
+              arrayPhysial.includes("skin") ||
               arrayPhysial.includes("heartrate") ||
               arrayPhysial.includes("tongue") ||
               arrayPhysial.includes("vomit")
@@ -110,7 +110,7 @@ function getValues() {
             }
           } else {
             if (
-              arrayPhysial.includes("gums") ||
+              arrayPhysial.includes("skin") ||
               arrayPhysial.includes("heartrate") ||
               arrayPhysial.includes("tongue") ||
               arrayPhysial.includes("vomit")

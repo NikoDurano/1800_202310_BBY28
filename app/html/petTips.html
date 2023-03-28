@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/public/css/navBar.css">
     <link rel="stylesheet" href="/public/css/petTips.css">
     <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
-    
+
 
     <!-- Google Icons -->
     <link rel="stylesheet"
@@ -56,26 +56,26 @@
             </div>
 
             <div id="general">
-                <button class="button">General Tips</button>
+                <button class="button" onclick="showContent('content1')">General Tips</button>
             </div>
 
             <div id="hotDay">
-                <button class="button">Hot Day</button>
+                <button class="button" onclick="showContent('content2')">Hot Day</button>
 
             </div>
 
             <div id="heatStroke">
-                <button class="button">Heat Stroke</button>
+                <button class="button" onclick="showContent('content3')">Heat Stroke</button>
 
             </div>
 
             <div id="coldDay">
-                <button class="button">Cold Day</button>
+                <button class="button" onclick="showContent('content4')">Cold Day</button>
 
             </div>
 
             <div id="freezing">
-                <button class="button">Freezing </button>
+                <button class="button" onclick="showContent('content5')">Freezing </button>
 
             </div>
 
@@ -88,42 +88,99 @@
 
         <div id="right">
 
-            <div id="generalText">
+            <div class="content" id="content1">
                 <h1>
-                    General
+                    General Tips
                 </h1>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nesciunt dicta quae nemo. Illo debitis explicabo nemo alias excepturi perspiciatis placeat ad? Minus dolor debitis cumque illum suscipit. Eos, ipsum.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sit ex blanditiis debitis iusto doloremque ratione, eaque hic laborum earum eos magni. Enim facere dolore veritatis possimus nobis sed odit.           
-</div>
+                <ul>
+                    <li>Have multiple areas for your pet to rest with varying levels of warmth and shade</li>
+                    <li>Brush your pet regularly. Groomed fur allows for better circulation of air and natural
+                        regulation of your pet's body temperature. </li>
+                    <li>Test if a surface or liquid is too hot or cold on your own skin. If the temperature is too much
+                        for a human, it'll be too much for your pet!</li>
+                </ul>
+            </div>
 
-            <div id="hotDayText">
+            <div class="content" id="content2">
                 <h1>
-                    Hot Day
+                    Tips for a Hot Day
                 </h1>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto veritatis voluptatem inventore reprehenderit ullam, repellendus dolore iure sed non neque, hic sapiente enim quam sunt! Numquam debitis harum reiciendis?  
-</div>
+                <ul>
+                    <li>Keep indoor temperature below 26°C for short-haired pets and below 24°C if you have long-haired
+                        pets</li>
+                    <li>Make sure your pet always has drinking water available, add ice to help keep it cool</li>
+                    <li>Make sure you pet always has access to a cool shaded area</li>
+                    <li>Restrict exercise on warm days</li>
+                    <li>If a pavement is too hot to put your hand on, it’s too hot for your pet to walk on</li>
+                    <li>For dogs, you can trim longer hair (but do not shave your dog!)</li>
+                    <li>For cats, additional brushing can help prevent excessive heat</li>
+                </ul>
+            </div>
 
-            <div id="heatStrokeText">
+            <div class="content" id="content3">
                 <h1>
                     Heat Stroke
                 </h1>
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, laudantium iste placeat recusandae officiis ipsum quas quidem quasi magnam non voluptas nemo numquam amet? Architecto optio dolores magnam eligendi recusandae?
+                <h2>Signs of Heat Stroke</h2>
+                <ul>
+                    <li>Panting for cats, excessive panting for dogs</li>
+                    <li>Agitation, restlessness</li>
+                    <li>Dizziness</li>
+                    <li>Lethargy, weakness, lying down</li>
+                    <li>Reddened gums</li>
+                    <li>Increased heart rate</li>
+                    <li>Distressed breathing</li>
+                    <li>Vomit or Diarrhea, possibly with blood</li>
+                    <li>Little to no urine production</li>
+                    <li>Loss of consciousness</li>
+                </ul>
+                <h2>If you pet is showing signs of Heat Stroke</h2>
+                <ul>
+                    <li>Take your pet somewhere cool and well-ventilated</li>
+                    <li>Offer them small sips of water but do not force them to drink</li>
+                    <li>Cool them down by rubbing cool (not cold!) water on them by hand, or draping a cool wet towel
+                        over them. Change the towel every five minutes.</li>
+                    <li>Call your vet asap who will be able to advise you further.</li>
+                </ul>
             </div>
 
-            <div id="coldDayText">
+            <div class="content" id="content4">
                 <h1>
                     Cold Day
                 </h1>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis deserunt, illo maiores similique nisi incidunt vel nesciunt eligendi aliquid culpa iste architecto qui laboriosam molestiae sed! Quas quibusdam consequatur quam.
+                <ul>
+                    <li>Keep indoor temperature around 20-22°C, and no lower than 16°C</li>
+                    <li>Provide your pet with options for sleeping with varying levels of warmth</li>
+                    <li>Keep your home humidified and towel dry your pet after coming inside</li>
+                    <li>For short-haired animals, consider buying them a sweater or coat to wear outside</li>
+                    <li>Arthritic and elderly pets may have more difficulty walking in snow, and short-legged pets can
+                        get colder faster if their bellies come into contact with snow covered ground</li>
+                    <li>After walks, wash and dry your pet’s feet and stomach to remove ice, salt, and chemicals and
+                        check
+                        their paws for any cracks or redness</li>
+                    <li>Antifreeze with ethylene glycol is lethal for cats and dogs even in small amounts. Clean up any
+                        antifreeze spills quickly and keep your pet away from de-icers.</li>
+                </ul>
             </div>
 
-            <div id="freezing"> 
+            <div class="content" id="content5">
                 <h1>
-                    Freezing
+                    Hypothermia
                 </h1>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem, debitis repudiandae quis nesciunt aspernatur impedit quos minima iste porro facilis laboriosam asperiores totam enim repellendus delectus. Quas, necessitatibus alias!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto iure quis nisi sint eaque, possimus consequuntur ratione quaerat amet officia fugit commodi. Quos neque id blanditiis provident tempore sequi ad.
-</div>
+                <p></p>
+                <h2>Signs of Hypothermia</h2>
+                <ul>
+                    <li>Shivering</li>
+                    <li>Dizziness</li>
+                    <li>Lethargy, weakness, lying down</li>
+                    <li>Blue gums</li>
+                    <li>Dilated pupils</li>
+                    <li>Distressed breathing</li>
+                    <li>Difficulty walking</li>
+                    <li>Loss of consciousness</li>
+                </ul>
+                <h2>Signs of Frostbite</h2>
+            </div>
 
         </div>
 
@@ -144,6 +201,7 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem, debitis 
     <!-- Link to scripts of your own -->
     <script src="/scripts/firebaseAPI_BBY28.js"></script>
     <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/petTips.js"></script>
 
 
     <!-- <script src="./scripts/script.js"></script> -->
