@@ -63,6 +63,7 @@ input[type="file"] {
   width: 206px;
   border-radius: 10px;
   object-fit: cover;
+  padding: 1px;
 
 }
 

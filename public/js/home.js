@@ -3,11 +3,21 @@ function getNameFromAuth() {
         // Check if a user is signed in:
         if (user) {
             // Do something for the currently logged-in user here: 
-            console.log(user.uid); //print the uid in the browser console
-            console.log(user.displayName);  //print the user name in the browser console
-            user_Name = user.displayName;
+            currentUser = db.collection("users").doc(user.uid);
 
-            method #1:  insert with JS
+
+            currentUser.get().then(userDoc=>{
+                //get the user name
+                var userName = userDoc.data().userName;
+                console.log(userName);
+                //$("#name-goes-here").text(userName); //jquery
+                document.getElementById("name-goes-here").innerText=userName;
+    
+
+ 
+
+            }) 
+           
             document.getElementById("name-goes-here").innerText = userName;    
             //method #2:  insert using jquery
             //$("#name-goes-here").text(userName); //using jquery
@@ -21,13 +31,3 @@ function getNameFromAuth() {
 }
 getNameFromAuth(); //run the function
 
-function insertNameFromFirestore() {
-    currentUser.get().then(userDoc => {
-        //get the user name
-        var user_Name = userDoc.data().name;
-        console.log(user_Name);
-        $("#name-goes-here").text(user_Name); //jquery
-        // document.getElementByID("name-goes-here").innetText=user_Name;
-    })
-}
-insertNameFromFirestore();

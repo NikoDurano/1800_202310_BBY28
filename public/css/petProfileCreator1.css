@@ -69,6 +69,7 @@ input[type="file"] {
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
+    padding: 1px;
 }
 
 #profilePic {
@@ -82,6 +83,7 @@ input[type="file"] {
     height: 150px;
     width: 206px;
     border-radius: 10px;
+
 }
 
 #profilePicHolder {
@@ -91,6 +93,7 @@ input[type="file"] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 
 }
 

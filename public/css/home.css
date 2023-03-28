@@ -12,28 +12,87 @@
     font-family: "Josefin";
   }
 
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #corgi {
+    grid-area: corgi;
     background-image: url(/public/img/welcomeCorgi.jpg);
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center ;
-    height: 75%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+ 
   }
+
+  .Content{
+    grid-area: msg;
+    align-items: flex-start;
+  }
+
+  #btnGroup{
+    grid-area: group;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+
+  button{
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #219EBC;
+    color: white;
+
+    text-align: center;
+    font-size: 1.2rem;
+
+    position: relative;
+  }
+/*   .material-symbols-outlined{
+    position: absolute;
+
+  } */
+
+
 
   #mainCon {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 45vh 42vh;
+    grid-template-rows: 200px 50px 1fr;
     grid-template-areas:
       "corgi"
-      "btn";
+      "msg"
+      "group";
     background-color: white;
+    height: 100%;
+    margin: 50px;
+    padding:30px;
+    border-radius: 10px;
+
+  
   }
 
-  @media only screen and (min-width: 769px) {
+  @media only screen and (max-width: 768px) {
     #mainCon {
-      margin: 50px;
-      border-radius: 10px;
+      min-height: 100%;
+      border-radius: 0;
+      margin: 0;
     }
+
   }
