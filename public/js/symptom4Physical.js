@@ -43,7 +43,7 @@ function getValues() {
 
       currentuserSymptom.get().then((userDoc) => {
         const arrayBehavior = userDoc.data().arrBehavior;
-        const arrayPhysial = userDoc.data().arrPhysical;
+        const arrayPhysical = userDoc.data().arrPhysical;
 
         const temperature = userDoc.data().temperature;
 
@@ -78,17 +78,17 @@ function getValues() {
 
           petStats += petPreConditions(flat, brain, heart, lung);
 
-          petStats += petSymptoms(arrayBehavior, arrayPhysial);
+          petStats += petSymptoms(arrayBehavior, arrayPhysical);
 
           console.log("Total: " + petStats);
 
           if (type == "cat") {
             if (
               arrayBehavior.includes("panting") ||
-              arrayPhysial.includes("skin") ||
-              arrayPhysial.includes("heartrate") ||
-              arrayPhysial.includes("tongue") ||
-              arrayPhysial.includes("vomit")
+              arrayPhysical.includes("skin") ||
+              arrayPhysical.includes("heartrate") ||
+              arrayPhysical.includes("tongue") ||
+              arrayPhysical.includes("vomit")
             ) {
               highRisk();
               if (weather >= 3) {
@@ -110,10 +110,10 @@ function getValues() {
             }
           } else {
             if (
-              arrayPhysial.includes("skin") ||
-              arrayPhysial.includes("heartrate") ||
-              arrayPhysial.includes("tongue") ||
-              arrayPhysial.includes("vomit")
+              arrayPhysical.includes("skin") ||
+              arrayPhysical.includes("heartrate") ||
+              arrayPhysical.includes("tongue") ||
+              arrayPhysical.includes("vomit")
             ) {
               highRisk();
               if (weather >= 3) {
@@ -283,4 +283,43 @@ function petSymptoms(behavior, physical) {
 
   console.log("Symptoms Value: " + symptomsValue);
   return symptomsValue;
+}
+
+function writeTrackerLog() {
+    console.log("Tracker Entries")
+    let Title = document.getElementById("title").value;
+    let Level = document.getElementById("level").value;
+    let Season = document.getElementById("season").value;
+    let Description = document.getElementById("description").value;
+    let Flooded = document.querySelector('input[name="flooded"]:checked').value;
+    let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
+    console.log(Title, Level, Season, Description, Flooded, Scrambled);
+
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            var currentUser = db.collection("users").doc(user.uid)
+            var userID = user.uid;
+            //get the document for current user.
+            currentUser.get()
+                .then(userDoc => {
+                    var userEmail = userDoc.data().email;
+                    db.collection("reviews").add({
+                        hikeDocID: hikeDocID,
+                        userID: userID,
+                        title: Title,
+                        level: Level,
+                        season: Season,
+                        description: Description,
+                        flooded: Flooded,
+                        scrambled: Scrambled,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    }).then(() => {
+                        window.location.href = "thanks.html"; //new line added
+                    })
+                })
+        } else {
+            console.log("No user is signed in");
+            window.location.href = 'review.html';
+        }
+    });
 }
