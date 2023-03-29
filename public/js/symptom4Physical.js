@@ -88,7 +88,8 @@ function getValues() {
               arrayPhysical.includes("skin") ||
               arrayPhysical.includes("heartrate") ||
               arrayPhysical.includes("tongue") ||
-              arrayPhysical.includes("vomit")
+              arrayPhysical.includes("vomit") ||
+              petStats > thresholdUpper
             ) {
               highRisk();
               if (weather >= 3) {
@@ -113,7 +114,8 @@ function getValues() {
               arrayPhysical.includes("skin") ||
               arrayPhysical.includes("heartrate") ||
               arrayPhysical.includes("tongue") ||
-              arrayPhysical.includes("vomit")
+              arrayPhysical.includes("vomit") ||
+              petStats > thresholdLower
             ) {
               highRisk();
               if (weather >= 3) {
