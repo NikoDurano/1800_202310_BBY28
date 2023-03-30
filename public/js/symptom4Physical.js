@@ -21,7 +21,7 @@ function physical() {
       arrPhysical: arrPhysicals,
     })
     .then(() => {
-      alert("works");
+   /*    alert("works"); */
       getValues();
     })
     .catch((error) => {

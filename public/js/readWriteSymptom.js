@@ -106,7 +106,7 @@ function temperature() {
             temperature: temp
         })
         .then(() => {
-            alert("works");
+  /*           alert("works"); */
             window.location.href = "symptom3Behavior.html";
         })
         .catch((error) => {
@@ -141,7 +141,7 @@ function behavioral() {
             arrBehavior: arrbehavioral
         })
         .then(() => {
-            alert("works");
+/*             alert("works"); */
             window.location.href = "symptom4Physical.html";
         })
         .catch((error) => {

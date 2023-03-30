@@ -26,7 +26,7 @@ async function updatePetProfileDoc() {
       agePet: ageBox.value,
     })
     .then(() => {
-      alert("works");
+   /*    alert("works"); */
       window.location.href = "tabPetProfile.html";
     })
     .catch((error) => {
@@ -53,7 +53,7 @@ function updateUserProfileDoc() {
   ref
     .update({})
     .then(() => {
-      alert("works");
+  /*     alert("works"); */
       window.location.href = "petProfileCreator1.html";
     })
     .catch((error) => {
@@ -77,7 +77,7 @@ function editUserProfileDoc() {
   ref
     .update({})
     .then(() => {
-      alert("works");
+    /*   alert("works"); */
     })
     .catch((error) => {
       alert("error" + error);
@@ -166,7 +166,7 @@ async function updatePetProfile2Doc() {
       brainProblem: this.brainProb.value,
     })
     .then(() => {
-      alert("works");
+   /*    alert("works"); */
       window.location.href = "vetProfileCreator.html";
     })
     .catch((error) => {
@@ -195,7 +195,7 @@ async function updateVetProfileCreator() {
       addressVet: vetLocation.value,
     })
     .then(() => {
-      alert("works");
+     /*  alert("works"); */
       window.location.href = "tabPetProfile.html";
     })
     .catch((error) => {
@@ -254,7 +254,7 @@ async function profileEdit1() {
       
     })
     .then(() => {
-      alert("works");
+/*       alert("works"); */
     })
     .catch((error) => {
       alert("error" + error);
@@ -287,7 +287,7 @@ async function profileEdit2() {
       brainProblem: this.brainProb.value,
     })
     .then(() => {
-      alert("works");
+ /*      alert("works"); */
     })
     .catch((error) => {
       alert("error" + error);
@@ -326,7 +326,7 @@ async function profileEdit3() {
   ref
     .update({})
     .then(() => {
-      alert("works");
+ /*      alert("works"); */
     })
     .catch((error) => {
       alert("error" + error);
