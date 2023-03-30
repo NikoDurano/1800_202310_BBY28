@@ -161,7 +161,7 @@ function lowRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
-/*     window.location.href = "home.html"; */
+    window.location.href = "home.html"; 
 
   });
   modelCon1.classList.add("show");
@@ -173,7 +173,7 @@ function midRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
-/*     window.location.href = "home.html"; */
+    window.location.href = "home.html";
 
   });
   modelCon1.classList.add("show");
@@ -183,9 +183,7 @@ function highRisk() {
   const close1 = document.getElementById("close3");
   const modelCon1 = document.getElementById("modelCon3");
 
-  close1.addEventListener("click", () => {
-    modelCon1.classList.remove("show");
-  });
+
   modelCon1.classList.add("show");
 }
 
