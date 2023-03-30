@@ -115,7 +115,7 @@ function getValues() {
               arrayPhysical.includes("heartrate") ||
               arrayPhysical.includes("tongue") ||
               arrayPhysical.includes("vomit") ||
-              petStats > thresholdLower
+              petStats > thresholdUpper
             ) {
               highRisk();
               if (weather >= 3) {
@@ -161,6 +161,8 @@ function lowRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
+/*     window.location.href = "home.html"; */
+
   });
   modelCon1.classList.add("show");
 }
@@ -171,6 +173,8 @@ function midRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
+/*     window.location.href = "home.html"; */
+
   });
   modelCon1.classList.add("show");
 }
