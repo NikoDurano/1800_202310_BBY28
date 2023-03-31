@@ -21,7 +21,7 @@ function physical() {
       arrPhysical: arrPhysicals,
     })
     .then(() => {
-      alert("works");
+   /*    alert("works"); */
       getValues();
     })
     .catch((error) => {
@@ -88,7 +88,8 @@ function getValues() {
               arrayPhysical.includes("skin") ||
               arrayPhysical.includes("heartrate") ||
               arrayPhysical.includes("tongue") ||
-              arrayPhysical.includes("vomit")
+              arrayPhysical.includes("vomit") ||
+              petStats > thresholdUpper
             ) {
               highRisk();
               if (weather >= 3) {
@@ -113,7 +114,8 @@ function getValues() {
               arrayPhysical.includes("skin") ||
               arrayPhysical.includes("heartrate") ||
               arrayPhysical.includes("tongue") ||
-              arrayPhysical.includes("vomit")
+              arrayPhysical.includes("vomit") ||
+              petStats > thresholdUpper
             ) {
               highRisk();
               if (weather >= 3) {
@@ -159,6 +161,8 @@ function lowRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
+    window.location.href = "home.html"; 
+
   });
   modelCon1.classList.add("show");
 }
@@ -169,6 +173,8 @@ function midRisk() {
 
   close1.addEventListener("click", () => {
     modelCon1.classList.remove("show");
+    window.location.href = "home.html";
+
   });
   modelCon1.classList.add("show");
 }
@@ -177,9 +183,7 @@ function highRisk() {
   const close1 = document.getElementById("close3");
   const modelCon1 = document.getElementById("modelCon3");
 
-  close1.addEventListener("click", () => {
-    modelCon1.classList.remove("show");
-  });
+
   modelCon1.classList.add("show");
 }
 
