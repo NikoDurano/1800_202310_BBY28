@@ -1,3 +1,5 @@
+let myDoc;
+
 function physical() {
   const user = firebase.auth().currentUser;
 
@@ -56,8 +58,9 @@ function physical() {
       arrPhysical: arrPhysicals,
       last_updated: firebase.firestore.FieldValue.serverTimestamp()
     })
-    .then(() => {
-      /*    alert("works"); */
+    .then(docRef => {
+      myDoc = docRef.id;
+      console.log("Document ID: " + myDoc);
       getValues();
     })
     .catch((error) => {
@@ -72,13 +75,22 @@ function getValues() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log(user.uid);
+      // ------old code -------
+      // currentuserSymptom = db
+      //   .collection("users")
+      //   .doc(user.uid)
+      //   .collection("petInfo")
+      //   .doc(user.uid)
+      //   .collection("symptomLog")
+      //   .doc(user.uid);
+
       currentuserSymptom = db
         .collection("users")
         .doc(user.uid)
         .collection("petInfo")
         .doc(user.uid)
         .collection("symptomLog")
-        .doc(user.uid);
+        .doc(myDoc);
 
       currentuserSymptom.get().then((userDoc) => {
         const arrayBehavior = userDoc.data().arrBehavior;

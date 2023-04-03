@@ -106,15 +106,6 @@ const entries = document.getElementById("entries");
 //     }
 // });
 
-// //goober method, use if all else fails.
-// // const id = "DIpd08YeFEOtoT1J8BxFoe0NFIm1";
-// // const ref = db
-// //     .collection("users")
-// //     .doc(id)
-// //     .collection("petInfo")
-// //     .doc(id)
-// //     .collection("symptomLog")
-// //     .doc(id);
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -203,7 +194,6 @@ firebase.auth().onAuthStateChanged((user) => {
             });
         });
 
-        // Rest of your code here...
     } else {
         alert("no user signed in");
     }

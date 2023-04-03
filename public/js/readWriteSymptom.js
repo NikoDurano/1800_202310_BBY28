@@ -111,20 +111,7 @@ function temperature() {
 
     //original code
     // ref
-    //     .add({
-    //         temperature: temp
-    //     })
-    //     .then(() => {
-    //         alert("works");
-    //         window.location.href = "symptom3Behavior.html";
-    //     })
-    //     .catch((error) => {
-    //         alert("error" + error);
-    //     });
-
-    //original code
-    // ref
-    //     .add({
+    //     .update({
     //         temperature: temp
     //     })
     //     .then(() => {
@@ -171,6 +158,7 @@ function behavioral() {
         arrbehavioral.push(checkbox.value);
     });
 
+    //original code
     // ref
     //     .update({
     //         arrBehavior: arrbehavioral
@@ -182,21 +170,6 @@ function behavioral() {
     //     .catch((error) => {
     //         alert("error" + error);
     //     });
-
-    //original code
-    // ref
-    //     .add({
-    //         arrBehavior: arrbehavioral
-    //     })
-    //     .then(() => {
-    //         alert("works");
-    //         window.location.href = "symptom4Physical.html";
-    //     })
-    //     .catch((error) => {
-    //         alert("error" + error);
-    //     });
-
-    //localStorage.setItem("arrBehavior", arrbehavioral);
 
     localStorage.setItem("arrBehavior", JSON.stringify(arrbehavioral));
 
