@@ -162,5 +162,34 @@ body {
 
         border-radius: 0;
         margin: 0;
+
+        
     }
+    .maintips{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tipsimg {
+        height: 100px;
+        width: auto;
+        float: left;
+    }
+    
+    .footerimg {
+        height: 100px;
+        width: auto;
+    }
+    #right div li {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    #right div{
+        font-size: 15px;
+    }
+
+
+
 }
