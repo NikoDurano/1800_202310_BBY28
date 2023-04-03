@@ -43,7 +43,8 @@ var uiConfig = {
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
                   arrBehavior: [],
                   temperature: "",
-                  arrPhysical:[]
+                  arrPhysical:[],
+                  last_updated: firebase.firestore.FieldValue.serverTimestamp()
                 
             })
             

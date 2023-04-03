@@ -82,13 +82,21 @@ async function updateTracker4Doc() {
 function temperature() {
     const user = firebase.auth().currentUser;
 
+    //---old code--------
+    // const ref = db
+    //     .collection("users")
+    //     .doc(user.uid)
+    //     .collection("petInfo")
+    //     .doc(user.uid)
+    //     .collection("symptomLog")
+    //     .doc(user.uid);
+
     const ref = db
         .collection("users")
         .doc(user.uid)
         .collection("petInfo")
         .doc(user.uid)
-        .collection("symptomLog")
-        .doc(user.uid);
+        .collection("symptomLog");
 
     const radioButtons = document.querySelectorAll('input[name="wheel"]');
 
@@ -99,54 +107,102 @@ function temperature() {
             break;
         }
     }
-    console.log(temp)
+    console.log(temp);
 
-    ref
-        .update({
-            temperature: temp
-        })
-        .then(() => {
-            alert("works");
-            window.location.href = "symptom3Behavior.html";
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
+    //original code
+    // ref
+    //     .add({
+    //         temperature: temp
+    //     })
+    //     .then(() => {
+    //         alert("works");
+    //         window.location.href = "symptom3Behavior.html";
+    //     })
+    //     .catch((error) => {
+    //         alert("error" + error);
+    //     });
 
+    //original code
+    // ref
+    //     .add({
+    //         temperature: temp
+    //     })
+    //     .then(() => {
+    //         alert("works");
+    //         window.location.href = "symptom3Behavior.html";
+    //     })
+    //     .catch((error) => {
+    //         alert("error" + error);
+    //     });
+
+    localStorage.setItem("temperature", temp);
+    console.log(
+        "Temperature in local storage is: " +
+            localStorage.getItem("temperature")
+    );
+
+    window.location.href = "symptom3Behavior.html";
 }
-
 
 function behavioral() {
     const user = firebase.auth().currentUser;
+
+    // const ref = db
+    //     .collection("users")
+    //     .doc(user.uid)
+    //     .collection("petInfo")
+    //     .doc(user.uid)
+    //     .collection("symptomLog")
+    //     .doc(user.uid);
 
     const ref = db
         .collection("users")
         .doc(user.uid)
         .collection("petInfo")
         .doc(user.uid)
-        .collection("symptomLog")
-        .doc(user.uid);
+        .collection("symptomLog");
 
-    let checkboxes = document.querySelectorAll('input[name="behavior"]:checked');
-
-
+    let checkboxes = document.querySelectorAll(
+        'input[name="behavior"]:checked'
+    );
 
     let arrbehavioral = [];
     checkboxes.forEach((checkbox) => {
         arrbehavioral.push(checkbox.value);
     });
 
-    ref
-        .update({
-            arrBehavior: arrbehavioral
-        })
-        .then(() => {
-            alert("works");
-            window.location.href = "symptom4Physical.html";
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
+    // ref
+    //     .update({
+    //         arrBehavior: arrbehavioral
+    //     })
+    //     .then(() => {
+    //         alert("works");
+    //         window.location.href = "symptom4Physical.html";
+    //     })
+    //     .catch((error) => {
+    //         alert("error" + error);
+    //     });
 
+    //original code
+    // ref
+    //     .add({
+    //         arrBehavior: arrbehavioral
+    //     })
+    //     .then(() => {
+    //         alert("works");
+    //         window.location.href = "symptom4Physical.html";
+    //     })
+    //     .catch((error) => {
+    //         alert("error" + error);
+    //     });
+
+    //localStorage.setItem("arrBehavior", arrbehavioral);
+
+    localStorage.setItem("arrBehavior", JSON.stringify(arrbehavioral));
+
+    var behavior = JSON.parse(localStorage.getItem("arrBehavior"));
+
+    console.log("arrBehavior in local storage is: " + behavior);
+
+    window.location.href = "symptom4Physical.html";
 }
-
