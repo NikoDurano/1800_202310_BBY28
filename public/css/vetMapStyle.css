@@ -1,0 +1,339 @@
+/* ------------- TABVET1.CSS STUFF DONE BY NIKO ------------------ */
+@font-face {
+  font-family: 'Josefin';
+  src: url('../font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #8ecae6;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin";
+}
+
+
+#vetName{
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+/* VET NUMBER */
+#number{
+  grid-area: number;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#callCon{
+  grid-area: call;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#call{
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+#vetNum{
+  grid-area: num;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "number call";
+}
+
+
+/* VET ADDRESS */
+#address{
+  grid-area: addressVet;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#findCon{
+  grid-area: find;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#find{
+
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+#vetAddress{
+  grid-area: address;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "addressVet find";
+}
+
+
+/* FIND A VET BUTTON */
+#searchVetCon{
+  grid-area: btn;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* background-image: url(/public/img/corgiDoc.png);
+  background-repeat: no-repeat;
+  background-size: contain; */
+  padding: 25px;
+}
+#searchVet{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #219EBC;
+  border-color: #219EBC;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
+
+#theVet{
+  grid-area: info;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: 
+  "name"
+  "num"
+  "address"
+
+}
+#theVet div{
+padding: 14px;
+}
+
+
+
+#mainCon{
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:45vh 42vh;
+  grid-template-areas: 
+  "info"
+  "btn";
+  background-color: white;
+
+
+
+}
+
+
+
+@media only screen and (min-width: 769px){
+  #mainCon{
+      margin: 50px;
+      border-radius: 10px;
+  }
+
+  #searchVetCon{
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(/public/img/corgiDoc.png); */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+    padding: 20px;
+  }
+  
+}
+
+
+/* ------------------------------------------MAP STUFF-------------------------------------------------- */
+
+/* 
+  * Always set the map height explicitly to define the size of the div element
+  * that contains the map. 
+  */
+#map {
+  /*height has to  be specified to some value.
+    Leaving it empty will cause the map to have a height of 0.*/
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1%;
+}
+
+/* 
+  * Optional: Makes the sample page fill the window. 
+  */
+body {
+  background-color: #8ecae6;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin";
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  font-family: Roboto;
+  padding: 0;
+}
+
+#pac-container {
+  /* padding-bottom: 12px; --------------- DEFAULT CODE -------------*/
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+/* ---------------------CONTACT STUFF---------------------------- */
+
+
+.vetContactInfo{
+  width: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#breed{
+  grid-area: breed;
+}
+#coatLength{
+  grid-area: coatL;
+}
+#behavioralIssues{
+  grid-area: BIssues;
+}
+#physicalIssues{
+  grid-area: PIssues;
+}
+#bottomPortion{
+  margin: 10px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
+  grid-template-areas:
+  "breed"
+  "coatL"
+  "BIssues"
+  "PIssues"; 
+
+  grid-area: botPart;
+}
+
+.mainPetProfileContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 80vh;
+  grid-template-areas: 
+  "topPart"
+  "botPart";
+}
+
+#editButton{
+  border-radius: 10%;
+  background-color: #0892d0;
+  color: rgb(255, 255, 255);
+  border: 2px solid #0892d0;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.callVetButton {
+  width: 40px;
+  position: absolute;
+  right: 30px;
+}
