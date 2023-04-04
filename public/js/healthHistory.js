@@ -115,7 +115,7 @@ firebase.auth().onAuthStateChanged((user) => {
             .doc(uid)
             .collection("petInfo")
             .doc(uid);
-        const symptomLogRef = petInfoRef.collection("symptomLog").orderBy("last_updated");
+        const symptomLogRef = petInfoRef.collection("symptomLog").orderBy("last_updated", "desc");
 
         var name = "BOB"; //default name
 
