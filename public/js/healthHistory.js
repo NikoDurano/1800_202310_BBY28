@@ -158,17 +158,37 @@ firebase.auth().onAuthStateChanged((user) => {
                     .toDate().toDateString() + " " + data.last_updated
                     .toDate().toLocaleTimeString();
                     //.toLocaleDateString();
-                    
+                    console.log(data.arrBehavior.length);
+
+                    if(data.arrBehavior.length == 0){
+                        let idName = "behavior";
+                        let curBehavior = document.createElement("span");
+                        let myBreak = document.createElement("br");
+    
+                        curBehavior.setAttribute("id", idName);
+                        curBehavior.textContent = "none";
+    
+                        behaviors.appendChild(myBreak);
+                        behaviors.appendChild(curBehavior);
+                    }
+
+                    if(data.arrPhysical.length == 0){
+                        let idName = "physical";
+                        let curPhysical = document.createElement("span");
+                        let myBreak = document.createElement("br");
+    
+                        curPhysical.setAttribute("id", idName);
+                        curPhysical.textContent = "none";
+    
+                        physicals.appendChild(myBreak);
+                        physicals.appendChild(curPhysical);
+                    }
                 data.arrBehavior.forEach((element, index) => {
                         let idName = "behavior" + index;
                         let curBehavior = document.createElement("span");
                         let myBreak = document.createElement("br");
     
                         curBehavior.setAttribute("id", idName);
-                        if(data.arrBehavior.length === 0){
-                            curBehavior.textContent = "none";
-                        }
-                        console.log(data.arrBehavior);
                         curBehavior.textContent = element;
     
                         behaviors.appendChild(myBreak);
