@@ -109,7 +109,6 @@ input[type="file"] {
   width: 206px;
   border-radius: 10px;
   object-fit: cover;
-  padding: 1px;
 
 }
 
@@ -119,7 +118,7 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
 
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   height: 150px;
   width: 206px;
   border-radius: 10px;
@@ -349,6 +348,21 @@ input[type="file"] {
     height: 135vh;
     border-radius: 0;
     margin: 0;
+  }
+
+  .mainCon {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "backTop"
+      "profilePic"
+      "profilePicText"
+      "name"
+      "age"
+      "typePet"
+      "weightPet"
+      "next";
   }
   #nameTextBoxBot{
     font-size: 20px;

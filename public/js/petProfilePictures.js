@@ -16,7 +16,6 @@ listenFileSelect();
 var test =  document.getElementById("petPic"); 
 test.addEventListener('change',function(){
 
-    alert ("SAVE POST is triggered");
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.

@@ -41,9 +41,9 @@ var uiConfig = {
             })
             //Justin
             db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("symptomLog").doc(user.uid).set({
-                  arrBehavior: [],
-                  temperature: "",
-                  arrPhysical:[],
+                  arrBehavior: ["none"],
+                  temperature: "0",
+                  arrPhysical:["none"],
                   last_updated: firebase.firestore.FieldValue.serverTimestamp()
                 
             })
@@ -79,7 +79,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'tabPetProfile.html',
+    signInSuccessUrl: 'home.html',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
 /*       firebase.auth.GoogleAuthProvider.PROVIDER_ID,

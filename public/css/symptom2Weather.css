@@ -118,7 +118,7 @@ body {
 #tempWheel{
     height: 100%;
     position: relative;
-    overflow: scroll;
+    overflow-x: scroll;
     white-space: nowrap;
     border: 1px solid #666;
     border-radius: 4px;
@@ -257,6 +257,10 @@ body {
         height: 50px;
         width: 100px;
     
+    }
+    .weatherWidget{
+        width: 250px;
+
     }
 
 }
