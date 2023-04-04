@@ -50,11 +50,10 @@ body {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 
-    height: 100px;
+    height: auto;
     width: 100px;
     overflow: hidden;
     object-fit: cover;
-    padding: 1px;
 }
 #opOne{
     grid-area: one;

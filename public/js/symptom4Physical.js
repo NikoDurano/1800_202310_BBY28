@@ -1,3 +1,5 @@
+let myDoc;
+
 function physical() {
   const user = firebase.auth().currentUser;
 
@@ -9,6 +11,13 @@ function physical() {
     .collection("symptomLog")
     .doc(user.uid);
 
+  const newRef = db
+    .collection("users")
+    .doc(user.uid)
+    .collection("petInfo")
+    .doc(user.uid)
+    .collection("symptomLog");
+
   let checkboxes = document.querySelectorAll('input[name="Physical"]:checked');
 
   let arrPhysicals = [];
@@ -16,30 +25,72 @@ function physical() {
     arrPhysicals.push(checkbox.value);
   });
 
-  ref
-    .update({
+  // ref
+  //   .update({
+  //     arrPhysical: arrPhysicals,
+  //   })
+  //   .then(() => {
+  //     alert("works");
+  //     getValues();
+  //   })
+  //   .catch((error) => {
+  //     alert("error" + error);
+  //   });
+
+  //localStorage.setItem("arrPhysical", arrPhysicals);
+
+  let temp =  localStorage.getItem("temperature");
+  var behavior = JSON.parse(localStorage.getItem("arrBehavior"));
+
+  console.log("Temperature in local storage is: " + 
+    temp);
+  console.log("arrBehavior in local storage is: " + 
+    behavior);
+  
+  //-------not necessary----
+  // console.log("arrPhysical in local storage is: " + 
+  // localStorage.getItem("arrPhysical"));
+
+  newRef
+    .add({
+      temperature: temp,
+      arrBehavior: behavior,
       arrPhysical: arrPhysicals,
+      last_updated: firebase.firestore.FieldValue.serverTimestamp()
     })
-    .then(() => {
-      /*    alert("works"); */
+    .then(docRef => {
+      myDoc = docRef.id;
+      console.log("Document ID: " + myDoc);
       getValues();
     })
     .catch((error) => {
       alert("error" + error);
     });
+
+
+
 }
 
 function getValues() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log(user.uid);
+      // ------old code -------
+      // currentuserSymptom = db
+      //   .collection("users")
+      //   .doc(user.uid)
+      //   .collection("petInfo")
+      //   .doc(user.uid)
+      //   .collection("symptomLog")
+      //   .doc(user.uid);
+
       currentuserSymptom = db
         .collection("users")
         .doc(user.uid)
         .collection("petInfo")
         .doc(user.uid)
         .collection("symptomLog")
-        .doc(user.uid);
+        .doc(myDoc);
 
       currentuserSymptom.get().then((userDoc) => {
         const arrayBehavior = userDoc.data().arrBehavior;

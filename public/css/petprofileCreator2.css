@@ -12,6 +12,14 @@ body {
     font-family: "Josefin";
 }
 
+.widthSize{
+ width: 200px;
+ text-align: center;
+
+ padding-top: 10px;
+ padding-bottom: 10px;
+ border-radius: 5px;
+}
 
 #blank{
     grid-area: blank;
@@ -49,14 +57,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-#coatLength{
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
 
-}
 
 .face{
     grid-area: face;
@@ -65,13 +66,6 @@ body {
     align-items: center;
     flex-direction: column;
 
-}
-#flatFace{
-    padding-left: 107px;
-    padding-right: 107px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
 }
 
 .heart{
@@ -82,13 +76,7 @@ body {
     flex-direction: column;
 
 }
-#heartProb{
-    padding-left: 107px;
-    padding-right: 107px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-}
+
 
 .lungs{
     grid-area: lungs;
@@ -98,13 +86,7 @@ body {
     flex-direction: column;
 
 }
-#lungProb{
-    padding-left: 107px;
-    padding-right: 107px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-}
+
 
 .brain{
     grid-area: brain;
@@ -114,14 +96,6 @@ body {
     flex-direction: column;
 
 }
-#brainProb{
-    padding-left: 107px;
-    padding-right: 107px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-}
-
 #userSubmitBtn{
     padding-left: 10vw;
     padding-right: 10vw;
@@ -158,10 +132,6 @@ body {
     margin: 50px;
     border-radius: 10px;
     height: 89vh;
-
-
-/*     padding:  0 100px 0 100px;
- */
 }
 
 
@@ -205,8 +175,6 @@ img{
     text-align: center;
 
 }
-
-
 
 #close{
     padding-left: 10vw;

@@ -69,7 +69,6 @@ input[type="file"] {
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
-    padding: 1px;
 }
 
 #profilePic {
@@ -351,10 +350,19 @@ img {
 
 
 @media only screen and (max-width : 768px) {
-    .mainCon{
-        min-height: 87vh;
-
-
+    .mainCon {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "backTop"
+          "profilePic"
+          "profilePicText"
+          "name"
+          "age"
+          "typePet"
+          "weightPet"
+          "next";
     }
   
     #TypeCon{
