@@ -182,6 +182,6 @@ function behavioral() {
 
 // Centers the tempwheel on 9 degrees on full screen
 function defaultScroll() {
-    document.querySelector("#tempWheel").scrollLeft = 1820;
+    document.querySelector("#tempWheel").scrollLeft = 2600;
 }
 defaultScroll();
