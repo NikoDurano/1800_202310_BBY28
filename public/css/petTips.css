@@ -94,7 +94,11 @@ body {
 
     font-size: large;
 }
-
+.tips li{
+    list-style-type: none;
+    margin-bottom: 5px;
+    
+}
 .maintips {
     background-color: white;
     margin: 15px;
@@ -203,6 +207,18 @@ body {
 
     #right div{
         font-size: 15px;
+    }
+
+    .content {
+        background-color: #0892D0;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        max-height: 80vh;
+        min-height: 800px;
+        width: 65vw;
+        overflow: auto;
+    
     }
 
 
