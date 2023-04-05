@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Vet Info</title>
+    <meta name="comp1800 template" content="My 1800 App">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <!-- Other libraries go here -->
+    <!-- This needs to be here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="/public/css/navBar.css">
+    <link rel="stylesheet" href="/public/css/petProfileEditor3.css">
+    <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
+
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+
+</head>
+
+<body>
+
+    <nav id="navbarPlaceholder"></nav>
+
+
+
+    <div class="mainCon">
+
+
+        <div id="backButtonCon">
+        <button id="backButton" onclick="window.location.href ='petProfileEditor2.html'">
+            <i class="bi bi-arrow-left" style="font-size: xx-large;"></i>
+        </button>
+        <div id="blank"></div>
+
+        
+        <button id="backButtonR" onclick="window.location.href ='tabPetProfile.html'">
+            <i class="bi bi-house" style="font-size: xx-large;"></i>
+        </button>
+
+        
+        <div id="progress">
+
+            <div id="bar">
+                <div class="barTop" id="one"></div>
+                <div class="barTop" id="two"></div>
+                <div class="barTop" id="three"></div>
+            </div>
+
+        </div> 
+    </div>
+        <div id="petStuff">
+                <h1> Update Vet Information   </h1> 
+            </div>
+
+        <div class="name">
+            <div id="vetNameText">
+                Veterinarian Name
+            </div>
+            <div id="vetNameInputDiv">
+                <input id="vetNameInput" class="form-control" type="text" placeholder="Name" aria-label="Name">
+            </div>
+        </div>
+
+        <div class="number">
+            <div id="vetPhoneText">
+                Veterinarian Phone Number
+            </div>
+            <div id="vetPhoneInputDiv">
+                <input id="vetPhoneInput" class="form-control" type="text" placeholder="Phone Number" aria-label="Name">
+            </div>
+        </div>
+
+        <div class="locStat">
+            <div id="vetLocationText">
+                Veterinarian Location
+            </div>
+            <div id="vetLocationInputDiv">
+                <input id="vetLocationInput" class="form-control" type="text" placeholder="Address" aria-label="Name">
+            </div>
+        </div>
+
+
+
+        <div id="nextButtonBox">
+            <button id="userSubmitBtn" type="submit" onclick="profileEdit3()">SAVE</button>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="foot">
+        <nav id="footerPlaceholder"></nav>
+    </div>
+
+
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+
+    <!-- Link to scripts of your own -->
+    <script src="/scripts/firebaseAPI_BBY28.js"></script>
+    <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/readWriteProfile.js"></script>
+    <script>
+
+        firebase.auth().onAuthStateChanged(user =>{
+        if (user){
+            console.log(user.uid); // let me to know who is the user that logged in to get the UID
+            currentUser = db.collection("users").doc(user.uid).collection("petInfo").doc(user.uid).collection("vetInfo").doc(user.uid); // will to to the firestore and go to the document of the user
+              
+            currentUser.get().then(userDoc=>{
+         
+  
+            if(userDoc.data().nameVet=""){
+                document.getElementById("vetNameInput").placeholder = userDoc.data().nameVet;
+            }else{
+                document.getElementById("vetNameInput").placeholder = userDoc.data().nameVet;
+            }
+            if(userDoc.data().phoneNumberVet=""){
+                document.getElementById("vetPhoneInput").placeholder = userDoc.data().phoneNumberVet;
+            }else{
+                document.getElementById("vetPhoneInput").placeholder = userDoc.data().phoneNumberVet;
+            }
+            if(userDoc.data().addressVet=""){
+                document.getElementById("vetLocationInput").placeholder = userDoc.data().addressVet;
+            }else{
+                document.getElementById("vetLocationInput").placeholder = userDoc.data().addressVet;
+            }
+            })  
+          }    
+       })
+  
+  
+  
+  
+  
+      </script>
+
+
+    <!-- <script src="./scripts/script.js"></script> -->
+
+
+</body>
+
+</html>

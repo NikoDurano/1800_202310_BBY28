@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pet Care Tips</title>
+    <meta name="comp1800 template" content="My 1800 App">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <!-- Other libraries go here -->
+    <!-- This needs to be here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="/public/css/navBar.css">
+    <link rel="stylesheet" href="/public/css/petTips.css">
+    <link href="/public/img/Logo.png" rel="icon" type="image/x-icon" />
+
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+
+</head>
+
+<body>
+
+
+
+
+    <nav id="navbarPlaceholder"></nav>
+
+    <div id="mainCon">
+        <div id="left">
+
+            <div id="text">
+                <h2>Pet Care Tips</h2>
+            </div>
+
+            <div id="general">
+                <button class="button" onclick="showContent('content1')">General Tips</button>
+            </div>
+
+            <div id="hotDay">
+                <button class="button" onclick="showContent('content2')">Hot Day</button>
+
+            </div>
+
+            <div id="coldDay">
+                <button class="button" onclick="showContent('content3')">Cold Day</button>
+
+            </div>
+
+            <div id="text">
+                <h2>Weather Effects</h2>
+            </div>
+            
+            <div id="heatStroke">
+                <button class="button" onclick="showContent('content4')">Heatstroke</button>
+
+            </div>
+
+            <div id="hypothermia">
+                <button class="button" onclick="showContent('content5')">Hypothermia</button>
+
+            </div>
+
+            <div id="frostbite">
+                <button class="button" onclick="showContent('content6')">Frostbite</button>
+
+            </div>
+
+
+        </div>
+
+        <div id="right">
+
+            <div class="content" id="content1">
+                <div class="maintips">
+                    <img src="/public/img/cozypets.png" alt="cozypets" class="tipsimg">
+                    <p><b>Set up multiple beds for your pet.</b> Place them in places with varying levels of warmth and shade. This will train your pet to find necessary shade or warmth on their own.</p>
+                </div>
+                <div class="maintips">
+                    <img src="/public/img/brush.png" alt="brush" class="tipsimg">
+                    <p><b>Brush your pet's fur regularly.</b> Groomed fur is important for maintaining your pet's blood circulation. Ungroomed fur leads to matts, which can trap heat in the summer or lead to frostbite in the winter.
+                    </p>
+                </div>
+                <div class="maintips">
+                    <img src="/public/img/catShoes.png" alt="catShoes" class="tipsimg">
+                    <p><b>Test if a surface or liquid is too hot or cold on your own skin.</b> If the temperature is too
+                        much for a human, it'll be too much for your pet to touch. This is especially important when going for walks on hot pavement or snow!</p>
+                </div>
+                <div class="maintips">
+                    <img src="/public/img/catDrink.png" alt="catDrink" class="tipsimg">
+                    <p><b>Make sure your pet always has access to multiple sources of fresh, cool water.</b> Add ice in the summer to keep the water cool. A heated bowl can help keep an outdoor water bowl from freezing outside during the winter.</p>
+                </div>
+            </div>
+
+        <div class="content" id="content2">
+            <div class="maintips">
+                <img src="/public/img/coolSun.png" alt="coolSun" class="tipsimg">
+                <p>Keep the <b>indoor temperature</b> below 26°C for short-haired pets and below 24°C if you have
+                    long-haired pets.</p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/igloo.png" alt="igloo" class="tipsimg">
+                <p><b>Add ice to your pet's water bowl throughout the day.</b> You can also freeze a small balloon filled with water to make an ice sphere your pet can safely lick.
+                </p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/shibaSurf.png" alt="shibaSurf" class="tipsimg">
+                <p><b>Make sure your pet has access to a cool shaded area.</b> If you don't have an AC at home, check your nearby area for public areas like a park or even a mall that you can bring your pet too in case the weather gets too extreme.</p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/corgiSwim.png" alt="corgiSwim" class="tipsimg">
+                <p><b>Let your pet relax on warmer days.</b> Exercise on a hot day can cause your pet's body to overheat and run the risk of heatstroke.</p>
+            </div>
+        </div>
+
+        <div class="content" id="content3">
+            <div class="maintips">
+                <img src="/public/img/snowman.png" alt="snowman" class="tipsimg">
+                <p>Keep the <b>indoor temperature</b> around 20-22°C, and no lower than 16°C. Install safety guards and covers around heaters and fireplaces to prevent your pet getting burned.</p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/shibaSleep.png" alt="shibasleep" class="tipsimg">
+                <p><b>Use a humidifier to keep the air moist.</b> In addition to reducing skin irritation, humidifiers help your pet breathe better by moisturizing their nasal passages. This can also prevent snoring!
+                </p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/shortDog.png" alt="shortDog" class="tipsimg">
+                <p><b>Towel dry your pet's fur and check their paws after going for a walk in snowy conditions.</b> During winter, your pet can step on hazards like ice, salt, and other chemicals. Before a snowfall, clear outdoor spaces of objects that would become unseen hazards underneath the snow.</p>
+            </div>
+            <div class="maintips">
+                <img src="/public/img/catHoodie.png" alt="catHoodie" class="tipsimg">
+                <p><b>Spend time outdoors when it is sunny.</b> Exercise is important during winter, but be very careful not to spend much time outside, especially if your pet has conditions that are aggravated by the cold weather. A sweater or coat can help your pet stay comfortable longer, but don't force them to go outside if they're too cold.</p>
+            </div>
+        </div>
+
+        <div class="content" id="content4">
+            <div class="tips">
+                <h2>If you pet is showing signs of Heat Stroke</h2>
+                <ul>
+                    <li>• Take your pet somewhere cool and well-ventilated</li>
+                    <li>• Offer them small sips of water but do not force them to drink</li>
+                    <li>• Cool them down by rubbing cool (not cold!) water on them by hand, or draping a cool wet
+                        towel
+                        over them. Change the towel every five minutes.</li>
+                    <li>• Call your vet asap who will be able to advise you further.</li>
+                </ul>
+                <h2>Signs of Heat Stroke</h2>
+                <div class="symptomlist">
+                    <ul>
+                        <li>• Panting for cats, excessive panting for dogs</li>
+                        <li>• Agitation, restlessness</li>
+                        <li>• Dizziness</li>
+                        <li>• Lethargy, weakness, lying down</li>
+                        <li>• Reddened gums</li>
+                        <li>• Increased heart rate</li>
+                        <li>• Distressed breathing</li>
+                        <li>• Vomit or Diarrhea, possibly with blood</li>
+                        <li>• Little to no urine production</li>
+                        <li>• Loss of consciousness</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="content5">
+            <div class="tips">
+                <h2>If your pet is showing signs of Hypothermia</h2>
+                <ul>
+                    <li>• Take your pet somewhere dry and warm as quickly as possible</li>
+                    <li>• Slowly wrap your pet in dry, warm blankets or towels</li>
+                    <li>• Place bottles of warm water wrapped in blankets next to your pet</li>
+                    <li>• Wrap your pet in warmed towels or blankets when transporting to the vet.</li>
+                </ul>
+                <h2>Signs of Hypothermia</h2>
+                <div class="symptomlist">
+                <ul>
+                    <li>• Shivering</li>
+                    <li>• Dizziness</li>
+                    <li>• Lethargy, weakness, lying down</li>
+                    <li>• Blue gums</li>
+                    <li>• Dilated pupils</li>
+                    <li>• Distressed breathing</li>
+                    <li>• Difficulty walking</li>
+                    <li>• Loss of consciousness</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="content6">
+            <div class="tips">
+                <h2>If your pet is showing signs of Frostbite</h2>
+                <ul>
+                    <li>• Take your pet somewhere dry and warm as quickly as possible</li>
+                    <li>• Slowly wrap your pet in dry, warm blankets or towels</li>
+                    <li>• Carefully soak affected areas in warm water, around 37-38°C or use warm water compresses.</li>
+                    <li>• Once the area is warm, pat dry as thoroughly as possible.</li>
+                    <li>• Wrap your pet in warmed towels or blankets when transporting to the vet.</li>
+                    <li>• Do <i>not</i> use direct heat such as a hair dryer, heating pad, or hot water on affected areas as it can cause more damage.</li>
+                    <li>• Do <i>not</i> massage or rub the affected areas</li>
+                </ul>
+                <h2>Signs of Frostbite</h2>
+                <div class="symptomlist">
+                    <ul>
+                        <li>• Grey or blue discolored skin</li>
+                        <li>• Affected area is painful to touch</li>
+                        <li>• Cold or brittle feeling when touched</li>
+                        <li>• Swelling</li>
+                        <li>• Red, inflamed skin</li>
+                        <li>• Shivering</li>
+                        <li>• Distressed breathing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    <nav id="footerPlaceholder"></nav>
+
+
+
+
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+
+    <!-- Link to scripts of your own -->
+    <script src="/scripts/firebaseAPI_BBY28.js"></script>
+    <script src="/public/js/skeleton.js"></script>
+    <script src="/public/js/petTips.js"></script>
+
+
+    <!-- <script src="./scripts/script.js"></script> -->
+
+
+</body>
+
+</html>
