@@ -120,7 +120,7 @@ body {
 }
 
 .symptomlist ul {
-    columns: 2;
+    columns: 1;
     column-width: 50%;
 }
 
@@ -197,7 +197,7 @@ body {
         width: auto;
     }
     #right div li {
-        font-size: 10px;
+        font-size: 1rem;
         margin-bottom: 10px;
     }
 
