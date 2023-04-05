@@ -23,3 +23,9 @@ function insertNameFromFirestore(){
     })
 }
 insertNameFromFirestore();
+
+
+function notWorking(){
+    alert("This functions is not implemented yet")
+
+}
