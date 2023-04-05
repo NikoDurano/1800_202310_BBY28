@@ -171,6 +171,21 @@ body {
 
     }
 
+    .tips li{
+        list-style-type: none;
+        margin-bottom: 5px;
+        
+    }
+
+    .tips ul{
+        padding: 0;
+    }
+    
+    .tips h2{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
     .tipsimg {
         height: 100px;
         width: auto;
