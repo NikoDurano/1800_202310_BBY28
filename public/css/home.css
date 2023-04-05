@@ -25,8 +25,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  border-top-right-radius: 75px;
-  border-top-left-radius: 75px;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
 
   width: 600px;
   margin-left: auto;
