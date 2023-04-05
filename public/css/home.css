@@ -36,7 +36,7 @@ body {
 
 .Content {
   grid-area: msg;
-  align-items: flex-start;
+  font-size: large;
 }
 
 #btnGroup1 {
@@ -60,14 +60,39 @@ body {
   justify-content: space-evenly;
 }
 
-.button {
-  width: 200px;
+.button1 {
+  width: 300px;
   height: 200px;
 
   padding: 10px;
   margin: 10px;
   margin-left: 30px;
   margin-right: 30px;
+  border-radius: 10px;
+  max-width: 300px;
+  max-height: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  background: #219EBC;
+  color: white;
+
+  font-size: 1.2rem;
+
+  position: relative;
+}
+
+.button2 {
+  width: 200px;
+  height: 200px;
+
+  padding: 10px;
+  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-radius: 10px;
   max-width: 200px;
   max-height: 200px;
@@ -98,14 +123,14 @@ button img {
 #mainCon {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 250px 50px 1fr 1fr;
+  grid-template-rows: 1fr 50px 1fr 1fr;
   grid-template-areas:
     "corgi"
     "msg"
     "group1"
     "group2";
   background-color: white;
-  min-height: 90%;
+  min-height: 100%;
   margin: 50px;
   margin-top: 10px;
   padding: 30px;
