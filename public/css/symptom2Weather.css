@@ -221,12 +221,14 @@ body {
 
 
 }
+
 #info{
     grid-area: info;
     text-align: center;
     font-weight: 500;
 
 }
+
 .mainCon{
     display: grid;
     grid-template-columns: 1fr;
