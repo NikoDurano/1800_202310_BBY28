@@ -21,20 +21,25 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 State what a user needs to do when they come to your project.  How do others start using your code or application?
 Here are the steps ...
 * Go through account creation process.
-* 
-* ...
+* Open tracker log and start symptom tracker process
+* follow tips on screen
+
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
-* ...
-* ...
+* On smaller screens the home page and temperature page have some styling issues but this can be fixed with a media query.
+* On account creation a log is made in the diary log with default values. Need to find a work around
 * ...
 
 ## 6. Features for Future
 What we'd like to build in the future:
-* ...
-* ...
-* ...
+* Vet integration that allows vets to check on peoples pets.
+* Allow users to add more pets
+* Currently only for cats and dogs, want to add for more pet types
+* More accurate tracker.
+* Develop on the vet tab map
+
+
 	
 ## 7. Contents of Folder
 Content of the project folder:
@@ -46,7 +51,35 @@ Content of the project folder:
 ├── scripts                  # Firestore Keys   
 ├── .gitignore               # Git ignore file
 ├── formulaAlgoConcept.txt   # Pseudocode for symptom tracker
-└── README.md
+├── README.md
+├── .firebaserc
+├── 404.html
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── storeage.rules
+├── home.html
+├── index.html
+├── login.html
+├── map.html
+├── petProfileCreator1.html
+├── petProfileCreator2.html
+├── petProfileEditor.html
+├── petProfileEditor2.html
+├── petProfileEditor3.html
+├── petTips.html
+├── symptom1Pet.html
+├── symptom2Weather.html
+├── symptom3Behavior.html
+├── symptom4Physical.html
+├── symptomTemplate.html
+├── tabHealthHistory.html
+├── tabPetProfile.html
+├── tabVet1.html
+├── template.html
+├── userProfileCreator.html
+├── userProfileEditor.html
+├── vetProfileCreator.html
 
 It has the following subfolders and files:
 ├── app                      # Holds html and standard folders.
