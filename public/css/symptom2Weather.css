@@ -285,3 +285,19 @@ body {
 
 
 }
+@media only screen and (max-device-width: 480px) {
+
+      .weatherWidget{
+        width: 250px;
+
+    }
+
+}
+@media only screen and (max-device-width: 395px) {
+
+      .weatherWidget{
+        width: 220px;
+
+    }
+
+}

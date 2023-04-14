@@ -140,6 +140,16 @@ button img {
   margin-right: auto;
 }
 
+@media only screen and (max-device-width: 480px) {
+  .button1 {
+
+    margin-left: 0!important;
+    margin-right: 0!important;;
+
+  }
+  
+}
+
 @media only screen and (max-width: 768px) {
 
   #mainCon {

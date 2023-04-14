@@ -248,6 +248,13 @@ img{
     }
 
 }
-@media only screen and (min-width: 769px){
+@media only screen and (max-device-width: 480px) {
+    #progress{
+        grid-template-rows: 100px 100px;
 
+    }
+    .mainCon{
+        grid-template-rows: 200px 1fr 100px;
+
+    }
 }
