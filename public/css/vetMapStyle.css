@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
 }
 #callCon{
   grid-area: call;
@@ -155,7 +156,15 @@ padding: 14px;
       margin: 50px;
       border-radius: 10px;
   }
+  #number {
+    justify-content: center;
+    font-size: 30px;
+  }
 
+  #address {
+    justify-content: center;
+    font-size: 30px;
+  }
   #searchVetCon{
     grid-area: btn;
     display: flex;
@@ -337,3 +346,4 @@ body {
   position: absolute;
   right: 30px;
 }
+
