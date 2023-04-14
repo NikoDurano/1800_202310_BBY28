@@ -4,15 +4,21 @@
     font-weight: normal;
     font-style: normal;
 }
-body {
+html,body {
     background-color: #8ecae6;
     margin: 0;
     padding: 0;
     font-family: "Josefin";
+    height: 100%;
 }
 h1{
     text-align: center;
     padding: 20px;
+}
+
+img{
+    height: 150px;
+    width: 150px;
 }
 
 #mainCon{
@@ -24,8 +30,8 @@ h1{
 
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 30px;
+    margin-left: 30px;
 
     padding: 50px;
 
@@ -34,6 +40,16 @@ h1{
 
 
 }
+@media only screen and (max-device-width: 480px) {
+    #mainCon{
 
+        padding: 50px;
+    
+        border-radius: 0;
+        margin: 0;
+        height: 100%;
+    
+    }
+}
 
 
