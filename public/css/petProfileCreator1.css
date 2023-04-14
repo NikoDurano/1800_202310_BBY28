@@ -449,3 +449,50 @@ img {
     }
 
 }
+@media only screen and (max-device-width: 395px) {
+#name {
+    padding: 20px 10vw 20px 10vw;
+
+}
+
+#age {
+
+    padding: 20px 10vw 20px 10vw;
+
+}
+    .mainCon {
+
+    margin-bottom: 90px!important;
+
+    }
+}
+@media only screen and (max-device-width: 480px) {
+    .mainCon {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "backTop"
+          "profilePic"
+          "profilePicText"
+          "name"
+          "age"
+          "typePet"
+          "weightPet"
+          "next";
+            
+
+    margin: 0;
+    border-radius: 0;
+    height: 120vh;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    }
+    body {
+        background-color: white;
+
+    
+    }
+    
+}

@@ -187,4 +187,30 @@ img{
     color: white;
 
 }
+@media only screen and (max-device-width: 480px) {
+    .mainCon{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "backTop"
+        "info"
+        "coat"
+        "face"
+        "brain"
+        "heart"
+        "lungs"
+        "next";
+    
+        background-color: white;
+        margin: 0;
+        border-radius: 0;
+        height: 89vh;
+    }
+    body {
+        background-color: white;
 
+    
+    }
+    
+}

@@ -221,3 +221,22 @@ img{
     color: white;
 
 }
+@media only screen and (max-device-width: 480px) {
+    .mainCon{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 44vh 45vh;
+        grid-template-areas: 
+        "up"
+        "down";
+        background-color: white;
+        margin: 0;
+        border-radius: 0;
+    }
+    body {
+        background-color: white;
+
+    
+    }
+    
+}
